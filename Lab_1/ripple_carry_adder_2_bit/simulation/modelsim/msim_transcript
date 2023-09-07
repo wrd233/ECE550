@@ -54,3 +54,7 @@
 # run -all
 #                    0 simulation start
 # Simulation succeeded with no errors.
+# Break key hit
+# Break in Module ripple_carry_adder_2_bit_tb at /Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v line 93
+# End time: 13:10:53 on Sep 07,2023, Elapsed time: 0:05:46
+# Errors: 0, Warnings: 0
