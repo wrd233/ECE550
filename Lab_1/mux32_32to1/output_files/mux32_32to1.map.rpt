@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mux32_32to1
-Wed Sep 06 21:43:56 2023
+Wed Sep 06 22:58:24 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 06 21:43:56 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 06 22:58:23 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; mux32_32to1                                 ;
 ; Top-level Entity Name              ; mux32_32to1                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 64                                          ;
-;     Total combinational functions  ; 64                                          ;
+; Total logic elements               ; 672                                         ;
+;     Total combinational functions  ; 672                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 162                                         ;
+; Total pins                         ; 1,061                                       ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,13 +162,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
-; mux32_32to1.v                    ; yes             ; User Verilog HDL File  ; C:/Users/wangrundong/Desktop/ECE551/Lab_1/mux32_32to1/mux32_32to1.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+; mux32_32to1.v                    ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Lab_1/mux32_32to1/mux32_32to1.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -176,41 +176,42 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 64              ;
+; Estimated Total logic elements              ; 672             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 64              ;
+; Total combinational functions               ; 672             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 64              ;
-;     -- 3 input functions                    ; 0               ;
+;     -- 4 input functions                    ; 640             ;
+;     -- 3 input functions                    ; 32              ;
 ;     -- <=2 input functions                  ; 0               ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 64              ;
+;     -- normal mode                          ; 672             ;
 ;     -- arithmetic mode                      ; 0               ;
 ;                                             ;                 ;
 ; Total registers                             ; 0               ;
 ;     -- Dedicated logic registers            ; 0               ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
-; I/O pins                                    ; 162             ;
+; I/O pins                                    ; 1061            ;
 ;                                             ;                 ;
 ; Embedded Multiplier 9-bit elements          ; 0               ;
 ;                                             ;                 ;
-; Maximum fan-out node                        ; select[1]~input ;
-; Maximum fan-out                             ; 48              ;
-; Total fan-out                               ; 450             ;
-; Average fan-out                             ; 1.16            ;
+; Maximum fan-out node                        ; select[2]~input ;
+; Maximum fan-out                             ; 240             ;
+; Total fan-out                               ; 3749            ;
+; Average fan-out                             ; 1.34            ;
 +---------------------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+-------------+--------------+
-; |mux32_32to1               ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 162  ; 0            ; |mux32_32to1              ; mux32_32to1 ; work         ;
-;    |mux_2:second|          ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux32_32to1|mux_2:second ; mux_2       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+-------------+--------------+
+; |mux32_32to1               ; 672 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 1061 ; 0            ; |mux32_32to1                          ; mux32_32to1 ; work         ;
+;    |mux_4:forth|           ; 672 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux32_32to1|mux_4:forth              ; mux_4       ; work         ;
+;       |mux_2:second|       ; 672 (672)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux32_32to1|mux_4:forth|mux_2:second ; mux_2       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -229,13 +230,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mux32_32to1|mux_2:second|out[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |mux32_32to1|mux_4:forth|mux_2:second|out[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -243,13 +244,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 162                         ;
-; cycloneiii_lcell_comb ; 64                          ;
-;     normal            ; 64                          ;
-;         4 data inputs ; 64                          ;
+; boundary_port         ; 1061                        ;
+; cycloneiii_lcell_comb ; 672                         ;
+;     normal            ; 672                         ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 640                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.67                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -258,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:29     ;
 +----------------+--------------+
 
 
@@ -268,27 +270,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Sep 06 21:43:43 2023
+    Info: Processing started: Wed Sep 06 22:57:42 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mux32_32to1 -c mux32_32to1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 3 design units, including 3 entities, in source file mux32_32to1.v
-    Info (12023): Found entity 1: mux_2 File: C:/Users/wangrundong/Desktop/ECE551/Lab_1/mux32_32to1/mux32_32to1.v Line: 1
-    Info (12023): Found entity 2: mux_4 File: C:/Users/wangrundong/Desktop/ECE551/Lab_1/mux32_32to1/mux32_32to1.v Line: 10
-    Info (12023): Found entity 3: mux32_32to1 File: C:/Users/wangrundong/Desktop/ECE551/Lab_1/mux32_32to1/mux32_32to1.v Line: 22
+Info (12021): Found 4 design units, including 4 entities, in source file mux32_32to1.v
+    Info (12023): Found entity 1: mux_2 File: //Mac/Home/Desktop/ECE550/Lab_1/mux32_32to1/mux32_32to1.v Line: 1
+    Info (12023): Found entity 2: mux_4 File: //Mac/Home/Desktop/ECE550/Lab_1/mux32_32to1/mux32_32to1.v Line: 8
+    Info (12023): Found entity 3: mux_8 File: //Mac/Home/Desktop/ECE550/Lab_1/mux32_32to1/mux32_32to1.v Line: 18
+    Info (12023): Found entity 4: mux32_32to1 File: //Mac/Home/Desktop/ECE550/Lab_1/mux32_32to1/mux32_32to1.v Line: 40
 Info (12127): Elaborating entity "mux32_32to1" for the top level hierarchy
-Info (12128): Elaborating entity "mux_2" for hierarchy "mux_2:first_top" File: C:/Users/wangrundong/Desktop/ECE551/Lab_1/mux32_32to1/mux32_32to1.v Line: 27
+Info (12128): Elaborating entity "mux_8" for hierarchy "mux_8:first1" File: //Mac/Home/Desktop/ECE550/Lab_1/mux32_32to1/mux32_32to1.v Line: 46
+Info (12128): Elaborating entity "mux_4" for hierarchy "mux_8:first1|mux_4:first_top" File: //Mac/Home/Desktop/ECE550/Lab_1/mux32_32to1/mux32_32to1.v Line: 23
+Info (12128): Elaborating entity "mux_2" for hierarchy "mux_8:first1|mux_4:first_top|mux_2:first_top" File: //Mac/Home/Desktop/ECE550/Lab_1/mux32_32to1/mux32_32to1.v Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 226 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 130 input pins
+Info (21057): Implemented 1733 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1029 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 64 logic cells
+    Info (21061): Implemented 672 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Wed Sep 06 21:43:56 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Wed Sep 06 22:58:24 2023
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:53
 
 

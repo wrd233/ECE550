@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sum[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[1]",
+					"strict" : false
+				},
+				{
+					"name" : "carry_out",
+					"strict" : false
+				},
+				{
+					"name" : "in0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "in1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "in0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "in1[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
