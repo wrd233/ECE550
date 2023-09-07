@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/simulation/modelsim
+vhard_block
+Z1 !s110 1694062699
+!i10b 1
+!s100 RdXbTg2@G2bXW0XNhdmiQ0
+I=Hl?IL5>o[8J2g?1MoH1R3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1694062587
+Z4 8ripple_carry_adder_2_bit_7_1200mv_85c_slow.vo
+Z5 Fripple_carry_adder_2_bit_7_1200mv_85c_slow.vo
+L0 221
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1694062699.000000
+Z8 !s107 ripple_carry_adder_2_bit_7_1200mv_85c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|ripple_carry_adder_2_bit_7_1200mv_85c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vripple_carry_adder_2_bit
+R1
+!i10b 1
+!s100 TTRF:6mg`GJQ4jCMlVVHm3
+I>AdX>QPSo8oKYabEYecJZ2
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vripple_carry_adder_2_bit_tb
+R1
+!i10b 1
+!s100 9?G<?HLHBfG9H44iZ4J0]0
+ISJVEBOechY=:@;M:CJTVM1
+R2
+R0
+w1694062497
+8/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v
+F/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v
+L0 4
+R6
+r1
+!s85 0
+31
+R7
+!s107 /Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit|/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit
+R12

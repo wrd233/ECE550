@@ -1,5 +1,5 @@
 Flow report for ripple_carry_adder_2_bit
-Thu Sep 07 10:21:30 2023
+Thu Sep 07 12:56:27 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 07 10:21:27 2023       ;
+; Flow Status                        ; Successful - Thu Sep 07 12:56:27 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; ripple_carry_adder_2_bit                    ;
 ; Top-level Entity Name              ; ripple_carry_adder_2_bit                    ;
@@ -64,26 +64,38 @@ refer to the applicable agreement for further details.
 +-------------------+--------------------------+
 ; Option            ; Setting                  ;
 +-------------------+--------------------------+
-; Start date & time ; 09/07/2023 10:20:59      ;
+; Start date & time ; 09/07/2023 12:55:56      ;
 ; Main task         ; Compilation              ;
 ; Revision Name     ; ripple_carry_adder_2_bit ;
 +-------------------+--------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 121380277911.169405325804820           ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                          ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                  ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------+
+; COMPILER_SIGNATURE_ID                ; 121380277911.169406255601240           ; --            ; --          ; --                          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ripple_carry_adder_2_bit_tb ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ripple_carry_adder_2_bit_tb            ; --            ; --          ; eda_simulation              ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR        ; simulation/modelsim                    ; --            ; --          ; eda_simulation              ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation              ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --                          ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation              ;
+; EDA_TEST_BENCH_FILE                  ; ripple_carry_adder_2_bit_tb.v          ; --            ; --          ; ripple_carry_adder_2_bit_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ripple_carry_adder_2_bit_tb            ; --            ; --          ; ripple_carry_adder_2_bit_tb ;
+; EDA_TEST_BENCH_NAME                  ; ripple_carry_adder_2_bit_tb            ; --            ; --          ; eda_simulation              ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation              ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                          ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                          ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --          ; --                          ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top                         ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top                         ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top                         ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                          ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                          ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                          ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -91,11 +103,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4776 MB             ; 00:00:27                           ;
-; Fitter               ; 00:00:09     ; 1.0                     ; 5811 MB             ; 00:00:16                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4864 MB             ; 00:00:02                           ;
-; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:48                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4770 MB             ; 00:00:23                           ;
+; Fitter               ; 00:00:08     ; 1.0                     ; 5821 MB             ; 00:00:14                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4680 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4865 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4652 MB             ; 00:00:01                           ;
+; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,6 +121,7 @@ refer to the applicable agreement for further details.
 ; Fitter               ; BD37             ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; BD37             ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; BD37             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; BD37             ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -118,6 +132,7 @@ quartus_map --read_settings_files=on --write_settings_files=off ripple_carry_add
 quartus_fit --read_settings_files=off --write_settings_files=off ripple_carry_adder_2_bit -c ripple_carry_adder_2_bit
 quartus_asm --read_settings_files=off --write_settings_files=off ripple_carry_adder_2_bit -c ripple_carry_adder_2_bit
 quartus_sta ripple_carry_adder_2_bit -c ripple_carry_adder_2_bit
+quartus_eda --read_settings_files=off --write_settings_files=off ripple_carry_adder_2_bit -c ripple_carry_adder_2_bit
 
 
 

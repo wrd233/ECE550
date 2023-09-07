@@ -3,9 +3,9 @@ in0[0] => in0[0].IN1
 in0[1] => in0[1].IN1
 in1[0] => in1[0].IN1
 in1[1] => in1[1].IN1
-sum[0] <= full_adder:fa1.port3
-sum[1] <= full_adder:fa2.port3
-carry_out <= full_adder:fa2.port4
+sum[0] << full_adder:fa1.port3
+sum[1] << full_adder:fa2.port3
+carry_out << full_adder:fa2.port4
 
 
 |ripple_carry_adder_2_bit|full_adder:fa1

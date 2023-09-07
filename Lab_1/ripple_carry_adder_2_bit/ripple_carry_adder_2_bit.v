@@ -26,5 +26,4 @@ module ripple_carry_adder_2_bit(in0, in1, sum, carry_out);
 	  
 	full_adder fa1(in0[0], in1[0], 1'b0, sum[0], carry_out_1);  
 	full_adder fa2(in0[1], in1[1], carry_out_1, sum[1], carry_out);  
-  
 endmodule
