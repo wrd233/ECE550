@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 d//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/simulation/modelsim
 vfull_adder
-Z1 !s110 1694063107
+Z1 !s110 1694072298
 !i10b 1
 !s100 D7X<3z`aM;JKo;jeK3N:?2
 IWSAE4Fa4`TKFRmi5?2H562
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1694060724
+Z3 w1694070949
 Z4 8//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit.v
 Z5 F//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit.v
 L0 9
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1694063107.000000
+Z7 !s108 1694072298.000000
 Z8 !s107 //Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit|//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit.v|
 !i113 1
@@ -75,13 +75,13 @@ R10
 R11
 R12
 vripple_carry_adder_2_bit_tb
-R1
+!s110 1694072299
 !i10b 1
-!s100 FobNSA>;FVOX6`BVeTeGA3
-IKHeE]O[XJ:YafJ^Y]Y5Ui2
+!s100 O]AGMeVWf7Cj@ii2PH3eD0
+I3B0I]C3WAkKd;@897]lTa3
 R2
 R0
-w1694063089
+w1694072043
 8/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v
 F/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v
 L0 4

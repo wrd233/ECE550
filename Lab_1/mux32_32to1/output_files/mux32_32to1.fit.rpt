@@ -1,5 +1,5 @@
 Fitter report for mux32_32to1
-Wed Sep 06 22:58:30 2023
+Thu Sep 07 15:17:20 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Failed - Wed Sep 06 22:58:29 2023           ;
+; Fitter Status                      ; Failed - Thu Sep 07 15:17:20 2023           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; mux32_32to1                                 ;
 ; Top-level Entity Name              ; mux32_32to1                                 ;
@@ -7564,9 +7564,9 @@ Error (169281): There are 1029 IO input pads in the design, but only 529 IO inpu
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Error (171000): Can't fit design in device
 Error: Quartus Prime Fitter was unsuccessful. 2 errors, 4 warnings
-    Error: Peak virtual memory: 5008 megabytes
-    Error: Processing ended: Wed Sep 06 22:58:30 2023
-    Error: Elapsed time: 00:00:05
+    Error: Peak virtual memory: 5009 megabytes
+    Error: Processing ended: Thu Sep 07 15:17:21 2023
+    Error: Elapsed time: 00:00:04
     Error: Total CPU time (on all processors): 00:00:05
 
 

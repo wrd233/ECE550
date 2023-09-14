@@ -1,5 +1,5 @@
 Flow report for mux32_32to1
-Wed Sep 06 22:58:30 2023
+Thu Sep 07 15:17:20 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed Sep 06 22:58:29 2023      ;
+; Flow Status                        ; Flow Failed - Thu Sep 07 15:17:20 2023      ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; mux32_32to1                                 ;
 ; Top-level Entity Name              ; mux32_32to1                                 ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/06/2023 22:57:42 ;
+; Start date & time ; 09/07/2023 15:16:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mux32_32to1         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 121380277911.169401226207108           ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 121380277911.169407100304140           ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -91,9 +91,9 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 4786 MB             ; 00:00:53                           ;
-; Fitter               ; 00:00:04     ; 1.0                     ; 5008 MB             ; 00:00:05                           ;
-; Total                ; 00:00:45     ; --                      ; --                  ; 00:00:58                           ;
+; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4787 MB             ; 00:00:44                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 5009 MB             ; 00:00:05                           ;
+; Total                ; 00:00:35     ; --                      ; --                  ; 00:00:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

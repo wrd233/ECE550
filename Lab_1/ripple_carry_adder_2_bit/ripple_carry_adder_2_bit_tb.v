@@ -44,7 +44,7 @@ module ripple_carry_adder_2_bit_tb;
 
     @(negedge clock);
     if (sum != 2'b11 || carry_out != 1'b00) begin
-      $display("Error: Test case 2 failed. Expected (3, 0), got (%b, %b)", sum, carry_out);
+      $display("Error: Test case 2 failed. Expected (1, 0), got (%b, %b)", sum, carry_out);
       num_errors = num_errors + 1;
     end
 

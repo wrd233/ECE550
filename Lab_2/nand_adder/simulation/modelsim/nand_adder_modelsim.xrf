@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, //Mac/Home/Desktop/ECE550/Lab_2/nand_adder/nand_adder.v
+source_file = 1, //Mac/Home/Desktop/ECE550/Lab_2/nand_adder/nand_adder_tb.v
+source_file = 1, //Mac/Home/Desktop/ECE550/Lab_2/nand_adder/db/nand_adder.cbx.xml
+design_name = nand_adder
+instance = comp, \sum~output , sum~output, nand_adder, 1
+instance = comp, \carry_out~output , carry_out~output, nand_adder, 1
+instance = comp, \in1~input , in1~input, nand_adder, 1
+instance = comp, \in0~input , in0~input, nand_adder, 1
+instance = comp, \carry_in~input , carry_in~input, nand_adder, 1
+instance = comp, \ng9|my_nand~0 , ng9|my_nand~0, nand_adder, 1
+instance = comp, \ng8|my_nand~0 , ng8|my_nand~0, nand_adder, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

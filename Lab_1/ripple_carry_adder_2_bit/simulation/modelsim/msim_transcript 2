@@ -1,0 +1,62 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do ripple_carry_adder_2_bit_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit {//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:44:16 on Sep 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit" //Mac/Home/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit.v 
+# -- Compiling module half_adder
+# -- Compiling module full_adder
+# -- Compiling module ripple_carry_adder_2_bit
+# 
+# Top level modules:
+# 	ripple_carry_adder_2_bit
+# End time: 12:44:16 on Sep 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit {/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:44:16 on Sep 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit" /Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v 
+# -- Compiling module ripple_carry_adder_2_bit_tb
+# 
+# Top level modules:
+# 	ripple_carry_adder_2_bit_tb
+# End time: 12:44:16 on Sep 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  ripple_carry_adder_2_bit_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" ripple_carry_adder_2_bit_tb 
+# Start time: 12:44:16 on Sep 07,2023
+# Loading work.ripple_carry_adder_2_bit_tb
+# Loading work.ripple_carry_adder_2_bit
+# Loading work.full_adder
+# Loading work.half_adder
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Sum: 00, Carry Out: 0
+# Sum: 11, Carry Out: 0
+# Sum: 00, Carry Out: 1
+# Sum: 01, Carry Out: 1
+# ** Note: $finish    : /Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v(47)
+#    Time: 40 ns  Iteration: 0  Instance: /ripple_carry_adder_2_bit_tb
+# 1
+# Break in Module ripple_carry_adder_2_bit_tb at /Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v line 47
+# Error opening ///Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v
+# Path name '///Desktop/ECE550/Lab_1/ripple_carry_adder_2_bit/ripple_carry_adder_2_bit_tb.v' doesn't exist.
+# End time: 12:44:43 on Sep 07,2023, Elapsed time: 0:00:27
+# Errors: 1, Warnings: 0
