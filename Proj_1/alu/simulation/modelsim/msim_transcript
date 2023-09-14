@@ -12,102 +12,122 @@
 # 
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:20 on Sep 14,2023
+# Start time: 00:55:57 on Sep 15,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v 
 # -- Compiling module alu_1_bit
 # 
 # Top level modules:
 # 	alu_1_bit
-# End time: 22:46:20 on Sep 14,2023, Elapsed time: 0:00:00
+# End time: 00:55:57 on Sep 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:55:57 on Sep 15,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v 
+# -- Compiling module alu_1_bit_f
+# 
+# Top level modules:
+# 	alu_1_bit_f
+# End time: 00:55:57 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:20 on Sep 14,2023
+# Start time: 00:55:57 on Sep 15,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v 
 # -- Compiling module half_adder
 # -- Compiling module full_adder
 # 
 # Top level modules:
 # 	full_adder
-# End time: 22:46:20 on Sep 14,2023, Elapsed time: 0:00:00
+# End time: 00:55:57 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:20 on Sep 14,2023
+# Start time: 00:55:57 on Sep 15,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v 
 # -- Compiling module and_gate
 # 
 # Top level modules:
 # 	and_gate
-# End time: 22:46:20 on Sep 14,2023, Elapsed time: 0:00:00
+# End time: 00:55:57 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:21 on Sep 14,2023
+# Start time: 00:55:57 on Sep 15,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v 
 # -- Compiling module or_gate
 # 
 # Top level modules:
 # 	or_gate
-# End time: 22:46:21 on Sep 14,2023, Elapsed time: 0:00:00
+# End time: 00:55:58 on Sep 15,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:21 on Sep 14,2023
+# Start time: 00:55:58 on Sep 15,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v 
 # -- Compiling module not_gate
 # 
 # Top level modules:
 # 	not_gate
-# End time: 22:46:21 on Sep 14,2023, Elapsed time: 0:00:00
+# End time: 00:55:58 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:21 on Sep 14,2023
+# Start time: 00:55:58 on Sep 15,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v 
 # -- Compiling module mux_4
 # 
 # Top level modules:
 # 	mux_4
-# End time: 22:46:21 on Sep 14,2023, Elapsed time: 0:00:00
+# End time: 00:55:58 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:21 on Sep 14,2023
+# Start time: 00:55:58 on Sep 15,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v 
 # -- Compiling module mux_2
 # 
 # Top level modules:
 # 	mux_2
-# End time: 22:46:21 on Sep 14,2023, Elapsed time: 0:00:00
+# End time: 00:55:58 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v}
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:21 on Sep 14,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v 
-# -- Compiling module alu_16_bit
+# Start time: 00:55:58 on Sep 15,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v 
+# -- Compiling module overflow_check
 # 
 # Top level modules:
-# 	alu_16_bit
-# End time: 22:46:21 on Sep 14,2023, Elapsed time: 0:00:00
+# 	overflow_check
+# End time: 00:55:58 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_1/alu {/Desktop/ECE550/Proj_1/alu/alu_16_bit_tb.v}
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:21 on Sep 14,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/Desktop/ECE550/Proj_1/alu" /Desktop/ECE550/Proj_1/alu/alu_16_bit_tb.v 
-# -- Compiling module alu_16_bit_tb
+# Start time: 00:55:58 on Sep 15,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v 
+# -- Compiling module alu_16_bit_f
 # 
 # Top level modules:
-# 	alu_16_bit_tb
-# End time: 22:46:21 on Sep 14,2023, Elapsed time: 0:00:00
+# 	alu_16_bit_f
+# End time: 00:55:58 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  alu_16_bit_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" alu_16_bit_tb 
-# Start time: 22:46:21 on Sep 14,2023
-# Loading work.alu_16_bit_tb
-# Loading work.alu_16_bit
+# vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_1/alu {/Desktop/ECE550/Proj_1/alu/alu_16_bit_f_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:55:58 on Sep 15,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/Desktop/ECE550/Proj_1/alu" /Desktop/ECE550/Proj_1/alu/alu_16_bit_f_tb.v 
+# -- Compiling module alu_16_bit_f_tb
+# 
+# Top level modules:
+# 	alu_16_bit_f_tb
+# End time: 00:55:58 on Sep 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  alu_16_bit_f_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" alu_16_bit_f_tb 
+# Start time: 00:55:59 on Sep 15,2023
+# Loading work.alu_16_bit_f_tb
+# Loading work.alu_16_bit_f
 # Loading work.alu_1_bit
 # Loading work.not_gate
 # Loading work.mux_2
@@ -116,6 +136,8 @@
 # Loading work.full_adder
 # Loading work.half_adder
 # Loading work.mux_4
+# Loading work.alu_1_bit_f
+# Loading work.overflow_check
 # 
 # add wave *
 # view structure
@@ -124,8 +146,5 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 #                    0 simulation start
-# Simulation succeeded with no errors.
-# Break key hit
-# Break in Module alu_16_bit_tb at /Desktop/ECE550/Proj_1/alu/alu_16_bit_tb.v line 111
-# End time: 22:46:35 on Sep 14,2023, Elapsed time: 0:00:14
-# Errors: 0, Warnings: 0
+# Testcase 2 failed, got (out = 0011010110000101) supposed (out = 0010110111001101)
+# Simulation failed with           1 error(s).

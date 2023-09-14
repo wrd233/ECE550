@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Thu Sep 14 22:28:33 2023
+Fri Sep 15 00:39:36 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -14,10 +14,12 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "alu_1_bit:fa0|mux_4:mx3"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "alu_1_bit_f:fa15|mux_4:mx3"
+ 11. Port Connectivity Checks: "alu_1_bit:fa0|mux_4:mx3"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +45,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 14 22:28:33 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 15 00:39:36 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; alu                                         ;
-; Top-level Entity Name              ; alu_16_bit                                  ;
+; Top-level Entity Name              ; alu_16_bit_f                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 68                                          ;
-;     Total combinational functions  ; 68                                          ;
+; Total logic elements               ; 67                                          ;
+;     Total combinational functions  ; 67                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 54                                          ;
+; Total pins                         ; 55                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +68,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; alu_16_bit         ; alu                ;
+; Top-level entity name                                            ; alu_16_bit_f       ; alu                ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,20 +164,22 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
-; alu_1_bit.v                      ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v  ;         ;
-; full_adder.v                     ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v ;         ;
-; and_gate.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v   ;         ;
-; or_gate.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v    ;         ;
-; not_gate.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v   ;         ;
-; mux_4.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v      ;         ;
-; mux_2.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v      ;         ;
-; alu_16_bit.v                     ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                          ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
+; alu_1_bit.v                      ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v      ;         ;
+; alu_1_bit_f.v                    ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v    ;         ;
+; full_adder.v                     ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v     ;         ;
+; and_gate.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v       ;         ;
+; or_gate.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v        ;         ;
+; not_gate.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v       ;         ;
+; mux_4.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v          ;         ;
+; mux_2.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v          ;         ;
+; overflow_check.v                 ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v ;         ;
+; alu_16_bit_f.v                   ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v   ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -183,120 +187,121 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 68            ;
+; Estimated Total logic elements              ; 67            ;
 ;                                             ;               ;
-; Total combinational functions               ; 68            ;
+; Total combinational functions               ; 67            ;
 ; Logic element usage by number of LUT inputs ;               ;
 ;     -- 4 input functions                    ; 50            ;
 ;     -- 3 input functions                    ; 0             ;
-;     -- <=2 input functions                  ; 18            ;
+;     -- <=2 input functions                  ; 17            ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 68            ;
+;     -- normal mode                          ; 67            ;
 ;     -- arithmetic mode                      ; 0             ;
 ;                                             ;               ;
 ; Total registers                             ; 0             ;
 ;     -- Dedicated logic registers            ; 0             ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 54            ;
+; I/O pins                                    ; 55            ;
 ;                                             ;               ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; Binvert~input ;
-; Maximum fan-out                             ; 32            ;
+; Maximum fan-out                             ; 33            ;
 ; Total fan-out                               ; 307           ;
-; Average fan-out                             ; 1.74          ;
+; Average fan-out                             ; 1.73          ;
 +---------------------------------------------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------+--------------+
-; |alu_16_bit                ; 68 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 54   ; 0            ; |alu_16_bit                                       ; alu_16_bit  ; work         ;
-;    |alu_1_bit:fa0|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa0                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa0|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa0|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa0|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa0|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa10|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa10                        ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa10|full_adder:fa          ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa10|mux_2:mx1              ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa10|mux_4:mx3              ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa10|mux_4:mx3|mux_2:second ; mux_2       ; work         ;
-;    |alu_1_bit:fa11|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa11                        ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa11|full_adder:fa          ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa11|mux_2:mx1              ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa11|mux_4:mx3              ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa11|mux_4:mx3|mux_2:second ; mux_2       ; work         ;
-;    |alu_1_bit:fa12|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa12                        ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa12|full_adder:fa          ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa12|mux_2:mx1              ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa12|mux_4:mx3              ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa12|mux_4:mx3|mux_2:second ; mux_2       ; work         ;
-;    |alu_1_bit:fa13|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa13                        ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa13|full_adder:fa          ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa13|mux_2:mx1              ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa13|mux_4:mx3              ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa13|mux_4:mx3|mux_2:second ; mux_2       ; work         ;
-;    |alu_1_bit:fa14|        ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa14                        ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa14|full_adder:fa          ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa14|mux_2:mx1              ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa14|mux_4:mx3              ; mux_4       ; work         ;
-;          |mux_2:second|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa14|mux_4:mx3|mux_2:second ; mux_2       ; work         ;
-;    |alu_1_bit:fa15|        ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa15                        ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa15|full_adder:fa          ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa15|mux_2:mx1              ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa15|mux_4:mx3              ; mux_4       ; work         ;
-;          |mux_2:second|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa15|mux_4:mx3|mux_2:second ; mux_2       ; work         ;
-;    |alu_1_bit:fa1|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa1                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa1|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa1|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa1|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa1|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa2|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa2                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa2|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa2|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa2|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa2|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa3|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa3                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa3|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa3|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa3|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa3|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa4|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa4                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa4|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa4|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa4|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa4|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa5|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa5                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa5|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa5|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa5|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa5|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa6|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa6                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa6|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa6|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa6|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa6|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa7|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa7                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa7|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa7|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa7|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa7|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa8|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa8                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa8|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa8|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa8|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa8|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-;    |alu_1_bit:fa9|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa9                         ; alu_1_bit   ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa9|full_adder:fa           ; full_adder  ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa9|mux_2:mx1               ; mux_2       ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa9|mux_4:mx3               ; mux_4       ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit|alu_1_bit:fa9|mux_4:mx3|mux_2:second  ; mux_2       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+----------------+--------------+
+; |alu_16_bit_f              ; 67 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 55   ; 0            ; |alu_16_bit_f                                         ; alu_16_bit_f   ; work         ;
+;    |alu_1_bit:fa0|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa10|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10                          ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10|full_adder:fa            ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10|mux_2:mx1                ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10|mux_4:mx3                ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
+;    |alu_1_bit:fa11|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11                          ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11|full_adder:fa            ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11|mux_2:mx1                ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11|mux_4:mx3                ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
+;    |alu_1_bit:fa12|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12                          ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12|full_adder:fa            ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12|mux_2:mx1                ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12|mux_4:mx3                ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
+;    |alu_1_bit:fa13|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13                          ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13|full_adder:fa            ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13|mux_2:mx1                ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13|mux_4:mx3                ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
+;    |alu_1_bit:fa14|        ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14                          ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14|full_adder:fa            ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14|mux_2:mx1                ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14|mux_4:mx3                ; mux_4          ; work         ;
+;          |mux_2:second|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
+;    |alu_1_bit:fa1|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa2|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa3|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa4|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa5|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa6|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa7|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa8|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit:fa9|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9                           ; alu_1_bit      ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9|full_adder:fa             ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9|mux_2:mx1                 ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9|mux_4:mx3                 ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
+;    |alu_1_bit_f:fa15|      ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15                        ; alu_1_bit_f    ; work         ;
+;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|full_adder:fa          ; full_adder     ; work         ;
+;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|mux_2:mx1              ; mux_2          ; work         ;
+;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|mux_4:mx3              ; mux_4          ; work         ;
+;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|mux_4:mx3|mux_2:second ; mux_2          ; work         ;
+;       |overflow_check:oc|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|overflow_check:oc      ; overflow_check ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -315,6 +320,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3|mux_2:second|out ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "alu_1_bit_f:fa15|mux_4:mx3" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; in3  ; Input ; Info     ; Stuck at GND                 ;
++------+-------+----------+------------------------------+
+
+
 +-----------------------------------------------------+
 ; Port Connectivity Checks: "alu_1_bit:fa0|mux_4:mx3" ;
 +------+-------+----------+---------------------------+
@@ -329,14 +352,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 54                          ;
-; cycloneiii_lcell_comb ; 68                          ;
-;     normal            ; 68                          ;
-;         2 data inputs ; 18                          ;
+; boundary_port         ; 55                          ;
+; cycloneiii_lcell_comb ; 67                          ;
+;     normal            ; 67                          ;
+;         2 data inputs ; 17                          ;
 ;         4 data inputs ; 50                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 18.00                       ;
-; Average LUT depth     ; 11.28                       ;
+; Average LUT depth     ; 11.43                       ;
 +-----------------------+-----------------------------+
 
 
@@ -355,7 +378,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Sep 14 22:28:18 2023
+    Info: Processing started: Fri Sep 15 00:39:22 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -388,8 +411,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_1_b
     Info (12023): Found entity 1: alu_1_bit_tb File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_tb.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file alu_16_bit.v
     Info (12023): Found entity 1: alu_16_bit File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v Line: 1
-Info (12127): Elaborating entity "alu_16_bit" for the top level hierarchy
-Info (12128): Elaborating entity "alu_1_bit" for hierarchy "alu_1_bit:fa0" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file alu_16_bit_tb.v
+    Info (12023): Found entity 1: alu_16_bit_tb File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_tb.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file overflow_check.v
+    Info (12023): Found entity 1: overflow_check File: //Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_16_bit_f.v
+    Info (12023): Found entity 1: alu_16_bit_f File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v Line: 1
+Info (12127): Elaborating entity "alu_16_bit_f" for the top level hierarchy
+Info (12128): Elaborating entity "alu_1_bit" for hierarchy "alu_1_bit:fa0" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v Line: 10
 Info (12128): Elaborating entity "not_gate" for hierarchy "alu_1_bit:fa0|not_gate:ng1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 12
 Info (12128): Elaborating entity "mux_2" for hierarchy "alu_1_bit:fa0|mux_2:mx1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 13
 Info (12128): Elaborating entity "and_gate" for hierarchy "alu_1_bit:fa0|and_gate:ad" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 19
@@ -397,17 +426,19 @@ Info (12128): Elaborating entity "or_gate" for hierarchy "alu_1_bit:fa0|or_gate:
 Info (12128): Elaborating entity "full_adder" for hierarchy "alu_1_bit:fa0|full_adder:fa" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 25
 Info (12128): Elaborating entity "half_adder" for hierarchy "alu_1_bit:fa0|full_adder:fa|half_adder:ha1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v Line: 15
 Info (12128): Elaborating entity "mux_4" for hierarchy "alu_1_bit:fa0|mux_4:mx3" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 28
+Info (12128): Elaborating entity "alu_1_bit_f" for hierarchy "alu_1_bit_f:fa15" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v Line: 25
+Info (12128): Elaborating entity "overflow_check" for hierarchy "alu_1_bit_f:fa15|overflow_check:oc" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v Line: 31
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 37 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 68 logic cells
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 67 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Thu Sep 14 22:28:33 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Fri Sep 15 00:39:36 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 

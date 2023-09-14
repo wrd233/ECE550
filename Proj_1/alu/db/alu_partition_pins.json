@@ -72,6 +72,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "overflow",
+					"strict" : false
+				},
+				{
 					"name" : "Binvert",
 					"strict" : false
 				},

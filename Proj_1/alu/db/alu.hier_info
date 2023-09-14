@@ -1,4 +1,4 @@
-|alu_16_bit
+|alu_16_bit_f
 operandA[0] => operandA[0].IN1
 operandA[1] => operandA[1].IN1
 operandA[2] => operandA[2].IN1
@@ -36,7 +36,7 @@ Binvert => Binvert.IN16
 Operation[0] => Operation[0].IN16
 Operation[1] => Operation[1].IN16
 carry_in => carry_in.IN1
-carry_out <= alu_1_bit:fa15.port6
+carry_out <= alu_1_bit_f:fa15.port6
 out[0] <= alu_1_bit:fa0.port7
 out[1] <= alu_1_bit:fa1.port7
 out[2] <= alu_1_bit:fa2.port7
@@ -52,10 +52,11 @@ out[11] <= alu_1_bit:fa11.port7
 out[12] <= alu_1_bit:fa12.port7
 out[13] <= alu_1_bit:fa13.port7
 out[14] <= alu_1_bit:fa14.port7
-out[15] <= alu_1_bit:fa15.port7
+out[15] <= alu_1_bit_f:fa15.port7
+overflow <= alu_1_bit_f:fa15.port8
 
 
-|alu_16_bit|alu_1_bit:fa0
+|alu_16_bit_f|alu_1_bit:fa0
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -67,43 +68,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa0|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa0|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa0|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa0|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa0|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa0|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa0|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa0|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -111,7 +112,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa0|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -120,7 +121,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa0|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -129,7 +130,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -139,28 +140,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa0|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa0|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1
+|alu_16_bit_f|alu_1_bit:fa1
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -172,43 +173,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa1|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa1|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa1|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa1|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa1|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa1|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa1|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa1|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -216,7 +217,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa1|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -225,7 +226,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa1|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -234,7 +235,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa1|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -244,28 +245,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa1|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa1|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa1|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa1|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa1|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2
+|alu_16_bit_f|alu_1_bit:fa2
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -277,43 +278,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa2|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa2|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa2|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa2|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa2|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa2|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa2|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa2|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -321,7 +322,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa2|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -330,7 +331,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa2|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -339,7 +340,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa2|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -349,28 +350,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa2|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa2|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa2|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa2|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa2|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3
+|alu_16_bit_f|alu_1_bit:fa3
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -382,43 +383,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa3|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa3|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa3|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa3|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa3|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa3|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa3|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa3|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -426,7 +427,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa3|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -435,7 +436,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa3|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -444,7 +445,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa3|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -454,28 +455,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa3|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa3|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa3|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa3|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa3|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4
+|alu_16_bit_f|alu_1_bit:fa4
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -487,43 +488,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa4|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa4|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa4|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa4|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa4|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa4|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa4|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa4|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -531,7 +532,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa4|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -540,7 +541,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa4|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -549,7 +550,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa4|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -559,28 +560,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa4|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa4|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa4|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa4|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa4|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5
+|alu_16_bit_f|alu_1_bit:fa5
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -592,43 +593,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa5|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa5|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa5|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa5|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa5|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa5|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa5|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa5|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -636,7 +637,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa5|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -645,7 +646,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa5|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -654,7 +655,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa5|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -664,28 +665,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa5|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa5|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa5|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa5|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa5|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6
+|alu_16_bit_f|alu_1_bit:fa6
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -697,43 +698,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa6|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa6|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa6|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa6|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa6|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa6|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa6|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa6|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -741,7 +742,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa6|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -750,7 +751,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa6|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -759,7 +760,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa6|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -769,28 +770,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa6|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa6|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa6|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa6|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa6|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7
+|alu_16_bit_f|alu_1_bit:fa7
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -802,43 +803,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa7|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa7|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa7|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa7|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa7|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa7|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa7|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa7|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -846,7 +847,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa7|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -855,7 +856,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa7|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -864,7 +865,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa7|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -874,28 +875,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa7|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa7|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa7|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa7|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa7|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8
+|alu_16_bit_f|alu_1_bit:fa8
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -907,43 +908,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa8|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa8|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa8|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa8|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa8|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa8|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa8|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa8|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -951,7 +952,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa8|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -960,7 +961,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa8|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -969,7 +970,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa8|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -979,28 +980,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa8|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa8|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa8|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa8|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa8|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9
+|alu_16_bit_f|alu_1_bit:fa9
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -1012,43 +1013,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa9|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa9|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa9|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa9|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa9|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa9|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa9|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa9|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -1056,7 +1057,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa9|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1065,7 +1066,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa9|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1074,7 +1075,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa9|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -1084,28 +1085,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa9|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa9|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa9|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa9|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa9|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10
+|alu_16_bit_f|alu_1_bit:fa10
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -1117,43 +1118,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa10|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa10|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa10|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa10|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa10|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa10|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa10|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa10|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -1161,7 +1162,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa10|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1170,7 +1171,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa10|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1179,7 +1180,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa10|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -1189,28 +1190,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa10|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa10|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa10|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa10|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa10|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11
+|alu_16_bit_f|alu_1_bit:fa11
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -1222,43 +1223,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa11|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa11|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa11|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa11|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa11|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa11|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa11|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa11|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -1266,7 +1267,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa11|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1275,7 +1276,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa11|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1284,7 +1285,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa11|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -1294,28 +1295,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa11|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa11|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa11|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa11|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa11|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12
+|alu_16_bit_f|alu_1_bit:fa12
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -1327,43 +1328,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa12|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa12|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa12|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa12|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa12|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa12|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa12|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa12|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -1371,7 +1372,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa12|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1380,7 +1381,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa12|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1389,7 +1390,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa12|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -1399,28 +1400,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa12|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa12|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa12|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa12|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa12|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13
+|alu_16_bit_f|alu_1_bit:fa13
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -1432,43 +1433,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa13|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa13|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa13|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa13|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa13|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa13|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa13|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa13|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -1476,7 +1477,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa13|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1485,7 +1486,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa13|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1494,7 +1495,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa13|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -1504,28 +1505,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa13|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa13|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa13|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa13|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa13|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14
+|alu_16_bit_f|alu_1_bit:fa14
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -1537,43 +1538,43 @@ carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
 
 
-|alu_16_bit|alu_1_bit:fa14|not_gate:ng1
+|alu_16_bit_f|alu_1_bit:fa14|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|mux_2:mx1
+|alu_16_bit_f|alu_1_bit:fa14|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|not_gate:ng2
+|alu_16_bit_f|alu_1_bit:fa14|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|mux_2:mx2
+|alu_16_bit_f|alu_1_bit:fa14|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|and_gate:ad
+|alu_16_bit_f|alu_1_bit:fa14|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|or_gate:og
+|alu_16_bit_f|alu_1_bit:fa14|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|full_adder:fa
+|alu_16_bit_f|alu_1_bit:fa14|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -1581,7 +1582,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit:fa14|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1590,7 +1591,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit:fa14|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1599,7 +1600,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|mux_4:mx3
+|alu_16_bit_f|alu_1_bit:fa14|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -1609,28 +1610,28 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa14|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit:fa14|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit:fa14|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa14|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit:fa14|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15
+|alu_16_bit_f|alu_1_bit_f:fa15
 operandA => operandA.IN2
 operandB => operandB.IN2
 Ainvert => Ainvert.IN1
@@ -1640,45 +1641,46 @@ Operation[1] => Operation[1].IN1
 carry_in => carry_in.IN1
 carry_out <= full_adder:fa.port4
 out <= mux_4:mx3.port5
+overflow <= overflow_check:oc.port3
 
 
-|alu_16_bit|alu_1_bit:fa15|not_gate:ng1
+|alu_16_bit_f|alu_1_bit_f:fa15|not_gate:ng1
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|mux_2:mx1
+|alu_16_bit_f|alu_1_bit_f:fa15|mux_2:mx1
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|not_gate:ng2
+|alu_16_bit_f|alu_1_bit_f:fa15|not_gate:ng2
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|mux_2:mx2
+|alu_16_bit_f|alu_1_bit_f:fa15|mux_2:mx2
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|and_gate:ad
+|alu_16_bit_f|alu_1_bit_f:fa15|and_gate:ad
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|or_gate:og
+|alu_16_bit_f|alu_1_bit_f:fa15|or_gate:og
 a => my_and.IN0
 b => my_and.IN1
 out <= my_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|full_adder:fa
+|alu_16_bit_f|alu_1_bit_f:fa15|full_adder:fa
 in0 => in0.IN1
 in1 => in1.IN1
 carry_in => carry_in.IN1
@@ -1686,7 +1688,7 @@ sum <= half_adder:ha2.port2
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|full_adder:fa|half_adder:ha1
+|alu_16_bit_f|alu_1_bit_f:fa15|full_adder:fa|half_adder:ha1
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1695,7 +1697,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|full_adder:fa|half_adder:ha2
+|alu_16_bit_f|alu_1_bit_f:fa15|full_adder:fa|half_adder:ha2
 in0 => comb.IN0
 in0 => comb.IN0
 in1 => comb.IN1
@@ -1704,7 +1706,7 @@ sum <= comb.DB_MAX_OUTPUT_PORT_TYPE
 carry_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|mux_4:mx3
+|alu_16_bit_f|alu_1_bit_f:fa15|mux_4:mx3
 select[0] => select[0].IN2
 select[1] => select[1].IN1
 in0 => in0.IN1
@@ -1714,24 +1716,46 @@ in3 => in3.IN1
 out <= mux_2:second.out
 
 
-|alu_16_bit|alu_1_bit:fa15|mux_4:mx3|mux_2:first_top
+|alu_16_bit_f|alu_1_bit_f:fa15|mux_4:mx3|mux_2:first_top
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|mux_4:mx3|mux_2:first_bottom
+|alu_16_bit_f|alu_1_bit_f:fa15|mux_4:mx3|mux_2:first_bottom
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu_16_bit|alu_1_bit:fa15|mux_4:mx3|mux_2:second
+|alu_16_bit_f|alu_1_bit_f:fa15|mux_4:mx3|mux_2:second
 select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_16_bit_f|alu_1_bit_f:fa15|overflow_check:oc
+AV => AV.IN1
+BV => BV.IN1
+addOut => addOut.IN1
+overflow <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_16_bit_f|alu_1_bit_f:fa15|overflow_check:oc|not_gate:ng1
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_16_bit_f|alu_1_bit_f:fa15|overflow_check:oc|not_gate:ng2
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_16_bit_f|alu_1_bit_f:fa15|overflow_check:oc|not_gate:ng3
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
