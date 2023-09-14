@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d//Mac/Home/Desktop/ECE550/Lab_2/nand_adder/simulation/modelsim
 vnand_adder
-Z1 !s110 1694670315
+Z1 !s110 1694675590
 !i10b 1
 !s100 o=oVA8Ko>S_^B1<d56D>K1
 IB0?@BPiVf0iQj]`jmzlzF3
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1694670315.000000
+Z7 !s108 1694675590.000000
 Z8 !s107 //Mac/Home/Desktop/ECE550/Lab_2/nand_adder/nand_adder.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_2/nand_adder|//Mac/Home/Desktop/ECE550/Lab_2/nand_adder/nand_adder.v|
 !i113 1
@@ -31,13 +31,13 @@ Z10 o-vlog01compat -work work
 Z11 !s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Lab_2/nand_adder
 Z12 tCvgOpt 0
 vnand_adder_tb
-R1
+!s110 1694675591
 !i10b 1
-!s100 jlEfY42AAY<PzCeH1]O1i2
-IJH>c37TnBL?J_cBkFz=Z10
+!s100 H6IFABLS31O@O^@92KB<c1
+In00mFgSaJA:OKgXAWaViz2
 R2
 R0
-w1694670297
+w1694670343
 8/Desktop/ECE550/Lab_2/nand_adder/nand_adder_tb.v
 F/Desktop/ECE550/Lab_2/nand_adder/nand_adder_tb.v
 L0 4
@@ -45,7 +45,7 @@ R6
 r1
 !s85 0
 31
-R7
+!s108 1694675591.000000
 !s107 /Desktop/ECE550/Lab_2/nand_adder/nand_adder_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Lab_2/nand_adder|/Desktop/ECE550/Lab_2/nand_adder/nand_adder_tb.v|
 !i113 1
