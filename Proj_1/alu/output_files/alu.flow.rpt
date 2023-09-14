@@ -1,5 +1,5 @@
 Flow report for alu
-Thu Sep 14 22:01:11 2023
+Thu Sep 14 22:28:54 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 14 22:01:11 2023       ;
+; Flow Status                        ; Successful - Thu Sep 14 22:28:54 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; alu                                         ;
-; Top-level Entity Name              ; alu_1_bit                                   ;
+; Top-level Entity Name              ; alu_16_bit                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 5 / 114,480 ( < 1 % )                       ;
-;     Total combinational functions  ; 5 / 114,480 ( < 1 % )                       ;
+; Total logic elements               ; 68 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 68 / 114,480 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 9 / 529 ( 2 % )                             ;
+; Total pins                         ; 54 / 529 ( 10 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/14/2023 22:00:39 ;
+; Start date & time ; 09/14/2023 22:28:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 121380277911.169470003905312           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 121380277911.169470169903516           ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_1_bit_tb   ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; alu_1_bit_tb                           ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR        ; simulation/modelsim                    ; --            ; --          ; eda_simulation ;
@@ -89,13 +89,13 @@ refer to the applicable agreement for further details.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; alu_1_bit   ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; alu_1_bit   ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; alu_1_bit   ; Top            ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; alu_16_bit  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; alu_16_bit  ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; alu_16_bit  ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; alu_1_bit                              ; alu           ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; alu_16_bit                             ; alu           ; --          ; --             ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -104,12 +104,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4771 MB             ; 00:00:22                           ;
-; Fitter               ; 00:00:09     ; 1.0                     ; 5820 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4868 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4653 MB             ; 00:00:01                           ;
-; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4772 MB             ; 00:00:26                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 5818 MB             ; 00:00:15                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4866 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Total                ; 00:00:30     ; --                      ; --                  ; 00:00:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
