@@ -2,7 +2,44 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "carry_out",
+					"strict" : false
+				},
+				{
+					"name" : "out",
+					"strict" : false
+				},
+				{
+					"name" : "Binvert",
+					"strict" : false
+				},
+				{
+					"name" : "operandB",
+					"strict" : false
+				},
+				{
+					"name" : "operandA",
+					"strict" : false
+				},
+				{
+					"name" : "Ainvert",
+					"strict" : false
+				},
+				{
+					"name" : "carry_in",
+					"strict" : false
+				},
+				{
+					"name" : "Operation[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Operation[1]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

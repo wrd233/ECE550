@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Thu Sep 14 19:51:49 2023
+Thu Sep 14 22:00:51 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "mux_4:mx3"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 14 19:51:49 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 14 22:00:51 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; alu                                         ;
-; Top-level Entity Name              ; alu                                         ;
+; Top-level Entity Name              ; alu_1_bit                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
+; Total logic elements               ; 5                                           ;
+;     Total combinational functions  ; 5                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 109                                         ;
+; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -65,7 +66,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; alu                ; alu                ;
+; Top-level entity name                                            ; alu_1_bit          ; alu                ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -161,53 +162,64 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
-; alu.v                            ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; alu_1_bit.v                      ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v  ;         ;
+; full_adder.v                     ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v ;         ;
+; and_gate.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v   ;         ;
+; or_gate.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v    ;         ;
+; not_gate.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v   ;         ;
+; mux_4.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v      ;         ;
+; mux_2.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v      ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-;                                             ;                  ;
-; Total combinational functions               ; 0                ;
-; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 0                ;
-;     -- 3 input functions                    ; 0                ;
-;     -- <=2 input functions                  ; 0                ;
-;                                             ;                  ;
-; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 0                ;
-;     -- arithmetic mode                      ; 0                ;
-;                                             ;                  ;
-; Total registers                             ; 0                ;
-;     -- Dedicated logic registers            ; 0                ;
-;     -- I/O registers                        ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 109              ;
-;                                             ;                  ;
-; Embedded Multiplier 9-bit elements          ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; data_operandA[0] ;
-; Maximum fan-out                             ; 1                ;
-; Total fan-out                               ; 109              ;
-; Average fan-out                             ; 0.50             ;
-+---------------------------------------------+------------------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 5               ;
+;                                             ;                 ;
+; Total combinational functions               ; 5               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 3               ;
+;     -- 3 input functions                    ; 1               ;
+;     -- <=2 input functions                  ; 1               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 5               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 9               ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; mux_2:mx1|out~0 ;
+; Maximum fan-out                             ; 2               ;
+; Total fan-out                               ; 28              ;
+; Average fan-out                             ; 1.22            ;
++---------------------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |alu                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 109  ; 0            ; |alu                ; alu         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
+; |alu_1_bit                 ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |alu_1_bit                        ; alu_1_bit   ; work         ;
+;    |full_adder:fa|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_1_bit|full_adder:fa          ; full_adder  ; work         ;
+;    |mux_2:mx1|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_1_bit|mux_2:mx1              ; mux_2       ; work         ;
+;    |mux_4:mx3|             ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_1_bit|mux_4:mx3              ; mux_4       ; work         ;
+;       |mux_2:second|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_1_bit|mux_4:mx3|mux_2:second ; mux_2       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -226,18 +238,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------+
+; Port Connectivity Checks: "mux_4:mx3"  ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; in3  ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 109                         ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 9                           ;
+; cycloneiii_lcell_comb ; 5                           ;
+;     normal            ; 5                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -256,7 +279,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Sep 14 19:51:32 2023
+    Info: Processing started: Thu Sep 14 22:00:38 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -266,10 +289,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: alu File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nand.v
     Info (12023): Found entity 1: nand_gate File: //Mac/Home/Desktop/ECE550/Proj_1/alu/nand.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file and32.v
-    Info (12023): Found entity 1: add32 File: //Mac/Home/Desktop/ECE550/Proj_1/alu/and32.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file or32.v
-    Info (12023): Found entity 1: or32 File: //Mac/Home/Desktop/ECE550/Proj_1/alu/or32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_1_bit.v
     Info (12023): Found entity 1: alu_1_bit File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_1_bit_f.v
@@ -277,132 +296,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_1_b
 Info (12021): Found 2 design units, including 2 entities, in source file full_adder.v
     Info (12023): Found entity 1: half_adder File: //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v Line: 1
     Info (12023): Found entity 2: full_adder File: //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v Line: 9
-Info (12127): Elaborating entity "alu" for the top level hierarchy
-Warning (10034): Output port "data_result" at alu.v(6) has no driver File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-Warning (10034): Output port "isNotEqual" at alu.v(7) has no driver File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
-Warning (10034): Output port "isLessThan" at alu.v(7) has no driver File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
-Warning (10034): Output port "overflow" at alu.v(7) has no driver File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
-Warning (12158): Entity "alu" contains only dangling pins
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "data_result[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[5]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[6]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[7]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[8]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[9]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[10]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[11]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[12]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[13]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[14]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[15]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[16]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[17]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[18]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[19]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[20]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[21]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[22]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[23]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[24]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[25]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[26]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[27]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[28]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[29]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[30]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "data_result[31]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 6
-    Warning (13410): Pin "isNotEqual" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
-    Warning (13410): Pin "isLessThan" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
-    Warning (13410): Pin "overflow" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file and_gate.v
+    Info (12023): Found entity 1: and_gate File: //Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_gate.v
+    Info (12023): Found entity 1: or_gate File: //Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file not_gate.v
+    Info (12023): Found entity 1: not_gate File: //Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4.v
+    Info (12023): Found entity 1: mux_4 File: //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_8.v
+    Info (12023): Found entity 1: mux_8 File: //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_8.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2.v
+    Info (12023): Found entity 1: mux_2 File: //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_1_bit_tb.v
+    Info (12023): Found entity 1: alu_1_bit_tb File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_tb.v Line: 4
+Info (12127): Elaborating entity "alu_1_bit" for the top level hierarchy
+Info (12128): Elaborating entity "not_gate" for hierarchy "not_gate:ng1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 12
+Info (12128): Elaborating entity "mux_2" for hierarchy "mux_2:mx1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 13
+Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:ad" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 19
+Info (12128): Elaborating entity "or_gate" for hierarchy "or_gate:og" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 22
+Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:fa" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 25
+Info (12128): Elaborating entity "half_adder" for hierarchy "full_adder:fa|half_adder:ha1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v Line: 15
+Info (12128): Elaborating entity "mux_4" for hierarchy "mux_4:mx3" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 28
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 74 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "data_operandA[0]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[1]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[2]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[3]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[4]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[5]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[6]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[7]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[8]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[9]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[10]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[11]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[12]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[13]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[14]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[15]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[16]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[17]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[18]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[19]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[20]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[21]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[22]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[23]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[24]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[25]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[26]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[27]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[28]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[29]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[30]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandA[31]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[0]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[1]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[2]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[3]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[4]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[5]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[6]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[7]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[8]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[9]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[10]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[11]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[12]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[13]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[14]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[15]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[16]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[17]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[18]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[19]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[20]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[21]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[22]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[23]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[24]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[25]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[26]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[27]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[28]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[29]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[30]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "data_operandB[31]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 3
-    Warning (15610): No output dependent on input pin "ctrl_ALUopcode[0]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_ALUopcode[1]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_ALUopcode[2]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_ALUopcode[3]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_ALUopcode[4]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_shiftamt[0]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_shiftamt[1]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_shiftamt[2]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_shiftamt[3]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-    Warning (15610): No output dependent on input pin "ctrl_shiftamt[4]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
-Info (21057): Implemented 109 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 74 input pins
-    Info (21059): Implemented 35 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 117 warnings
-    Info: Peak virtual memory: 4742 megabytes
-    Info: Processing ended: Thu Sep 14 19:51:49 2023
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:36
+Info (21057): Implemented 14 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 5 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Thu Sep 14 22:00:51 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:22
 
 

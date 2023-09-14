@@ -10,33 +10,101 @@
 # Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v}
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:52:43 on Sep 14,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v 
-# -- Compiling module alu
+# Start time: 22:04:05 on Sep 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v 
+# -- Compiling module alu_1_bit
 # 
 # Top level modules:
-# 	alu
-# End time: 19:52:43 on Sep 14,2023, Elapsed time: 0:00:00
+# 	alu_1_bit
+# End time: 22:04:05 on Sep 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_1/alu {/Desktop/ECE550/Proj_1/alu/alu_tb.v}
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:52:43 on Sep 14,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/Desktop/ECE550/Proj_1/alu" /Desktop/ECE550/Proj_1/alu/alu_tb.v 
-# -- Compiling module alu_tb
+# Start time: 22:04:05 on Sep 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v 
+# -- Compiling module half_adder
+# -- Compiling module full_adder
 # 
 # Top level modules:
-# 	alu_tb
-# End time: 19:52:43 on Sep 14,2023, Elapsed time: 0:00:00
+# 	full_adder
+# End time: 22:04:05 on Sep 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:04:05 on Sep 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v 
+# -- Compiling module and_gate
+# 
+# Top level modules:
+# 	and_gate
+# End time: 22:04:06 on Sep 14,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:04:06 on Sep 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v 
+# -- Compiling module or_gate
+# 
+# Top level modules:
+# 	or_gate
+# End time: 22:04:06 on Sep 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:04:06 on Sep 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v 
+# -- Compiling module not_gate
+# 
+# Top level modules:
+# 	not_gate
+# End time: 22:04:06 on Sep 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:04:06 on Sep 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v 
+# -- Compiling module mux_4
+# 
+# Top level modules:
+# 	mux_4
+# End time: 22:04:06 on Sep 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:04:06 on Sep 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu" //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v 
+# -- Compiling module mux_2
+# 
+# Top level modules:
+# 	mux_2
+# End time: 22:04:06 on Sep 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  alu_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" alu_tb 
-# Start time: 19:52:43 on Sep 14,2023
-# Loading work.alu_tb
-# Loading work.alu
+# vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_1/alu {/Desktop/ECE550/Proj_1/alu/alu_1_bit_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:04:06 on Sep 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/Desktop/ECE550/Proj_1/alu" /Desktop/ECE550/Proj_1/alu/alu_1_bit_tb.v 
+# -- Compiling module alu_1_bit_tb
+# 
+# Top level modules:
+# 	alu_1_bit_tb
+# End time: 22:04:06 on Sep 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  alu_1_bit_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" alu_1_bit_tb 
+# Start time: 22:04:06 on Sep 14,2023
+# Loading work.alu_1_bit_tb
+# Loading work.alu_1_bit
+# Loading work.not_gate
+# Loading work.mux_2
+# Loading work.and_gate
+# Loading work.or_gate
+# Loading work.full_adder
+# Loading work.half_adder
+# Loading work.mux_4
 # 
 # add wave *
 # view structure
@@ -44,74 +112,9 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-#                    0 << Starting the Simulation >>
-# **Error in OR (test 1); expected: 00000000, actual: zzzzzzzz
-# **Error in OR (test 2); expected: ffffffff, actual: zzzzzzzz
-# **Error in OR (test 3); expected: ffffffff, actual: zzzzzzzz
-# **Error in OR (test 4); expected: ffffffff, actual: zzzzzzzz
-# **Error in AND (test 5); expected: 00000000, actual: zzzzzzzz
-# **Error in AND (test 6); expected: 00000000, actual: zzzzzzzz
-# **Error in AND (test 7); expected: 00000000, actual: zzzzzzzz
-# **Error in AND (test 8); expected: ffffffff, actual: zzzzzzzz
-# **Error in ADD (test 9); expected: 00000000, actual: zzzzzzzz
-# **Error in ADD (test 17 part           0); expected: 00000002, actual: zzzzzzzz
-# **Error in ADD (test 17 part           1); expected: 00000004, actual: zzzzzzzz
-# **Error in ADD (test 17 part           2); expected: 00000008, actual: zzzzzzzz
-# **Error in ADD (test 17 part           3); expected: 00000010, actual: zzzzzzzz
-# **Error in ADD (test 17 part           4); expected: 00000020, actual: zzzzzzzz
-# **Error in ADD (test 17 part           5); expected: 00000040, actual: zzzzzzzz
-# **Error in ADD (test 17 part           6); expected: 00000080, actual: zzzzzzzz
-# **Error in ADD (test 17 part           7); expected: 00000100, actual: zzzzzzzz
-# **Error in ADD (test 17 part           8); expected: 00000200, actual: zzzzzzzz
-# **Error in ADD (test 17 part           9); expected: 00000400, actual: zzzzzzzz
-# **Error in ADD (test 17 part          10); expected: 00000800, actual: zzzzzzzz
-# **Error in ADD (test 17 part          11); expected: 00001000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          12); expected: 00002000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          13); expected: 00004000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          14); expected: 00008000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          15); expected: 00010000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          16); expected: 00020000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          17); expected: 00040000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          18); expected: 00080000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          19); expected: 00100000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          20); expected: 00200000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          21); expected: 00400000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          22); expected: 00800000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          23); expected: 01000000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          24); expected: 02000000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          25); expected: 04000000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          26); expected: 08000000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          27); expected: 10000000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          28); expected: 20000000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          29); expected: 40000000, actual: zzzzzzzz
-# **Error in ADD (test 17 part          30); expected: 80000000, actual: zzzzzzzz
-# **Error in SUB (test 10); expected: 00000000, actual: zzzzzzzz
-# **Error in SLL (test 11); expected: 00000001, actual: zzzzzzzz
-# **Error in SLL (test 18 part           0); expected: 00000002, actual: zzzzzzzz
-# **Error in SLL (test 18 part           1); expected: 00000004, actual: zzzzzzzz
-# **Error in SLL (test 18 part           2); expected: 00000010, actual: zzzzzzzz
-# **Error in SLL (test 18 part           3); expected: 00000100, actual: zzzzzzzz
-# **Error in SLL (test 18 part           4); expected: 00010000, actual: zzzzzzzz
-# **Error in SLL (test 19 part           0); expected: 00000008, actual: zzzzzzzz
-# **Error in SLL (test 19 part           1); expected: 00000040, actual: zzzzzzzz
-# **Error in SLL (test 19 part           2); expected: 00001000, actual: zzzzzzzz
-# **Error in SLL (test 19 part           3); expected: 01000000, actual: zzzzzzzz
-# **Error in SRA (test 12); expected: 00000000, actual: zzzzzzzz
-# **Error in isNotEqual (test 13); expected: 0, actual: z
-# **Error in isLessThan (test 14); expected: 0, actual: z
-# **Error in isLessThan (test 23); expected: 0, actual: z
-# **Error in isLessThan (test 24); expected: 1, actual: z
-# **Error in overflow (test 15); expected: 0, actual: z
-# **Error in overflow (test 20); expected: 1, actual: z
-# **Error in overflow (test 21); expected: 1, actual: z
-# **Error in overflow (test 16); expected: 0, actual: z
-# **Error in overflow (test 22); expected: 0, actual: z
-# **Error in overflow (test 25); expected: 1, actual: z
-# The simulation failed with          62 errors
-# ** Note: $stop    : /Desktop/ECE550/Proj_1/alu/alu_tb.v(51)
-#    Time: 2480 ns  Iteration: 1  Instance: /alu_tb
-# Break in Module alu_tb at /Desktop/ECE550/Proj_1/alu/alu_tb.v line 51
-# Error opening ///Desktop/ECE550/Proj_1/alu/alu_tb.v
-# Path name '///Desktop/ECE550/Proj_1/alu/alu_tb.v' doesn't exist.
-# End time: 20:02:27 on Sep 14,2023, Elapsed time: 0:09:44
-# Errors: 1, Warnings: 0
+#                    0 simulation start
+# Simulation succeeded with no errors.
+# Break key hit
+# Break in Module alu_1_bit_tb at /Desktop/ECE550/Proj_1/alu/alu_1_bit_tb.v line 93
+# End time: 22:05:03 on Sep 14,2023, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 0
