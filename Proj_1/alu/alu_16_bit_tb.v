@@ -96,6 +96,20 @@ module alu_16_bit_tb;
         num_errors = num_errors + 1;
     end
 
+    // // Testcase 5: negative subtracts negative + no overflow(未完成)
+    // @(negedge clock);
+    // operandA = 16'b1011100001110000;
+    // operandB = 16'b1001000100010001;
+    // Ainvert = 0;
+    // Binvert = 1;
+    // carry_in = 1;
+    // Operation = 2'b10;  // subtract
+
+    // @(negedge clock);
+    // if (out !== 16'b0100100110000001 || carry_out != 1'b1) begin
+    //     // $display("Testcase 5 failed, got (out = %b, carryout = %b), supposed (out = 0100100110000001, carryout = 0)", out, carry_out);
+    //     num_errors = num_errors + 1;
+    // end
 
 
     

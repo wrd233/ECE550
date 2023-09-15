@@ -8,52 +8,74 @@ z2
 !i10f 100
 cModel Technology
 Z0 d//Mac/Home/Desktop/ECE550/Proj_1/alu/simulation/modelsim
-valu_16_bit_f
-Z1 !s110 1694710558
+valu
+Z1 !s110 1694736274
 !i10b 1
-!s100 4:0g0La5Q_Vb7Zj<oM8CD1
-IHE`BlfaSEHTcg]_DJ2CC_1
+!s100 IB`3k`Dg>GKJTJOzTILQ=1
+I@l]6N7Qb<ER5633MBoPAD3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1694709542
-8//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v
-F//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v
+w1694736107
+8//Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v
+F//Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v
 L0 1
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1694710558.000000
-!s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v|
+Z4 !s108 1694736274.000000
+!s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v|
 !i113 1
 Z5 o-vlog01compat -work work
 Z6 !s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu
 Z7 tCvgOpt 0
-valu_16_bit_f_tb
-R1
+valu_16_bit
+Z8 !s110 1694736276
 !i10b 1
-!s100 eTMoUacgKT3HA4HzZ@`Fi3
-IGRiB:A=ldo=D[jIUdT=G;2
+!s100 dCk1`^LDN7OHVGMg0VUa_3
+I<[SgAFU?hPRKG4INE:Sz=3
 R2
 R0
-w1694710533
-8/Desktop/ECE550/Proj_1/alu/alu_16_bit_f_tb.v
-F/Desktop/ECE550/Proj_1/alu/alu_16_bit_f_tb.v
-L0 4
+w1694701676
+8//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v
+F//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v
+L0 1
 R3
 r1
 !s85 0
 31
-R4
-!s107 /Desktop/ECE550/Proj_1/alu/alu_16_bit_f_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Proj_1/alu|/Desktop/ECE550/Proj_1/alu/alu_16_bit_f_tb.v|
+Z9 !s108 1694736276.000000
+!s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v|
 !i113 1
 R5
-!s92 -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_1/alu
+R6
+R7
+valu_16_bit_f
+R8
+!i10b 1
+!s100 4:0g0La5Q_Vb7Zj<oM8CD1
+IHE`BlfaSEHTcg]_DJ2CC_1
+R2
+R0
+w1694709542
+8//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v
+F//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v|
+!i113 1
+R5
+R6
 R7
 valu_1_bit
-Z8 !s110 1694710557
+R1
 !i10b 1
 !s100 [ci_j91DJg>>m3j<72mF33
 IT8FfVY1Ji^DYP=QD=coPQ0
@@ -67,7 +89,7 @@ R3
 r1
 !s85 0
 31
-Z9 !s108 1694710557.000000
+R4
 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v|
 !i113 1
@@ -75,7 +97,7 @@ R5
 R6
 R7
 valu_1_bit_f
-R8
+R1
 !i10b 1
 !s100 k0UF5R;L=VKE:o0`h]8oz3
 I:YSYl3@VaNWaH<W]HglJ=3
@@ -89,15 +111,59 @@ R3
 r1
 !s85 0
 31
-R9
+R4
 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v|
 !i113 1
 R5
 R6
 R7
-vand_gate
+valu_32_bit
+R1
+!i10b 1
+!s100 <3k8XzzPWcS_Io2ikzD=G2
+Iz0HhOFMXD6RzYj5@Db[_;1
+R2
+R0
+w1694735331
+8//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_32_bit.v
+F//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_32_bit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_32_bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_32_bit.v|
+!i113 1
+R5
+R6
+R7
+valu_tb
 R8
+!i10b 1
+!s100 ekX@Y6GSOh1<RLi8QSfPj3
+IL`BhT8?5GCmXPE;Pf4O;h3
+R2
+R0
+w1694736211
+8/Desktop/ECE550/Proj_1/alu/alu_tb.v
+F/Desktop/ECE550/Proj_1/alu/alu_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R9
+!s107 /Desktop/ECE550/Proj_1/alu/alu_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Proj_1/alu|/Desktop/ECE550/Proj_1/alu/alu_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_1/alu
+R7
+vand_gate
+Z10 !s110 1694736275
 !i10b 1
 !s100 WT3V9RTh7PCP6@MdLm_>B2
 IC1CBN6@7H:1N4DH1GC`HO2
@@ -111,7 +177,7 @@ R3
 r1
 !s85 0
 31
-R9
+Z11 !s108 1694736275.000000
 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/and_gate.v|
 !i113 1
@@ -119,51 +185,117 @@ R5
 R6
 R7
 vfull_adder
-R8
+R10
 !i10b 1
 !s100 D7X<3z`aM;JKo;jeK3N:?2
 IiYnmm]EO5b4eSZSK?iYX[2
 R2
 R0
-Z10 w1694691895
-Z11 8//Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v
-Z12 F//Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v
+Z12 w1694691895
+Z13 8//Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v
+Z14 F//Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v
 L0 9
 R3
 r1
 !s85 0
 31
-R9
-Z13 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v|
-Z14 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v|
+R4
+Z15 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v|
 !i113 1
 R5
 R6
 R7
 vhalf_adder
-R8
+R10
 !i10b 1
 !s100 _2M5NG[hGUGS?ZczFU96L3
 IH6YT_O6ibLcMi`1h]cUi11
 R2
 R0
-R10
-R11
 R12
+R13
+R14
 L0 1
 R3
 r1
 !s85 0
 31
-R9
-R13
-R14
+R4
+R15
+R16
+!i113 1
+R5
+R6
+R7
+vmux32_2to1
+Z17 !s110 1694736273
+!i10b 1
+!s100 Lob_@jk@>3FmX^o:=Rjlg1
+I>;O9le>MClKU=oNBfQz^e1
+R2
+R0
+Z18 w1694735200
+Z19 8//Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v
+Z20 F//Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z21 !s108 1694736273.000000
+Z22 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v|
+Z23 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v|
+!i113 1
+R5
+R6
+R7
+vmux32_4to1
+R17
+!i10b 1
+!s100 8QGE3BR156mA>4RdI;hA41
+IzSdYI=5e7XhGYa40o[Si]2
+R2
+R0
+R18
+R19
+R20
+L0 8
+R3
+r1
+!s85 0
+31
+R21
+R22
+R23
+!i113 1
+R5
+R6
+R7
+vmux32_8to1
+R1
+!i10b 1
+!s100 Ez^[kS2@kVJjTKR_lc2:c0
+I=RjeRi1>hYOd:>Ni4fa183
+R2
+R0
+R18
+R19
+R20
+L0 18
+R3
+r1
+!s85 0
+31
+R21
+R22
+R23
 !i113 1
 R5
 R6
 R7
 vmux_2
-R1
+R8
 !i10b 1
 !s100 lYjVWf[a2I@<>L1S364XT1
 I9TW^dWk]MRIQc8fcTfN[51
@@ -177,7 +309,7 @@ R3
 r1
 !s85 0
 31
-R4
+R9
 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v|
 !i113 1
@@ -185,7 +317,7 @@ R5
 R6
 R7
 vmux_4
-R1
+R10
 !i10b 1
 !s100 BblEzgDUCR=7?i>0dSRmn2
 Imll;k7;G33o<cP<bjozmH3
@@ -199,15 +331,37 @@ R3
 r1
 !s85 0
 31
-R4
+R11
 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v|
 !i113 1
 R5
 R6
 R7
+vmux_8
+R10
+!i10b 1
+!s100 ;5a]ARc8g14RozJ^@EUFm2
+IiP<ZIXoD950k8BW8e]cQd3
+R2
+R0
+w1694735069
+8//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_8.v
+F//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_8.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/mux_8.v|
+!i113 1
+R5
+R6
+R7
 vnot_gate
-R1
+R10
 !i10b 1
 !s100 mgTa5<dNkz0[GS30PHPk23
 ITMQXIP61KOm0[QJ1HC`352
@@ -221,7 +375,7 @@ R3
 r1
 !s85 0
 31
-R4
+R11
 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v|
 !i113 1
@@ -229,7 +383,7 @@ R5
 R6
 R7
 vor_gate
-R1
+R10
 !i10b 1
 !s100 l6G[d9ZY>T7Sa_DeN3Uc71
 Igf9YRmmW28Z?17CR=@XjW3
@@ -243,7 +397,7 @@ R3
 r1
 !s85 0
 31
-R9
+R11
 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v|
 !i113 1
@@ -251,7 +405,7 @@ R5
 R6
 R7
 voverflow_check
-R1
+R8
 !i10b 1
 !s100 AlFomi_zGEaYh7DXRbId72
 IBo]W;=lO?BBA7TeaHj@jn3
@@ -265,7 +419,7 @@ R3
 r1
 !s85 0
 31
-R4
+R9
 !s107 //Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu|//Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v|
 !i113 1

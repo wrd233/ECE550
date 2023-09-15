@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Fri Sep 15 00:39:36 2023
+Fri Sep 15 08:02:22 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -15,11 +15,19 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "alu_1_bit_f:fa15|mux_4:mx3"
- 11. Port Connectivity Checks: "alu_1_bit:fa0|mux_4:mx3"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "mux_8:mx2"
+ 11. Port Connectivity Checks: "mux32_8to1:mx1"
+ 12. Port Connectivity Checks: "alu_32_bit:a32b_sub"
+ 13. Port Connectivity Checks: "alu_32_bit:a32b_add"
+ 14. Port Connectivity Checks: "alu_32_bit:a32b_or"
+ 15. Port Connectivity Checks: "alu_32_bit:a32b_and|alu_16_bit_f:a16bf2"
+ 16. Port Connectivity Checks: "alu_32_bit:a32b_and|alu_16_bit_f:a16bf1|alu_1_bit_f:fa15|mux_4:mx3"
+ 17. Port Connectivity Checks: "alu_32_bit:a32b_and|alu_16_bit_f:a16bf1"
+ 18. Port Connectivity Checks: "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|mux_4:mx3"
+ 19. Port Connectivity Checks: "alu_32_bit:a32b_and"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +53,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 15 00:39:36 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 15 08:02:22 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; alu                                         ;
-; Top-level Entity Name              ; alu_16_bit_f                                ;
+; Top-level Entity Name              ; alu                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 67                                          ;
-;     Total combinational functions  ; 67                                          ;
+; Total logic elements               ; 281                                         ;
+;     Total combinational functions  ; 281                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 55                                          ;
+; Total pins                         ; 109                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -68,7 +76,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; alu_16_bit_f       ; alu                ;
+; Top-level entity name                                            ; alu                ; alu                ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -169,6 +177,9 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                          ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
+; mux32_8to1.v                     ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v     ;         ;
+; alu_32_bit.v                     ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_32_bit.v     ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v            ;         ;
 ; alu_1_bit.v                      ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v      ;         ;
 ; alu_1_bit_f.v                    ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v    ;         ;
 ; full_adder.v                     ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v     ;         ;
@@ -176,132 +187,264 @@ refer to the applicable agreement for further details.
 ; or_gate.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/or_gate.v        ;         ;
 ; not_gate.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/not_gate.v       ;         ;
 ; mux_4.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_4.v          ;         ;
+; mux_8.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_8.v          ;         ;
 ; mux_2.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/mux_2.v          ;         ;
+; alu_16_bit.v                     ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v     ;         ;
 ; overflow_check.v                 ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v ;         ;
 ; alu_16_bit_f.v                   ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v   ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 67            ;
-;                                             ;               ;
-; Total combinational functions               ; 67            ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 50            ;
-;     -- 3 input functions                    ; 0             ;
-;     -- <=2 input functions                  ; 17            ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 67            ;
-;     -- arithmetic mode                      ; 0             ;
-;                                             ;               ;
-; Total registers                             ; 0             ;
-;     -- Dedicated logic registers            ; 0             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 55            ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; Binvert~input ;
-; Maximum fan-out                             ; 33            ;
-; Total fan-out                               ; 307           ;
-; Average fan-out                             ; 1.73          ;
-+---------------------------------------------+---------------+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimated Total logic elements              ; 281                     ;
+;                                             ;                         ;
+; Total combinational functions               ; 281                     ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 183                     ;
+;     -- 3 input functions                    ; 48                      ;
+;     -- <=2 input functions                  ; 50                      ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 281                     ;
+;     -- arithmetic mode                      ; 0                       ;
+;                                             ;                         ;
+; Total registers                             ; 0                       ;
+;     -- Dedicated logic registers            ; 0                       ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 109                     ;
+;                                             ;                         ;
+; Embedded Multiplier 9-bit elements          ; 0                       ;
+;                                             ;                         ;
+; Maximum fan-out node                        ; ctrl_ALUopcode[1]~input ;
+; Maximum fan-out                             ; 45                      ;
+; Total fan-out                               ; 1118                    ;
+; Average fan-out                             ; 2.24                    ;
++---------------------------------------------+-------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+----------------+--------------+
-; |alu_16_bit_f              ; 67 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 55   ; 0            ; |alu_16_bit_f                                         ; alu_16_bit_f   ; work         ;
-;    |alu_1_bit:fa0|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa10|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10                          ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10|full_adder:fa            ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10|mux_2:mx1                ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10|mux_4:mx3                ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa10|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
-;    |alu_1_bit:fa11|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11                          ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11|full_adder:fa            ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11|mux_2:mx1                ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11|mux_4:mx3                ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa11|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
-;    |alu_1_bit:fa12|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12                          ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12|full_adder:fa            ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12|mux_2:mx1                ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12|mux_4:mx3                ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa12|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
-;    |alu_1_bit:fa13|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13                          ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13|full_adder:fa            ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13|mux_2:mx1                ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13|mux_4:mx3                ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa13|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
-;    |alu_1_bit:fa14|        ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14                          ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14|full_adder:fa            ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14|mux_2:mx1                ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14|mux_4:mx3                ; mux_4          ; work         ;
-;          |mux_2:second|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa14|mux_4:mx3|mux_2:second   ; mux_2          ; work         ;
-;    |alu_1_bit:fa1|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa1|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa2|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa2|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa3|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa3|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa4|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa4|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa5|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa5|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa6|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa6|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa7|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa7|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa8|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa8|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit:fa9|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9                           ; alu_1_bit      ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9|full_adder:fa             ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9|mux_2:mx1                 ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9|mux_4:mx3                 ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit:fa9|mux_4:mx3|mux_2:second    ; mux_2          ; work         ;
-;    |alu_1_bit_f:fa15|      ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15                        ; alu_1_bit_f    ; work         ;
-;       |full_adder:fa|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|full_adder:fa          ; full_adder     ; work         ;
-;       |mux_2:mx1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|mux_2:mx1              ; mux_2          ; work         ;
-;       |mux_4:mx3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|mux_4:mx3              ; mux_4          ; work         ;
-;          |mux_2:second|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|mux_4:mx3|mux_2:second ; mux_2          ; work         ;
-;       |overflow_check:oc|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_16_bit_f|alu_1_bit_f:fa15|overflow_check:oc      ; overflow_check ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name  ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+--------------+
+; |alu                            ; 281 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 109  ; 0            ; |alu                                                                                       ; alu          ; work         ;
+;    |alu_32_bit:a32b_add|        ; 61 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add                                                                   ; alu_32_bit   ; work         ;
+;       |alu_16_bit:a16b|         ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b                                                   ; alu_16_bit   ; work         ;
+;          |alu_1_bit:fa10|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa10                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa10|full_adder:fa                      ; full_adder   ; work         ;
+;          |alu_1_bit:fa11|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa11                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa11|full_adder:fa                      ; full_adder   ; work         ;
+;          |alu_1_bit:fa12|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa12                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa12|full_adder:fa                      ; full_adder   ; work         ;
+;          |alu_1_bit:fa13|       ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa13                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa13|full_adder:fa                      ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa13|full_adder:fa|half_adder:ha2       ; half_adder   ; work         ;
+;          |alu_1_bit:fa14|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa14                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa14|full_adder:fa                      ; full_adder   ; work         ;
+;          |alu_1_bit:fa15|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa15                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa15|full_adder:fa                      ; full_adder   ; work         ;
+;          |alu_1_bit:fa1|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa1                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa1|full_adder:fa                       ; full_adder   ; work         ;
+;          |alu_1_bit:fa2|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa2                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa2|full_adder:fa                       ; full_adder   ; work         ;
+;          |alu_1_bit:fa3|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa3                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa3|full_adder:fa                       ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa3|full_adder:fa|half_adder:ha2        ; half_adder   ; work         ;
+;          |alu_1_bit:fa4|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa4                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa4|full_adder:fa                       ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa4|full_adder:fa|half_adder:ha2        ; half_adder   ; work         ;
+;          |alu_1_bit:fa5|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa5                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa5|full_adder:fa                       ; full_adder   ; work         ;
+;          |alu_1_bit:fa6|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa6                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa6|full_adder:fa                       ; full_adder   ; work         ;
+;          |alu_1_bit:fa8|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa8                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa8|full_adder:fa                       ; full_adder   ; work         ;
+;          |alu_1_bit:fa9|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa9                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit:a16b|alu_1_bit:fa9|full_adder:fa                       ; full_adder   ; work         ;
+;       |alu_16_bit_f:a16bf1|     ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1                                               ; alu_16_bit_f ; work         ;
+;          |alu_1_bit:fa10|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa10                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa10|full_adder:fa                  ; full_adder   ; work         ;
+;          |alu_1_bit:fa11|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa11                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa11|full_adder:fa                  ; full_adder   ; work         ;
+;          |alu_1_bit:fa12|       ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa12                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa12|full_adder:fa                  ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa12|full_adder:fa|half_adder:ha2   ; half_adder   ; work         ;
+;          |alu_1_bit:fa13|       ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa13                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa13|full_adder:fa                  ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa13|full_adder:fa|half_adder:ha2   ; half_adder   ; work         ;
+;          |alu_1_bit:fa1|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa1                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa1|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa3|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa3                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa3|full_adder:fa                   ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa3|full_adder:fa|half_adder:ha2    ; half_adder   ; work         ;
+;          |alu_1_bit:fa4|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa4                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa4|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa5|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa5                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa5|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa6|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa6                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa6|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa7|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa7                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa7|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa8|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa8                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa8|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa9|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa9                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf1|alu_1_bit:fa9|full_adder:fa                   ; full_adder   ; work         ;
+;       |alu_16_bit_f:a16bf2|     ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2                                               ; alu_16_bit_f ; work         ;
+;          |alu_1_bit:fa10|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa10                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa10|full_adder:fa                  ; full_adder   ; work         ;
+;          |alu_1_bit:fa11|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa11                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa11|full_adder:fa                  ; full_adder   ; work         ;
+;          |alu_1_bit:fa12|       ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa12                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa12|full_adder:fa                  ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa12|full_adder:fa|half_adder:ha2   ; half_adder   ; work         ;
+;          |alu_1_bit:fa13|       ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa13                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa13|full_adder:fa                  ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa13|full_adder:fa|half_adder:ha2   ; half_adder   ; work         ;
+;          |alu_1_bit:fa14|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa14                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa14|full_adder:fa                  ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa14|full_adder:fa|half_adder:ha2   ; half_adder   ; work         ;
+;          |alu_1_bit:fa1|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa1                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa1|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa2|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa2                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa2|full_adder:fa                   ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa2|full_adder:fa|half_adder:ha2    ; half_adder   ; work         ;
+;          |alu_1_bit:fa3|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa3                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa3|full_adder:fa                   ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa3|full_adder:fa|half_adder:ha2    ; half_adder   ; work         ;
+;          |alu_1_bit:fa4|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa4                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa4|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa5|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa5                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa5|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa6|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa6                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa6|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa7|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa7                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa7|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa8|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa8                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa8|full_adder:fa                   ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa8|full_adder:fa|half_adder:ha2    ; half_adder   ; work         ;
+;          |alu_1_bit:fa9|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa9                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|alu_16_bit_f:a16bf2|alu_1_bit:fa9|full_adder:fa                   ; full_adder   ; work         ;
+;       |mux_2:mx2|               ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|mux_2:mx2                                                         ; mux_2        ; work         ;
+;       |mux_2:mx3|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_add|mux_2:mx3                                                         ; mux_2        ; work         ;
+;    |alu_32_bit:a32b_and|        ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and                                                                   ; alu_32_bit   ; work         ;
+;       |alu_16_bit:a16b|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|alu_16_bit:a16b                                                   ; alu_16_bit   ; work         ;
+;          |alu_1_bit:fa4|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa4                                     ; alu_1_bit    ; work         ;
+;             |and_gate:ad|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa4|and_gate:ad                         ; and_gate     ; work         ;
+;          |alu_1_bit:fa8|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa8                                     ; alu_1_bit    ; work         ;
+;             |and_gate:ad|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa8|and_gate:ad                         ; and_gate     ; work         ;
+;       |mux_2:mx10|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|mux_2:mx10                                                        ; mux_2        ; work         ;
+;       |mux_2:mx13|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|mux_2:mx13                                                        ; mux_2        ; work         ;
+;       |mux_2:mx15|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|mux_2:mx15                                                        ; mux_2        ; work         ;
+;       |mux_2:mx16|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|mux_2:mx16                                                        ; mux_2        ; work         ;
+;       |mux_2:mx4|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|mux_2:mx4                                                         ; mux_2        ; work         ;
+;       |mux_2:mx5|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|mux_2:mx5                                                         ; mux_2        ; work         ;
+;       |mux_2:mx6|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|mux_2:mx6                                                         ; mux_2        ; work         ;
+;       |mux_2:mx7|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_and|mux_2:mx7                                                         ; mux_2        ; work         ;
+;    |alu_32_bit:a32b_or|         ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or                                                                    ; alu_32_bit   ; work         ;
+;       |alu_16_bit:a16b|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|alu_16_bit:a16b                                                    ; alu_16_bit   ; work         ;
+;          |alu_1_bit:fa4|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|alu_16_bit:a16b|alu_1_bit:fa4                                      ; alu_1_bit    ; work         ;
+;             |or_gate:og|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|alu_16_bit:a16b|alu_1_bit:fa4|or_gate:og                           ; or_gate      ; work         ;
+;          |alu_1_bit:fa8|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|alu_16_bit:a16b|alu_1_bit:fa8                                      ; alu_1_bit    ; work         ;
+;             |or_gate:og|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|alu_16_bit:a16b|alu_1_bit:fa8|or_gate:og                           ; or_gate      ; work         ;
+;       |mux_2:mx10|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|mux_2:mx10                                                         ; mux_2        ; work         ;
+;       |mux_2:mx13|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|mux_2:mx13                                                         ; mux_2        ; work         ;
+;       |mux_2:mx15|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|mux_2:mx15                                                         ; mux_2        ; work         ;
+;       |mux_2:mx16|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|mux_2:mx16                                                         ; mux_2        ; work         ;
+;       |mux_2:mx4|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|mux_2:mx4                                                          ; mux_2        ; work         ;
+;       |mux_2:mx5|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|mux_2:mx5                                                          ; mux_2        ; work         ;
+;       |mux_2:mx6|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|mux_2:mx6                                                          ; mux_2        ; work         ;
+;       |mux_2:mx7|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_or|mux_2:mx7                                                          ; mux_2        ; work         ;
+;    |alu_32_bit:a32b_sub|        ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub                                                                   ; alu_32_bit   ; work         ;
+;       |alu_16_bit:a16b|         ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b                                                   ; alu_16_bit   ; work         ;
+;          |alu_1_bit:fa10|       ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa10                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa10|full_adder:fa                      ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa10|full_adder:fa|half_adder:ha1       ; half_adder   ; work         ;
+;                |half_adder:ha2| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa10|full_adder:fa|half_adder:ha2       ; half_adder   ; work         ;
+;          |alu_1_bit:fa11|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa11                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa11|full_adder:fa                      ; full_adder   ; work         ;
+;          |alu_1_bit:fa13|       ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa13                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa13|full_adder:fa                      ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa13|full_adder:fa|half_adder:ha1       ; half_adder   ; work         ;
+;                |half_adder:ha2| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa13|full_adder:fa|half_adder:ha2       ; half_adder   ; work         ;
+;          |alu_1_bit:fa14|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa14                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa14|full_adder:fa                      ; full_adder   ; work         ;
+;          |alu_1_bit:fa15|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa15                                    ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa15|full_adder:fa                      ; full_adder   ; work         ;
+;          |alu_1_bit:fa1|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa1                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa1|full_adder:fa                       ; full_adder   ; work         ;
+;          |alu_1_bit:fa3|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa3                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa3|full_adder:fa                       ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa3|full_adder:fa|half_adder:ha1        ; half_adder   ; work         ;
+;                |half_adder:ha2| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa3|full_adder:fa|half_adder:ha2        ; half_adder   ; work         ;
+;          |alu_1_bit:fa4|        ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa4                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 3 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa4|full_adder:fa                       ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa4|full_adder:fa|half_adder:ha1        ; half_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa4|full_adder:fa|half_adder:ha2        ; half_adder   ; work         ;
+;          |alu_1_bit:fa6|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa6                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa6|full_adder:fa                       ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa6|full_adder:fa|half_adder:ha1        ; half_adder   ; work         ;
+;                |half_adder:ha2| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa6|full_adder:fa|half_adder:ha2        ; half_adder   ; work         ;
+;          |alu_1_bit:fa7|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa7                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa7|full_adder:fa                       ; full_adder   ; work         ;
+;          |alu_1_bit:fa8|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa8                                     ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit:a16b|alu_1_bit:fa8|full_adder:fa                       ; full_adder   ; work         ;
+;       |alu_16_bit_f:a16bf1|     ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1                                               ; alu_16_bit_f ; work         ;
+;          |alu_1_bit:fa12|       ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa12                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa12|full_adder:fa                  ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa12|full_adder:fa|half_adder:ha1   ; half_adder   ; work         ;
+;          |alu_1_bit:fa13|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa13                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa13|full_adder:fa                  ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa13|full_adder:fa|half_adder:ha1   ; half_adder   ; work         ;
+;          |alu_1_bit:fa14|       ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa14                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa14|full_adder:fa                  ; full_adder   ; work         ;
+;          |alu_1_bit:fa3|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa3                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa3|full_adder:fa                   ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa3|full_adder:fa|half_adder:ha1    ; half_adder   ; work         ;
+;          |alu_1_bit:fa6|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa6                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa6|full_adder:fa                   ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa6|full_adder:fa|half_adder:ha1    ; half_adder   ; work         ;
+;          |alu_1_bit:fa7|        ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa7                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa7|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit:fa9|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa9                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa9|full_adder:fa                   ; full_adder   ; work         ;
+;                |half_adder:ha1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf1|alu_1_bit:fa9|full_adder:fa|half_adder:ha1    ; half_adder   ; work         ;
+;       |alu_16_bit_f:a16bf2|     ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf2                                               ; alu_16_bit_f ; work         ;
+;          |alu_1_bit:fa13|       ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf2|alu_1_bit:fa13                                ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf2|alu_1_bit:fa13|full_adder:fa                  ; full_adder   ; work         ;
+;          |alu_1_bit:fa6|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf2|alu_1_bit:fa6                                 ; alu_1_bit    ; work         ;
+;             |full_adder:fa|     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf2|alu_1_bit:fa6|full_adder:fa                   ; full_adder   ; work         ;
+;          |alu_1_bit_f:fa15|     ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf2|alu_1_bit_f:fa15                              ; alu_1_bit_f  ; work         ;
+;             |full_adder:fa|     ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf2|alu_1_bit_f:fa15|full_adder:fa                ; full_adder   ; work         ;
+;                |half_adder:ha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|alu_16_bit_f:a16bf2|alu_1_bit_f:fa15|full_adder:fa|half_adder:ha2 ; half_adder   ; work         ;
+;       |mux_2:mx10|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx10                                                        ; mux_2        ; work         ;
+;       |mux_2:mx11|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx11                                                        ; mux_2        ; work         ;
+;       |mux_2:mx12|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx12                                                        ; mux_2        ; work         ;
+;       |mux_2:mx13|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx13                                                        ; mux_2        ; work         ;
+;       |mux_2:mx14|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx14                                                        ; mux_2        ; work         ;
+;       |mux_2:mx15|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx15                                                        ; mux_2        ; work         ;
+;       |mux_2:mx16|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx16                                                        ; mux_2        ; work         ;
+;       |mux_2:mx17|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx17                                                        ; mux_2        ; work         ;
+;       |mux_2:mx2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx2                                                         ; mux_2        ; work         ;
+;       |mux_2:mx3|               ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx3                                                         ; mux_2        ; work         ;
+;       |mux_2:mx4|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx4                                                         ; mux_2        ; work         ;
+;       |mux_2:mx5|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx5                                                         ; mux_2        ; work         ;
+;       |mux_2:mx6|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx6                                                         ; mux_2        ; work         ;
+;       |mux_2:mx7|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx7                                                         ; mux_2        ; work         ;
+;       |mux_2:mx8|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx8                                                         ; mux_2        ; work         ;
+;       |mux_2:mx9|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|alu_32_bit:a32b_sub|mux_2:mx9                                                         ; mux_2        ; work         ;
+;    |mux32_8to1:mx1|             ; 123 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|mux32_8to1:mx1                                                                        ; mux32_8to1   ; work         ;
+;       |mux32_2to1:third|        ; 120 (120)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|mux32_8to1:mx1|mux32_2to1:third                                                       ; mux32_2to1   ; work         ;
+;       |mux32_4to1:first_top|    ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|mux32_8to1:mx1|mux32_4to1:first_top                                                   ; mux32_4to1   ; work         ;
+;          |mux32_2to1:second|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|mux32_8to1:mx1|mux32_4to1:first_top|mux32_2to1:second                                 ; mux32_2to1   ; work         ;
+;    |mux_8:mx2|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|mux_8:mx2                                                                             ; mux_8        ; work         ;
+;       |mux_4:first_top|         ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|mux_8:mx2|mux_4:first_top                                                             ; mux_4        ; work         ;
+;          |mux_2:second|         ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|mux_8:mx2|mux_4:first_top|mux_2:second                                                ; mux_2        ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -320,31 +463,131 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu_16_bit_f|alu_1_bit:fa0|mux_4:mx3|mux_2:second|out ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 5:1                ; 15 bits   ; 45 LEs        ; 45 LEs               ; 0 LEs                  ; No         ; |alu|mux32_8to1:mx1|mux32_2to1:third|out[1]  ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |alu|mux32_8to1:mx1|mux32_2to1:third|out[20] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
-+--------------------------------------------------------+
-; Port Connectivity Checks: "alu_1_bit_f:fa15|mux_4:mx3" ;
-+------+-------+----------+------------------------------+
-; Port ; Type  ; Severity ; Details                      ;
-+------+-------+----------+------------------------------+
-; in3  ; Input ; Info     ; Stuck at GND                 ;
-+------+-------+----------+------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_8:mx2"                                                                                                                                                                        ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                          ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; select ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (3 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; in4    ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; in5    ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; in6    ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; in7    ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Port Connectivity Checks: "alu_1_bit:fa0|mux_4:mx3" ;
-+------+-------+----------+---------------------------+
-; Port ; Type  ; Severity ; Details                   ;
-+------+-------+----------+---------------------------+
-; in3  ; Input ; Info     ; Stuck at GND              ;
-+------+-------+----------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux32_8to1:mx1"                                                                                                                                                                   ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                          ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; select ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (3 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; in4    ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; in5    ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; in6    ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; in7    ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32_bit:a32b_sub"                                                                        ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Ainvert      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Binvert      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Operation[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Operation[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_in     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; carry_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32_bit:a32b_add"                                                                        ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Ainvert      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Binvert      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Operation[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Operation[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_in     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32_bit:a32b_or"                                                                         ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Ainvert      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Binvert      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Operation[1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Operation[0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; carry_in     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32_bit:a32b_and|alu_16_bit_f:a16bf2" ;
++----------+-------+----------+---------------------------------------+
+; Port     ; Type  ; Severity ; Details                               ;
++----------+-------+----------+---------------------------------------+
+; carry_in ; Input ; Info     ; Stuck at VCC                          ;
++----------+-------+----------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32_bit:a32b_and|alu_16_bit_f:a16bf1|alu_1_bit_f:fa15|mux_4:mx3" ;
++------+-------+----------+----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                              ;
++------+-------+----------+----------------------------------------------------------------------+
+; in3  ; Input ; Info     ; Stuck at GND                                                         ;
++------+-------+----------+----------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32_bit:a32b_and|alu_16_bit_f:a16bf1" ;
++----------+-------+----------+---------------------------------------+
+; Port     ; Type  ; Severity ; Details                               ;
++----------+-------+----------+---------------------------------------+
+; carry_in ; Input ; Info     ; Stuck at GND                          ;
++----------+-------+----------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|mux_4:mx3" ;
++------+-------+----------+---------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                       ;
++------+-------+----------+---------------------------------------------------------------+
+; in3  ; Input ; Info     ; Stuck at GND                                                  ;
++------+-------+----------+---------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32_bit:a32b_and"                                                                     ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Ainvert   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Binvert   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Operation ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -352,14 +595,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 55                          ;
-; cycloneiii_lcell_comb ; 67                          ;
-;     normal            ; 67                          ;
-;         2 data inputs ; 17                          ;
-;         4 data inputs ; 50                          ;
+; boundary_port         ; 109                         ;
+; cycloneiii_lcell_comb ; 282                         ;
+;     normal            ; 282                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 50                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 183                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 18.00                       ;
-; Average LUT depth     ; 11.43                       ;
+; Max LUT depth         ; 25.00                       ;
+; Average LUT depth     ; 14.70                       ;
 +-----------------------+-----------------------------+
 
 
@@ -368,7 +613,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -378,10 +623,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Sep 15 00:39:22 2023
+    Info: Processing started: Fri Sep 15 08:01:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file mux32_8to1.v
+    Info (12023): Found entity 1: mux32_2to1 File: //Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v Line: 1
+    Info (12023): Found entity 2: mux32_4to1 File: //Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v Line: 8
+    Info (12023): Found entity 3: mux32_8to1 File: //Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file alu_32_bit.v
+    Info (12023): Found entity 1: alu_32_bit File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_32_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.v
     Info (12023): Found entity 1: alu_tb File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
@@ -417,28 +668,51 @@ Info (12021): Found 1 design units, including 1 entities, in source file overflo
     Info (12023): Found entity 1: overflow_check File: //Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_16_bit_f.v
     Info (12023): Found entity 1: alu_16_bit_f File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v Line: 1
-Info (12127): Elaborating entity "alu_16_bit_f" for the top level hierarchy
-Info (12128): Elaborating entity "alu_1_bit" for hierarchy "alu_1_bit:fa0" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v Line: 10
-Info (12128): Elaborating entity "not_gate" for hierarchy "alu_1_bit:fa0|not_gate:ng1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 12
-Info (12128): Elaborating entity "mux_2" for hierarchy "alu_1_bit:fa0|mux_2:mx1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 13
-Info (12128): Elaborating entity "and_gate" for hierarchy "alu_1_bit:fa0|and_gate:ad" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 19
-Info (12128): Elaborating entity "or_gate" for hierarchy "alu_1_bit:fa0|or_gate:og" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 22
-Info (12128): Elaborating entity "full_adder" for hierarchy "alu_1_bit:fa0|full_adder:fa" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 25
-Info (12128): Elaborating entity "half_adder" for hierarchy "alu_1_bit:fa0|full_adder:fa|half_adder:ha1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v Line: 15
-Info (12128): Elaborating entity "mux_4" for hierarchy "alu_1_bit:fa0|mux_4:mx3" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 28
-Info (12128): Elaborating entity "alu_1_bit_f" for hierarchy "alu_1_bit_f:fa15" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v Line: 25
-Info (12128): Elaborating entity "overflow_check" for hierarchy "alu_1_bit_f:fa15|overflow_check:oc" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file alu_16_bit_f_tb.v
+    Info (12023): Found entity 1: alu_16_bit_f_tb File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f_tb.v Line: 4
+Info (12127): Elaborating entity "alu" for the top level hierarchy
+Warning (10034): Output port "isNotEqual" at alu.v(7) has no driver File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
+Warning (10034): Output port "isLessThan" at alu.v(7) has no driver File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
+Info (12128): Elaborating entity "alu_32_bit" for hierarchy "alu_32_bit:a32b_and" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 15
+Info (12128): Elaborating entity "alu_16_bit" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_32_bit.v Line: 15
+Info (12128): Elaborating entity "alu_1_bit" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v Line: 10
+Info (12128): Elaborating entity "not_gate" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|not_gate:ng1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 12
+Info (12128): Elaborating entity "mux_2" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|mux_2:mx1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 13
+Info (12128): Elaborating entity "and_gate" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|and_gate:ad" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 19
+Info (12128): Elaborating entity "or_gate" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|or_gate:og" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 22
+Info (12128): Elaborating entity "full_adder" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|full_adder:fa" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 25
+Info (12128): Elaborating entity "half_adder" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|full_adder:fa|half_adder:ha1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/full_adder.v Line: 15
+Info (12128): Elaborating entity "mux_4" for hierarchy "alu_32_bit:a32b_and|alu_16_bit:a16b|alu_1_bit:fa0|mux_4:mx3" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit.v Line: 28
+Info (12128): Elaborating entity "alu_16_bit_f" for hierarchy "alu_32_bit:a32b_and|alu_16_bit_f:a16bf1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_32_bit.v Line: 18
+Info (12128): Elaborating entity "alu_1_bit_f" for hierarchy "alu_32_bit:a32b_and|alu_16_bit_f:a16bf1|alu_1_bit_f:fa15" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v Line: 25
+Info (12128): Elaborating entity "overflow_check" for hierarchy "alu_32_bit:a32b_and|alu_16_bit_f:a16bf1|alu_1_bit_f:fa15|overflow_check:oc" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu_1_bit_f.v Line: 31
+Info (12128): Elaborating entity "mux32_8to1" for hierarchy "mux32_8to1:mx1" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 21
+Info (12128): Elaborating entity "mux32_4to1" for hierarchy "mux32_8to1:mx1|mux32_4to1:first_top" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v Line: 23
+Info (12128): Elaborating entity "mux32_2to1" for hierarchy "mux32_8to1:mx1|mux32_4to1:first_top|mux32_2to1:first_top" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/mux32_8to1.v Line: 13
+Info (12128): Elaborating entity "mux_8" for hierarchy "mux_8:mx2" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 22
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "isNotEqual" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
+    Warning (13410): Pin "isLessThan" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 37 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 67 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Fri Sep 15 00:39:36 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:26
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ctrl_ALUopcode[3]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
+    Warning (15610): No output dependent on input pin "ctrl_ALUopcode[4]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
+    Warning (15610): No output dependent on input pin "ctrl_shiftamt[0]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
+    Warning (15610): No output dependent on input pin "ctrl_shiftamt[1]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
+    Warning (15610): No output dependent on input pin "ctrl_shiftamt[2]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
+    Warning (15610): No output dependent on input pin "ctrl_shiftamt[3]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
+    Warning (15610): No output dependent on input pin "ctrl_shiftamt[4]" File: //Mac/Home/Desktop/ECE550/Proj_1/alu/alu.v Line: 4
+Info (21057): Implemented 390 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 74 input pins
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 281 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Fri Sep 15 08:02:22 2023
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:31
 
 
