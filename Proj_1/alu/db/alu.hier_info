@@ -105,8 +105,8 @@ data_result[28] <= mux32_8to1:mx1.out
 data_result[29] <= mux32_8to1:mx1.out
 data_result[30] <= mux32_8to1:mx1.out
 data_result[31] <= mux32_8to1:mx1.out
-isNotEqual <= <GND>
-isLessThan <= <GND>
+isNotEqual <= nd.DB_MAX_OUTPUT_PORT_TYPE
+isLessThan <= not_gate:ng2.port1
 overflow <= mux_8:mx2.out
 
 
@@ -23697,5 +23697,10 @@ select => out.OUTPUTSELECT
 in0 => out.DATAA
 in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|not_gate:ng2
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 

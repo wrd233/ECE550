@@ -21,6 +21,14 @@ module alu(data_operandA, data_operandB, ctrl_ALUopcode, ctrl_shiftamt, data_res
     mux32_8to1 mx1(.select(ctrl_ALUopcode), .in0(addOut), .in1(subOut), .in2(andOut), .in3(orOut), .in4(32'h00000000), .in5(32'h00000000), .in6(32'h00000000), .in7(32'h00000000), .out(data_result));
     mux_8 mx2(.select(ctrl_ALUopcode), .in0(addOverflow), .in1(subOverflow), .in2(andOverflow), .in3(orOverflow), .in4(1'b0), .in5(1'b0), .in6(1'b0), .in7(1'b0), .out(overflow));
 
+    // 判断结果是否全0
+    or o(isNotEqual, subOut[0], subOut[1], subOut[2], subOut[3], subOut[4], subOut[5], subOut[6], subOut[7], subOut[8], subOut[9], subOut[10], subOut[11], subOut[12], subOut[13], subOut[14], subOut[15], subOut[16], subOut[17], subOut[18], subOut[19], subOut[20], subOut[21], subOut[22], subOut[23], subOut[24], subOut[25], subOut[26], subOut[27], subOut[28], subOut[29], subOut[30], subOut[31]);
+
+    // 判断是否小于，如果溢出了，那么需要反转
+    wire sign_negative; //存储符号位的反转
+    not_gate ng(subOut[31],sign_negative);
+    mux_2 mx3(overflow, subOut[31], sign_negative, isLessThan);
+    // not_gate ng2(subOut[31],isLessThan);
 
 //    // YOUR CODE HERE //
 //    always @(ctrl_ALUopcode, data_operandA, data_operandB) begin

@@ -132,6 +132,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "isNotEqual",
+					"strict" : false
+				},
+				{
+					"name" : "isLessThan",
+					"strict" : false
+				},
+				{
 					"name" : "overflow",
 					"strict" : false
 				},
@@ -156,11 +164,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_operandA[1]",
+					"name" : "data_operandB[1]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[1]",
+					"name" : "data_operandA[1]",
 					"strict" : false
 				},
 				{
