@@ -20,6 +20,7 @@ vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Ma
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit.v}
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/overflow_check.v}
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/alu_16_bit_f.v}
+vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_1/alu {//Mac/Home/Desktop/ECE550/Proj_1/alu/left_shift_32bit.v}
 
 vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_1/alu {/Desktop/ECE550/Proj_1/alu/alu_tb.v}
 

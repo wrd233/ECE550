@@ -68,46 +68,46 @@ ctrl_ALUopcode[1] => ctrl_ALUopcode[1].IN2
 ctrl_ALUopcode[2] => ctrl_ALUopcode[2].IN2
 ctrl_ALUopcode[3] => ctrl_ALUopcode[3].IN2
 ctrl_ALUopcode[4] => ctrl_ALUopcode[4].IN2
-ctrl_shiftamt[0] => ~NO_FANOUT~
-ctrl_shiftamt[1] => ~NO_FANOUT~
-ctrl_shiftamt[2] => ~NO_FANOUT~
-ctrl_shiftamt[3] => ~NO_FANOUT~
-ctrl_shiftamt[4] => ~NO_FANOUT~
-data_result[0] <= mux32_8to1:mx1.out
-data_result[1] <= mux32_8to1:mx1.out
-data_result[2] <= mux32_8to1:mx1.out
-data_result[3] <= mux32_8to1:mx1.out
-data_result[4] <= mux32_8to1:mx1.out
-data_result[5] <= mux32_8to1:mx1.out
-data_result[6] <= mux32_8to1:mx1.out
-data_result[7] <= mux32_8to1:mx1.out
-data_result[8] <= mux32_8to1:mx1.out
-data_result[9] <= mux32_8to1:mx1.out
-data_result[10] <= mux32_8to1:mx1.out
-data_result[11] <= mux32_8to1:mx1.out
-data_result[12] <= mux32_8to1:mx1.out
-data_result[13] <= mux32_8to1:mx1.out
-data_result[14] <= mux32_8to1:mx1.out
-data_result[15] <= mux32_8to1:mx1.out
-data_result[16] <= mux32_8to1:mx1.out
-data_result[17] <= mux32_8to1:mx1.out
-data_result[18] <= mux32_8to1:mx1.out
-data_result[19] <= mux32_8to1:mx1.out
-data_result[20] <= mux32_8to1:mx1.out
-data_result[21] <= mux32_8to1:mx1.out
-data_result[22] <= mux32_8to1:mx1.out
-data_result[23] <= mux32_8to1:mx1.out
-data_result[24] <= mux32_8to1:mx1.out
-data_result[25] <= mux32_8to1:mx1.out
-data_result[26] <= mux32_8to1:mx1.out
-data_result[27] <= mux32_8to1:mx1.out
-data_result[28] <= mux32_8to1:mx1.out
-data_result[29] <= mux32_8to1:mx1.out
-data_result[30] <= mux32_8to1:mx1.out
-data_result[31] <= mux32_8to1:mx1.out
-isNotEqual <= nd.DB_MAX_OUTPUT_PORT_TYPE
-isLessThan <= not_gate:ng2.port1
-overflow <= mux_8:mx2.out
+ctrl_shiftamt[0] => ctrl_shiftamt[0].IN1
+ctrl_shiftamt[1] => ctrl_shiftamt[1].IN1
+ctrl_shiftamt[2] => ctrl_shiftamt[2].IN1
+ctrl_shiftamt[3] => ctrl_shiftamt[3].IN1
+ctrl_shiftamt[4] => ctrl_shiftamt[4].IN1
+data_result[0] << mux32_8to1:mx1.out
+data_result[1] << mux32_8to1:mx1.out
+data_result[2] << mux32_8to1:mx1.out
+data_result[3] << mux32_8to1:mx1.out
+data_result[4] << mux32_8to1:mx1.out
+data_result[5] << mux32_8to1:mx1.out
+data_result[6] << mux32_8to1:mx1.out
+data_result[7] << mux32_8to1:mx1.out
+data_result[8] << mux32_8to1:mx1.out
+data_result[9] << mux32_8to1:mx1.out
+data_result[10] << mux32_8to1:mx1.out
+data_result[11] << mux32_8to1:mx1.out
+data_result[12] << mux32_8to1:mx1.out
+data_result[13] << mux32_8to1:mx1.out
+data_result[14] << mux32_8to1:mx1.out
+data_result[15] << mux32_8to1:mx1.out
+data_result[16] << mux32_8to1:mx1.out
+data_result[17] << mux32_8to1:mx1.out
+data_result[18] << mux32_8to1:mx1.out
+data_result[19] << mux32_8to1:mx1.out
+data_result[20] << mux32_8to1:mx1.out
+data_result[21] << mux32_8to1:mx1.out
+data_result[22] << mux32_8to1:mx1.out
+data_result[23] << mux32_8to1:mx1.out
+data_result[24] << mux32_8to1:mx1.out
+data_result[25] << mux32_8to1:mx1.out
+data_result[26] << mux32_8to1:mx1.out
+data_result[27] << mux32_8to1:mx1.out
+data_result[28] << mux32_8to1:mx1.out
+data_result[29] << mux32_8to1:mx1.out
+data_result[30] << mux32_8to1:mx1.out
+data_result[31] << mux32_8to1:mx1.out
+isNotEqual << o.DB_MAX_OUTPUT_PORT_TYPE
+isLessThan << mux_2:mx3.port3
+overflow << overflow.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu|alu_32_bit:a32b_and
@@ -22074,6 +22074,1563 @@ in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|alu|left_shift_32bit:ls
+ctrl_shiftamt[0] => ctrl_shiftamt[0].IN1
+ctrl_shiftamt[1] => ctrl_shiftamt[1].IN1
+ctrl_shiftamt[2] => ctrl_shiftamt[2].IN1
+ctrl_shiftamt[3] => ctrl_shiftamt[3].IN1
+ctrl_shiftamt[4] => ctrl_shiftamt[4].IN1
+data_in[0] => data_in[0].IN1
+data_in[1] => data_in[1].IN1
+data_in[2] => data_in[2].IN1
+data_in[3] => data_in[3].IN1
+data_in[4] => data_in[4].IN1
+data_in[5] => data_in[5].IN1
+data_in[6] => data_in[6].IN1
+data_in[7] => data_in[7].IN1
+data_in[8] => data_in[8].IN1
+data_in[9] => data_in[9].IN1
+data_in[10] => data_in[10].IN1
+data_in[11] => data_in[11].IN1
+data_in[12] => data_in[12].IN1
+data_in[13] => data_in[13].IN1
+data_in[14] => data_in[14].IN1
+data_in[15] => data_in[15].IN1
+data_in[16] => data_in[16].IN1
+data_in[17] => data_in[17].IN1
+data_in[18] => data_in[18].IN1
+data_in[19] => data_in[19].IN1
+data_in[20] => data_in[20].IN1
+data_in[21] => data_in[21].IN1
+data_in[22] => data_in[22].IN1
+data_in[23] => data_in[23].IN1
+data_in[24] => data_in[24].IN1
+data_in[25] => data_in[25].IN1
+data_in[26] => data_in[26].IN1
+data_in[27] => data_in[27].IN1
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+data_out[0] <= ls16:ls5.port2
+data_out[1] <= ls16:ls5.port2
+data_out[2] <= ls16:ls5.port2
+data_out[3] <= ls16:ls5.port2
+data_out[4] <= ls16:ls5.port2
+data_out[5] <= ls16:ls5.port2
+data_out[6] <= ls16:ls5.port2
+data_out[7] <= ls16:ls5.port2
+data_out[8] <= ls16:ls5.port2
+data_out[9] <= ls16:ls5.port2
+data_out[10] <= ls16:ls5.port2
+data_out[11] <= ls16:ls5.port2
+data_out[12] <= ls16:ls5.port2
+data_out[13] <= ls16:ls5.port2
+data_out[14] <= ls16:ls5.port2
+data_out[15] <= ls16:ls5.port2
+data_out[16] <= ls16:ls5.port2
+data_out[17] <= ls16:ls5.port2
+data_out[18] <= ls16:ls5.port2
+data_out[19] <= ls16:ls5.port2
+data_out[20] <= ls16:ls5.port2
+data_out[21] <= ls16:ls5.port2
+data_out[22] <= ls16:ls5.port2
+data_out[23] <= ls16:ls5.port2
+data_out[24] <= ls16:ls5.port2
+data_out[25] <= ls16:ls5.port2
+data_out[26] <= ls16:ls5.port2
+data_out[27] <= ls16:ls5.port2
+data_out[28] <= ls16:ls5.port2
+data_out[29] <= ls16:ls5.port2
+data_out[30] <= ls16:ls5.port2
+data_out[31] <= ls16:ls5.port2
+
+
+|alu|left_shift_32bit:ls|not_gate:ng1
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|not_gate:ng2
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|not_gate:ng3
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|not_gate:ng4
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|not_gate:ng5
+a => out.DATAIN
+out <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1
+select => select.IN32
+data_in[0] => data_in[0].IN2
+data_in[1] => data_in[1].IN2
+data_in[2] => data_in[2].IN2
+data_in[3] => data_in[3].IN2
+data_in[4] => data_in[4].IN2
+data_in[5] => data_in[5].IN2
+data_in[6] => data_in[6].IN2
+data_in[7] => data_in[7].IN2
+data_in[8] => data_in[8].IN2
+data_in[9] => data_in[9].IN2
+data_in[10] => data_in[10].IN2
+data_in[11] => data_in[11].IN2
+data_in[12] => data_in[12].IN2
+data_in[13] => data_in[13].IN2
+data_in[14] => data_in[14].IN2
+data_in[15] => data_in[15].IN2
+data_in[16] => data_in[16].IN2
+data_in[17] => data_in[17].IN2
+data_in[18] => data_in[18].IN2
+data_in[19] => data_in[19].IN2
+data_in[20] => data_in[20].IN2
+data_in[21] => data_in[21].IN2
+data_in[22] => data_in[22].IN2
+data_in[23] => data_in[23].IN2
+data_in[24] => data_in[24].IN2
+data_in[25] => data_in[25].IN2
+data_in[26] => data_in[26].IN2
+data_in[27] => data_in[27].IN2
+data_in[28] => data_in[28].IN2
+data_in[29] => data_in[29].IN2
+data_in[30] => data_in[30].IN2
+data_in[31] => data_in[31].IN1
+data_out[0] <= mux_2:mx0.port3
+data_out[1] <= mux_2:loop1[0].mx.port3
+data_out[2] <= mux_2:loop1[1].mx.port3
+data_out[3] <= mux_2:loop1[2].mx.port3
+data_out[4] <= mux_2:loop1[3].mx.port3
+data_out[5] <= mux_2:loop1[4].mx.port3
+data_out[6] <= mux_2:loop1[5].mx.port3
+data_out[7] <= mux_2:loop1[6].mx.port3
+data_out[8] <= mux_2:loop1[7].mx.port3
+data_out[9] <= mux_2:loop1[8].mx.port3
+data_out[10] <= mux_2:loop1[9].mx.port3
+data_out[11] <= mux_2:loop1[10].mx.port3
+data_out[12] <= mux_2:loop1[11].mx.port3
+data_out[13] <= mux_2:loop1[12].mx.port3
+data_out[14] <= mux_2:loop1[13].mx.port3
+data_out[15] <= mux_2:loop1[14].mx.port3
+data_out[16] <= mux_2:loop1[15].mx.port3
+data_out[17] <= mux_2:loop1[16].mx.port3
+data_out[18] <= mux_2:loop1[17].mx.port3
+data_out[19] <= mux_2:loop1[18].mx.port3
+data_out[20] <= mux_2:loop1[19].mx.port3
+data_out[21] <= mux_2:loop1[20].mx.port3
+data_out[22] <= mux_2:loop1[21].mx.port3
+data_out[23] <= mux_2:loop1[22].mx.port3
+data_out[24] <= mux_2:loop1[23].mx.port3
+data_out[25] <= mux_2:loop1[24].mx.port3
+data_out[26] <= mux_2:loop1[25].mx.port3
+data_out[27] <= mux_2:loop1[26].mx.port3
+data_out[28] <= mux_2:loop1[27].mx.port3
+data_out[29] <= mux_2:loop1[28].mx.port3
+data_out[30] <= mux_2:loop1[29].mx.port3
+data_out[31] <= mux_2:loop1[30].mx.port3
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:mx0
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[0].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[1].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[2].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[3].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[4].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[5].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[6].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[7].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[8].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[9].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[10].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[11].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[12].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[13].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[14].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[15].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[16].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[17].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[18].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[19].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[20].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[21].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[22].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[23].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[24].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[25].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[26].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[27].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[28].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[29].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls1:ls1|mux_2:loop1[30].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2
+select => select.IN32
+data_in[0] => data_in[0].IN2
+data_in[1] => data_in[1].IN2
+data_in[2] => data_in[2].IN2
+data_in[3] => data_in[3].IN2
+data_in[4] => data_in[4].IN2
+data_in[5] => data_in[5].IN2
+data_in[6] => data_in[6].IN2
+data_in[7] => data_in[7].IN2
+data_in[8] => data_in[8].IN2
+data_in[9] => data_in[9].IN2
+data_in[10] => data_in[10].IN2
+data_in[11] => data_in[11].IN2
+data_in[12] => data_in[12].IN2
+data_in[13] => data_in[13].IN2
+data_in[14] => data_in[14].IN2
+data_in[15] => data_in[15].IN2
+data_in[16] => data_in[16].IN2
+data_in[17] => data_in[17].IN2
+data_in[18] => data_in[18].IN2
+data_in[19] => data_in[19].IN2
+data_in[20] => data_in[20].IN2
+data_in[21] => data_in[21].IN2
+data_in[22] => data_in[22].IN2
+data_in[23] => data_in[23].IN2
+data_in[24] => data_in[24].IN2
+data_in[25] => data_in[25].IN2
+data_in[26] => data_in[26].IN2
+data_in[27] => data_in[27].IN2
+data_in[28] => data_in[28].IN2
+data_in[29] => data_in[29].IN2
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+data_out[0] <= mux_2:mx0.port3
+data_out[1] <= mux_2:mx1.port3
+data_out[2] <= mux_2:loop2[0].mx.port3
+data_out[3] <= mux_2:loop2[1].mx.port3
+data_out[4] <= mux_2:loop2[2].mx.port3
+data_out[5] <= mux_2:loop2[3].mx.port3
+data_out[6] <= mux_2:loop2[4].mx.port3
+data_out[7] <= mux_2:loop2[5].mx.port3
+data_out[8] <= mux_2:loop2[6].mx.port3
+data_out[9] <= mux_2:loop2[7].mx.port3
+data_out[10] <= mux_2:loop2[8].mx.port3
+data_out[11] <= mux_2:loop2[9].mx.port3
+data_out[12] <= mux_2:loop2[10].mx.port3
+data_out[13] <= mux_2:loop2[11].mx.port3
+data_out[14] <= mux_2:loop2[12].mx.port3
+data_out[15] <= mux_2:loop2[13].mx.port3
+data_out[16] <= mux_2:loop2[14].mx.port3
+data_out[17] <= mux_2:loop2[15].mx.port3
+data_out[18] <= mux_2:loop2[16].mx.port3
+data_out[19] <= mux_2:loop2[17].mx.port3
+data_out[20] <= mux_2:loop2[18].mx.port3
+data_out[21] <= mux_2:loop2[19].mx.port3
+data_out[22] <= mux_2:loop2[20].mx.port3
+data_out[23] <= mux_2:loop2[21].mx.port3
+data_out[24] <= mux_2:loop2[22].mx.port3
+data_out[25] <= mux_2:loop2[23].mx.port3
+data_out[26] <= mux_2:loop2[24].mx.port3
+data_out[27] <= mux_2:loop2[25].mx.port3
+data_out[28] <= mux_2:loop2[26].mx.port3
+data_out[29] <= mux_2:loop2[27].mx.port3
+data_out[30] <= mux_2:loop2[28].mx.port3
+data_out[31] <= mux_2:loop2[29].mx.port3
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:mx0
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:mx1
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[0].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[1].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[2].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[3].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[4].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[5].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[6].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[7].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[8].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[9].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[10].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[11].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[12].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[13].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[14].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[15].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[16].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[17].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[18].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[19].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[20].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[21].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[22].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[23].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[24].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[25].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[26].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[27].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[28].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls2:ls2|mux_2:loop2[29].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3
+select => select.IN32
+data_in[0] => data_in[0].IN2
+data_in[1] => data_in[1].IN2
+data_in[2] => data_in[2].IN2
+data_in[3] => data_in[3].IN2
+data_in[4] => data_in[4].IN2
+data_in[5] => data_in[5].IN2
+data_in[6] => data_in[6].IN2
+data_in[7] => data_in[7].IN2
+data_in[8] => data_in[8].IN2
+data_in[9] => data_in[9].IN2
+data_in[10] => data_in[10].IN2
+data_in[11] => data_in[11].IN2
+data_in[12] => data_in[12].IN2
+data_in[13] => data_in[13].IN2
+data_in[14] => data_in[14].IN2
+data_in[15] => data_in[15].IN2
+data_in[16] => data_in[16].IN2
+data_in[17] => data_in[17].IN2
+data_in[18] => data_in[18].IN2
+data_in[19] => data_in[19].IN2
+data_in[20] => data_in[20].IN2
+data_in[21] => data_in[21].IN2
+data_in[22] => data_in[22].IN2
+data_in[23] => data_in[23].IN2
+data_in[24] => data_in[24].IN2
+data_in[25] => data_in[25].IN2
+data_in[26] => data_in[26].IN2
+data_in[27] => data_in[27].IN2
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+data_out[0] <= mux_2:mx0.port3
+data_out[1] <= mux_2:mx1.port3
+data_out[2] <= mux_2:mx2.port3
+data_out[3] <= mux_2:mx3.port3
+data_out[4] <= mux_2:loop3[0].mx.port3
+data_out[5] <= mux_2:loop3[1].mx.port3
+data_out[6] <= mux_2:loop3[2].mx.port3
+data_out[7] <= mux_2:loop3[3].mx.port3
+data_out[8] <= mux_2:loop3[4].mx.port3
+data_out[9] <= mux_2:loop3[5].mx.port3
+data_out[10] <= mux_2:loop3[6].mx.port3
+data_out[11] <= mux_2:loop3[7].mx.port3
+data_out[12] <= mux_2:loop3[8].mx.port3
+data_out[13] <= mux_2:loop3[9].mx.port3
+data_out[14] <= mux_2:loop3[10].mx.port3
+data_out[15] <= mux_2:loop3[11].mx.port3
+data_out[16] <= mux_2:loop3[12].mx.port3
+data_out[17] <= mux_2:loop3[13].mx.port3
+data_out[18] <= mux_2:loop3[14].mx.port3
+data_out[19] <= mux_2:loop3[15].mx.port3
+data_out[20] <= mux_2:loop3[16].mx.port3
+data_out[21] <= mux_2:loop3[17].mx.port3
+data_out[22] <= mux_2:loop3[18].mx.port3
+data_out[23] <= mux_2:loop3[19].mx.port3
+data_out[24] <= mux_2:loop3[20].mx.port3
+data_out[25] <= mux_2:loop3[21].mx.port3
+data_out[26] <= mux_2:loop3[22].mx.port3
+data_out[27] <= mux_2:loop3[23].mx.port3
+data_out[28] <= mux_2:loop3[24].mx.port3
+data_out[29] <= mux_2:loop3[25].mx.port3
+data_out[30] <= mux_2:loop3[26].mx.port3
+data_out[31] <= mux_2:loop3[27].mx.port3
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:mx0
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:mx1
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:mx2
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:mx3
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[0].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[1].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[2].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[3].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[4].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[5].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[6].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[7].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[8].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[9].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[10].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[11].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[12].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[13].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[14].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[15].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[16].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[17].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[18].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[19].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[20].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[21].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[22].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[23].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[24].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[25].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[26].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls4:ls3|mux_2:loop3[27].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4
+select => select.IN32
+data_in[0] => data_in[0].IN2
+data_in[1] => data_in[1].IN2
+data_in[2] => data_in[2].IN2
+data_in[3] => data_in[3].IN2
+data_in[4] => data_in[4].IN2
+data_in[5] => data_in[5].IN2
+data_in[6] => data_in[6].IN2
+data_in[7] => data_in[7].IN2
+data_in[8] => data_in[8].IN2
+data_in[9] => data_in[9].IN2
+data_in[10] => data_in[10].IN2
+data_in[11] => data_in[11].IN2
+data_in[12] => data_in[12].IN2
+data_in[13] => data_in[13].IN2
+data_in[14] => data_in[14].IN2
+data_in[15] => data_in[15].IN2
+data_in[16] => data_in[16].IN2
+data_in[17] => data_in[17].IN2
+data_in[18] => data_in[18].IN2
+data_in[19] => data_in[19].IN2
+data_in[20] => data_in[20].IN2
+data_in[21] => data_in[21].IN2
+data_in[22] => data_in[22].IN2
+data_in[23] => data_in[23].IN2
+data_in[24] => data_in[24].IN1
+data_in[25] => data_in[25].IN1
+data_in[26] => data_in[26].IN1
+data_in[27] => data_in[27].IN1
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+data_out[0] <= mux_2:mx0.port3
+data_out[1] <= mux_2:mx1.port3
+data_out[2] <= mux_2:mx2.port3
+data_out[3] <= mux_2:mx3.port3
+data_out[4] <= mux_2:mx4.port3
+data_out[5] <= mux_2:mx5.port3
+data_out[6] <= mux_2:mx6.port3
+data_out[7] <= mux_2:mx7.port3
+data_out[8] <= mux_2:loop4[0].mx.port3
+data_out[9] <= mux_2:loop4[1].mx.port3
+data_out[10] <= mux_2:loop4[2].mx.port3
+data_out[11] <= mux_2:loop4[3].mx.port3
+data_out[12] <= mux_2:loop4[4].mx.port3
+data_out[13] <= mux_2:loop4[5].mx.port3
+data_out[14] <= mux_2:loop4[6].mx.port3
+data_out[15] <= mux_2:loop4[7].mx.port3
+data_out[16] <= mux_2:loop4[8].mx.port3
+data_out[17] <= mux_2:loop4[9].mx.port3
+data_out[18] <= mux_2:loop4[10].mx.port3
+data_out[19] <= mux_2:loop4[11].mx.port3
+data_out[20] <= mux_2:loop4[12].mx.port3
+data_out[21] <= mux_2:loop4[13].mx.port3
+data_out[22] <= mux_2:loop4[14].mx.port3
+data_out[23] <= mux_2:loop4[15].mx.port3
+data_out[24] <= mux_2:loop4[16].mx.port3
+data_out[25] <= mux_2:loop4[17].mx.port3
+data_out[26] <= mux_2:loop4[18].mx.port3
+data_out[27] <= mux_2:loop4[19].mx.port3
+data_out[28] <= mux_2:loop4[20].mx.port3
+data_out[29] <= mux_2:loop4[21].mx.port3
+data_out[30] <= mux_2:loop4[22].mx.port3
+data_out[31] <= mux_2:loop4[23].mx.port3
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:mx0
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:mx1
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:mx2
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:mx3
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:mx4
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:mx5
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:mx6
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:mx7
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[0].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[1].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[2].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[3].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[4].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[5].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[6].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[7].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[8].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[9].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[10].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[11].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[12].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[13].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[14].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[15].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[16].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[17].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[18].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[19].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[20].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[21].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[22].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls8:ls4|mux_2:loop4[23].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5
+select => select.IN32
+data_in[0] => data_in[0].IN2
+data_in[1] => data_in[1].IN2
+data_in[2] => data_in[2].IN2
+data_in[3] => data_in[3].IN2
+data_in[4] => data_in[4].IN2
+data_in[5] => data_in[5].IN2
+data_in[6] => data_in[6].IN2
+data_in[7] => data_in[7].IN2
+data_in[8] => data_in[8].IN2
+data_in[9] => data_in[9].IN2
+data_in[10] => data_in[10].IN2
+data_in[11] => data_in[11].IN2
+data_in[12] => data_in[12].IN2
+data_in[13] => data_in[13].IN2
+data_in[14] => data_in[14].IN2
+data_in[15] => data_in[15].IN2
+data_in[16] => data_in[16].IN1
+data_in[17] => data_in[17].IN1
+data_in[18] => data_in[18].IN1
+data_in[19] => data_in[19].IN1
+data_in[20] => data_in[20].IN1
+data_in[21] => data_in[21].IN1
+data_in[22] => data_in[22].IN1
+data_in[23] => data_in[23].IN1
+data_in[24] => data_in[24].IN1
+data_in[25] => data_in[25].IN1
+data_in[26] => data_in[26].IN1
+data_in[27] => data_in[27].IN1
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+data_out[0] <= mux_2:loop5[0].mx.port3
+data_out[1] <= mux_2:loop5[1].mx.port3
+data_out[2] <= mux_2:loop5[2].mx.port3
+data_out[3] <= mux_2:loop5[3].mx.port3
+data_out[4] <= mux_2:loop5[4].mx.port3
+data_out[5] <= mux_2:loop5[5].mx.port3
+data_out[6] <= mux_2:loop5[6].mx.port3
+data_out[7] <= mux_2:loop5[7].mx.port3
+data_out[8] <= mux_2:loop5[8].mx.port3
+data_out[9] <= mux_2:loop5[9].mx.port3
+data_out[10] <= mux_2:loop5[10].mx.port3
+data_out[11] <= mux_2:loop5[11].mx.port3
+data_out[12] <= mux_2:loop5[12].mx.port3
+data_out[13] <= mux_2:loop5[13].mx.port3
+data_out[14] <= mux_2:loop5[14].mx.port3
+data_out[15] <= mux_2:loop5[15].mx.port3
+data_out[16] <= mux_2:loop6[0].mx.port3
+data_out[17] <= mux_2:loop6[1].mx.port3
+data_out[18] <= mux_2:loop6[2].mx.port3
+data_out[19] <= mux_2:loop6[3].mx.port3
+data_out[20] <= mux_2:loop6[4].mx.port3
+data_out[21] <= mux_2:loop6[5].mx.port3
+data_out[22] <= mux_2:loop6[6].mx.port3
+data_out[23] <= mux_2:loop6[7].mx.port3
+data_out[24] <= mux_2:loop6[8].mx.port3
+data_out[25] <= mux_2:loop6[9].mx.port3
+data_out[26] <= mux_2:loop6[10].mx.port3
+data_out[27] <= mux_2:loop6[11].mx.port3
+data_out[28] <= mux_2:loop6[12].mx.port3
+data_out[29] <= mux_2:loop6[13].mx.port3
+data_out[30] <= mux_2:loop6[14].mx.port3
+data_out[31] <= mux_2:loop6[15].mx.port3
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[0].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[1].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[2].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[3].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[4].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[5].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[6].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[7].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[8].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[9].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[10].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[11].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[12].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[13].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[14].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop5[15].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[0].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[1].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[2].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[3].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[4].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[5].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[6].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[7].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[8].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[9].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[10].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[11].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[12].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[13].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[14].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|left_shift_32bit:ls|ls16:ls5|mux_2:loop6[15].mx
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |alu|mux32_8to1:mx1
 select[0] => select[0].IN2
 select[1] => select[1].IN2
@@ -23699,8 +25256,15 @@ in1 => out.DATAB
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|not_gate:ng2
+|alu|not_gate:ng
 a => out.DATAIN
 out <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|mux_2:mx3
+select => out.OUTPUTSELECT
+in0 => out.DATAA
+in1 => out.DATAB
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
