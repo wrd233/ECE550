@@ -1,5 +1,5 @@
 Timing Analyzer report for alu
-Fri Sep 15 10:10:09 2023
+Fri Sep 15 10:56:43 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -90,12 +90,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.05        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.6%      ;
+;     Processors 2-6         ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -293,46 +293,46 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; ctrl_ALUopcode[3]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ctrl_ALUopcode[4]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ctrl_shiftamt[0]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ctrl_shiftamt[1]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ctrl_ALUopcode[2]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ctrl_shiftamt[2]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ctrl_shiftamt[3]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ctrl_shiftamt[4]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ctrl_ALUopcode[1]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ctrl_ALUopcode[0]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[0]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ctrl_shiftamt[0]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ctrl_shiftamt[1]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[0]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ctrl_ALUopcode[2]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data_operandB[1]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ctrl_ALUopcode[0]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ctrl_ALUopcode[1]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[1]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_operandB[1]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[2]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[2]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data_operandB[3]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[3]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_operandB[3]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[4]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[4]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data_operandB[5]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[5]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_operandB[5]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[6]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[6]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data_operandB[7]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[7]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_operandB[7]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[8]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[8]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data_operandB[9]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[9]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_operandB[9]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[10]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[10]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data_operandB[11]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[11]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_operandB[11]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[12]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[12]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data_operandB[13]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[13]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_operandB[13]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[14]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[14]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; data_operandB[15]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[15]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_operandB[15]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[16]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandB[16]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data_operandA[17]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -390,7 +390,7 @@ No synchronizer chains to report.
 ; data_result[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
 ; data_result[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
 ; data_result[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
-; data_result[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; data_result[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
 ; data_result[16] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
 ; data_result[17] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
@@ -435,7 +435,7 @@ No synchronizer chains to report.
 ; data_result[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; data_result[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; data_result[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[16] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[17] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
@@ -480,7 +480,7 @@ No synchronizer chains to report.
 ; data_result[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; data_result[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_result[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
 ; data_result[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[16] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; data_result[17] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
@@ -531,10 +531,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 67    ; 67   ;
-; Unconstrained Input Port Paths  ; 1350  ; 1350 ;
+; Unconstrained Input Ports       ; 72    ; 72   ;
+; Unconstrained Input Port Paths  ; 1510  ; 1510 ;
 ; Unconstrained Output Ports      ; 35    ; 35   ;
-; Unconstrained Output Port Paths ; 1350  ; 1350 ;
+; Unconstrained Output Port Paths ; 1510  ; 1510 ;
 +---------------------------------+-------+------+
 
 
@@ -546,6 +546,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ctrl_ALUopcode[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ctrl_ALUopcode[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ctrl_ALUopcode[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; data_operandA[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; data_operandA[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; data_operandA[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -664,6 +669,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ctrl_ALUopcode[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ctrl_ALUopcode[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ctrl_ALUopcode[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ctrl_shiftamt[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; data_operandA[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; data_operandA[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; data_operandA[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -780,7 +790,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Sep 15 10:10:06 2023
+    Info: Processing started: Fri Sep 15 10:56:41 2023
 Info: Command: quartus_sta alu -c alu
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -828,9 +838,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Fri Sep 15 10:10:09 2023
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Fri Sep 15 10:56:43 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

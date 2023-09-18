@@ -144,11 +144,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "ctrl_ALUopcode[1]",
+					"name" : "ctrl_ALUopcode[2]",
 					"strict" : false
 				},
 				{
-					"name" : "ctrl_ALUopcode[0]",
+					"name" : "ctrl_shiftamt[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_shiftamt[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_shiftamt[4]",
 					"strict" : false
 				},
 				{
@@ -156,19 +164,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "ctrl_shiftamt[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ctrl_shiftamt[1]",
+					"strict" : false
+				},
+				{
 					"name" : "data_operandB[0]",
 					"strict" : false
 				},
 				{
-					"name" : "ctrl_ALUopcode[2]",
+					"name" : "ctrl_ALUopcode[0]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[1]",
+					"name" : "ctrl_ALUopcode[1]",
 					"strict" : false
 				},
 				{
 					"name" : "data_operandA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_operandB[1]",
 					"strict" : false
 				},
 				{
@@ -180,11 +200,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[3]",
+					"name" : "data_operandA[3]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandA[3]",
+					"name" : "data_operandB[3]",
 					"strict" : false
 				},
 				{
@@ -196,11 +216,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[5]",
+					"name" : "data_operandA[5]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandA[5]",
+					"name" : "data_operandB[5]",
 					"strict" : false
 				},
 				{
@@ -212,11 +232,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[7]",
+					"name" : "data_operandA[7]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandA[7]",
+					"name" : "data_operandB[7]",
 					"strict" : false
 				},
 				{
@@ -228,11 +248,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[9]",
+					"name" : "data_operandA[9]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandA[9]",
+					"name" : "data_operandB[9]",
 					"strict" : false
 				},
 				{
@@ -244,11 +264,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[11]",
+					"name" : "data_operandA[11]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandA[11]",
+					"name" : "data_operandB[11]",
 					"strict" : false
 				},
 				{
@@ -260,11 +280,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[13]",
+					"name" : "data_operandA[13]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandA[13]",
+					"name" : "data_operandB[13]",
 					"strict" : false
 				},
 				{
@@ -276,11 +296,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_operandB[15]",
+					"name" : "data_operandA[15]",
 					"strict" : false
 				},
 				{
-					"name" : "data_operandA[15]",
+					"name" : "data_operandB[15]",
 					"strict" : false
 				},
 				{
