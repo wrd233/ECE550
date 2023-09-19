@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/simulation/modelsim
+vfull_adder
+Z1 !s110 1695123697
+!i10b 1
+!s100 D7X<3z`aM;JKo;jeK3N:?2
+I^Sh:V@BZfGVVbO:LW^@D00
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1695049365
+Z4 8//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit.v
+Z5 F//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit.v
+L0 9
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1695123697.000000
+Z8 !s107 //Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit|//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit
+Z12 tCvgOpt 0
+vhalf_adder
+R1
+!i10b 1
+!s100 _2M5NG[hGUGS?ZczFU96L3
+IU[jme=K4czz[>8RdL2U0i2
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vmultiplier_W_tree_5_bit
+R1
+!i10b 1
+!s100 @g8U>nEV0bLE31R_IcfkG2
+IO3BLYUjLP<cjZGQbCRN`h0
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+nmultiplier_@w_tree_5_bit
+vmultiplier_W_tree_5_bit_tb
+R1
+!i10b 1
+!s100 gG>;ULM<nOYCc4c20?PTM3
+IEDOXBE?h7jAej6GWID3hn3
+R2
+R0
+w1695123684
+8/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit_tb.v
+F/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit_tb.v
+L0 4
+R6
+r1
+!s85 0
+31
+R7
+!s107 /Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit|/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit
+R12
+nmultiplier_@w_tree_5_bit_tb

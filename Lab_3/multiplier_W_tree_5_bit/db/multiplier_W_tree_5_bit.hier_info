@@ -49,16 +49,16 @@ in1[4] => and_gate14.IN1
 in1[4] => and_gate24.IN1
 in1[4] => and_gate34.IN1
 in1[4] => and_gate44.IN1
-multi_out[0] <= full_adder:fa13.sum
-multi_out[1] <= full_adder:fa14.sum
-multi_out[2] <= full_adder:fa15.sum
-multi_out[3] <= full_adder:fa16.sum
-multi_out[4] <= full_adder:fa17.sum
-multi_out[5] <= full_adder:fa18.sum
-multi_out[6] <= full_adder:fa19.sum
-multi_out[7] <= full_adder:fa20.sum
-multi_out[8] <= full_adder:fa21.sum
-multi_out[9] <= full_adder:fa21.carry_out
+multi_out[0] << full_adder:fa13.sum
+multi_out[1] << full_adder:fa14.sum
+multi_out[2] << full_adder:fa15.sum
+multi_out[3] << full_adder:fa16.sum
+multi_out[4] << full_adder:fa17.sum
+multi_out[5] << full_adder:fa18.sum
+multi_out[6] << full_adder:fa19.sum
+multi_out[7] << full_adder:fa20.sum
+multi_out[8] << full_adder:fa21.sum
+multi_out[9] << full_adder:fa21.carry_out
 
 
 |multiplier_W_tree_5_bit|full_adder:fa1
