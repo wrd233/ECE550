@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/simulation/modelsim
 vfull_adder
-Z1 !s110 1695123697
+Z1 !s110 1695198864
 !i10b 1
 !s100 D7X<3z`aM;JKo;jeK3N:?2
 I^Sh:V@BZfGVVbO:LW^@D00
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1695123697.000000
+Z7 !s108 1695198864.000000
 Z8 !s107 //Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit|//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit.v|
 !i113 1

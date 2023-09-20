@@ -1,0 +1,14 @@
+module d_latch(data, enable, clock, Q, Qbar);
+    input data;
+    input enable, clock;
+    output Q, Qbar;
+
+    wire EandDbar,Dbar,EandD;
+    not_gate ng1(data, Dbar);
+    and_gate ag1(EandDbar, Dbar, enable);
+    and_gate ag2(EandD, enable, data);
+
+    nor_gate ng2(Q, Qbar, EandDbar);
+    nor_gate ng3(Qbar, Q, EandD);
+
+endmodule

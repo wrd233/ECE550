@@ -12,7 +12,7 @@
 # 
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit {//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:41:37 on Sep 19,2023
+# Start time: 16:34:24 on Sep 20,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit" //Mac/Home/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit.v 
 # -- Compiling module half_adder
 # -- Compiling module full_adder
@@ -20,23 +20,23 @@
 # 
 # Top level modules:
 # 	multiplier_W_tree_5_bit
-# End time: 19:41:37 on Sep 19,2023, Elapsed time: 0:00:00
+# End time: 16:34:24 on Sep 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit {/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:41:37 on Sep 19,2023
+# Start time: 16:34:24 on Sep 20,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit" /Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit_tb.v 
 # -- Compiling module multiplier_W_tree_5_bit_tb
 # 
 # Top level modules:
 # 	multiplier_W_tree_5_bit_tb
-# End time: 19:41:37 on Sep 19,2023, Elapsed time: 0:00:00
+# End time: 16:34:24 on Sep 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  multiplier_W_tree_5_bit_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" multiplier_W_tree_5_bit_tb 
-# Start time: 19:41:38 on Sep 19,2023
+# Start time: 16:34:24 on Sep 20,2023
 # Loading work.multiplier_W_tree_5_bit_tb
 # Loading work.multiplier_W_tree_5_bit
 # Loading work.full_adder
@@ -51,6 +51,6 @@
 #                    0 simulation start
 # Simulation succeeded with no errors.
 # Break key hit
-# Simulation stop requested.
-# End time: 19:42:12 on Sep 19,2023, Elapsed time: 0:00:34
+# Break in Module multiplier_W_tree_5_bit_tb at /Desktop/ECE550/Lab_3/multiplier_W_tree_5_bit/multiplier_W_tree_5_bit_tb.v line 74
+# End time: 16:36:58 on Sep 20,2023, Elapsed time: 0:02:34
 # Errors: 0, Warnings: 0
