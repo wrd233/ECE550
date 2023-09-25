@@ -1,5 +1,5 @@
 Analysis & Synthesis report for regfile
-Mon Sep 25 20:49:31 2023
+Mon Sep 25 22:07:54 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -15,42 +15,10 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Logic Cells Representing Combinational Loops
   9. General Register Statistics
- 10. Port Connectivity Checks: "d_flip_flop:dff_loop[31].dff"
- 11. Port Connectivity Checks: "d_flip_flop:dff_loop[30].dff"
- 12. Port Connectivity Checks: "d_flip_flop:dff_loop[29].dff"
- 13. Port Connectivity Checks: "d_flip_flop:dff_loop[28].dff"
- 14. Port Connectivity Checks: "d_flip_flop:dff_loop[27].dff"
- 15. Port Connectivity Checks: "d_flip_flop:dff_loop[26].dff"
- 16. Port Connectivity Checks: "d_flip_flop:dff_loop[25].dff"
- 17. Port Connectivity Checks: "d_flip_flop:dff_loop[24].dff"
- 18. Port Connectivity Checks: "d_flip_flop:dff_loop[23].dff"
- 19. Port Connectivity Checks: "d_flip_flop:dff_loop[22].dff"
- 20. Port Connectivity Checks: "d_flip_flop:dff_loop[21].dff"
- 21. Port Connectivity Checks: "d_flip_flop:dff_loop[20].dff"
- 22. Port Connectivity Checks: "d_flip_flop:dff_loop[19].dff"
- 23. Port Connectivity Checks: "d_flip_flop:dff_loop[18].dff"
- 24. Port Connectivity Checks: "d_flip_flop:dff_loop[17].dff"
- 25. Port Connectivity Checks: "d_flip_flop:dff_loop[16].dff"
- 26. Port Connectivity Checks: "d_flip_flop:dff_loop[15].dff"
- 27. Port Connectivity Checks: "d_flip_flop:dff_loop[14].dff"
- 28. Port Connectivity Checks: "d_flip_flop:dff_loop[13].dff"
- 29. Port Connectivity Checks: "d_flip_flop:dff_loop[12].dff"
- 30. Port Connectivity Checks: "d_flip_flop:dff_loop[11].dff"
- 31. Port Connectivity Checks: "d_flip_flop:dff_loop[10].dff"
- 32. Port Connectivity Checks: "d_flip_flop:dff_loop[9].dff"
- 33. Port Connectivity Checks: "d_flip_flop:dff_loop[8].dff"
- 34. Port Connectivity Checks: "d_flip_flop:dff_loop[7].dff"
- 35. Port Connectivity Checks: "d_flip_flop:dff_loop[6].dff"
- 36. Port Connectivity Checks: "d_flip_flop:dff_loop[5].dff"
- 37. Port Connectivity Checks: "d_flip_flop:dff_loop[4].dff"
- 38. Port Connectivity Checks: "d_flip_flop:dff_loop[3].dff"
- 39. Port Connectivity Checks: "d_flip_flop:dff_loop[2].dff"
- 40. Port Connectivity Checks: "d_flip_flop:dff_loop[1].dff"
- 41. Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff|d_latch:dl1"
- 42. Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff"
- 43. Post-Synthesis Netlist Statistics for Top Partition
- 44. Elapsed Time Per Partition
- 45. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "mux_2:mx"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -76,16 +44,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 25 20:49:31 2023       ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 25 22:07:54 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; regfile                                     ;
-; Top-level Entity Name              ; register                                    ;
+; Top-level Entity Name              ; d_latch                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 64                                          ;
-;     Total combinational functions  ; 64                                          ;
+; Total logic elements               ; 3                                           ;
+;     Total combinational functions  ; 3                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 66                                          ;
+; Total pins                         ; 6                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -99,7 +67,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; register           ; regfile            ;
+; Top-level entity name                                            ; d_latch            ; regfile            ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -195,226 +163,67 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; d_flip_flop.v                    ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v ;         ;
-; register.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v    ;         ;
-; d_latch.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v     ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; mux_4.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v   ;         ;
+; d_latch.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 64           ;
-;                                             ;              ;
-; Total combinational functions               ; 64           ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 64           ;
-;     -- 3 input functions                    ; 0            ;
-;     -- <=2 input functions                  ; 0            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 64           ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 0            ;
-;     -- Dedicated logic registers            ; 0            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 66           ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; enable~input ;
-; Maximum fan-out                             ; 64           ;
-; Total fan-out                               ; 354          ;
-; Average fan-out                             ; 1.81         ;
-+---------------------------------------------+--------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 3     ;
+;                                             ;       ;
+; Total combinational functions               ; 3     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 3     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 6     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; ng2~1 ;
+; Maximum fan-out                             ; 3     ;
+; Total fan-out                               ; 18    ;
+; Average fan-out                             ; 1.20  ;
++---------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
-+-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
-; |register                         ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 66   ; 0            ; |register                                          ; register    ; work         ;
-;    |d_flip_flop:dff_loop[0].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[0].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[0].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[0].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[10].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[10].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[10].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[10].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[11].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[11].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[11].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[11].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[12].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[12].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[12].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[12].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[13].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[13].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[13].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[13].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[14].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[14].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[14].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[14].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[15].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[15].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[15].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[15].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[16].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[16].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[16].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[16].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[17].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[17].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[17].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[17].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[18].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[18].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[18].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[18].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[19].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[19].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[19].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[19].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[1].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[1].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[1].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[1].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[20].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[20].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[20].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[20].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[21].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[21].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[21].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[21].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[22].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[22].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[22].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[22].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[23].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[23].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[23].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[23].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[24].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[24].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[24].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[24].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[25].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[25].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[25].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[25].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[26].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[26].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[26].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[26].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[27].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[27].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[27].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[27].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[28].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[28].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[28].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[28].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[29].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[29].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[29].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[29].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[2].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[2].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[2].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[2].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[30].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[30].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[30].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[30].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[31].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[31].dff             ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[31].dff|d_latch:dl1 ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[31].dff|d_latch:dl2 ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[3].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[3].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[3].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[3].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[4].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[4].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[4].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[4].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[5].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[5].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[5].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[5].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[6].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[6].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[6].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[6].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[7].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[7].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[7].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[7].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[8].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[8].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[8].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[8].dff|d_latch:dl2  ; d_latch     ; work         ;
-;    |d_flip_flop:dff_loop[9].dff|  ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[9].dff              ; d_flip_flop ; work         ;
-;       |d_latch:dl1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[9].dff|d_latch:dl1  ; d_latch     ; work         ;
-;       |d_latch:dl2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register|d_flip_flop:dff_loop[9].dff|d_latch:dl2  ; d_latch     ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |d_latch                   ; 3 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |d_latch            ; d_latch     ; work         ;
+;    |mux_2:mx|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |d_latch|mux_2:mx   ; mux_2       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                ;
-+--------------------------------------------------------+----+
-; Logic Cell Name                                        ;    ;
-+--------------------------------------------------------+----+
-; d_flip_flop:dff_loop[0].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[1].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[2].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[3].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[4].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[5].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[6].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[7].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[8].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[9].dff|d_latch:dl2|Q~0            ;    ;
-; d_flip_flop:dff_loop[10].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[11].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[12].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[13].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[14].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[15].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[16].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[17].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[18].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[19].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[20].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[21].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[22].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[23].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[24].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[25].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[26].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[27].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[28].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[29].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[30].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[31].dff|d_latch:dl2|Q~0           ;    ;
-; d_flip_flop:dff_loop[0].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[1].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[2].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[3].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[4].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[5].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[6].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[7].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[8].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[9].dff|d_latch:dl1|Q~0            ;    ;
-; d_flip_flop:dff_loop[10].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[11].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[12].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[13].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[14].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[15].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[16].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[17].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[18].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[19].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[20].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[21].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[22].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[23].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[24].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[25].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[26].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[27].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[28].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[29].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[30].dff|d_latch:dl1|Q~0           ;    ;
-; d_flip_flop:dff_loop[31].dff|d_latch:dl1|Q~0           ;    ;
-; Number of logic cells representing combinational loops ; 64 ;
-+--------------------------------------------------------+----+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; ng2~0                                                  ;   ;
+; Number of logic cells representing combinational loops ; 1 ;
++--------------------------------------------------------+---+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -433,301 +242,13 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[31].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[30].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[29].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[28].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[27].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[26].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[25].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[24].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[23].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[22].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[21].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[20].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[19].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[18].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[17].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[16].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[15].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[14].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[13].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[12].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[11].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[10].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[9].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[8].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[7].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[6].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[5].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[4].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[3].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[2].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[1].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff|d_latch:dl1"                                            ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++----------------------------------------+
+; Port Connectivity Checks: "mux_2:mx"   ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; in1  ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -735,14 +256,15 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 66                          ;
-; cycloneiii_lcell_comb ; 96                          ;
-;     normal            ; 96                          ;
-;         1 data inputs ; 32                          ;
-;         4 data inputs ; 64                          ;
+; boundary_port         ; 6                           ;
+; cycloneiii_lcell_comb ; 4                           ;
+;     normal            ; 4                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         4 data inputs ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.67                        ;
 +-----------------------+-----------------------------+
 
 
@@ -761,10 +283,13 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Sep 25 20:49:18 2023
+    Info: Processing started: Mon Sep 25 22:07:41 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off regfile -c regfile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file mux_4.v
+    Info (12023): Found entity 1: mux_2 File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v Line: 1
+    Info (12023): Found entity 2: mux_4 File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file or_gate.v
     Info (12023): Found entity 1: or_gate File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/or_gate.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file not_gate.v
@@ -783,20 +308,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
     Info (12023): Found entity 1: register File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_latch.v
     Info (12023): Found entity 1: d_latch File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v Line: 1
-Info (12127): Elaborating entity "register" for the top level hierarchy
-Info (12128): Elaborating entity "d_flip_flop" for hierarchy "d_flip_flop:dff_loop[0].dff" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 9
-Info (12128): Elaborating entity "d_latch" for hierarchy "d_flip_flop:dff_loop[0].dff|d_latch:dl1" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file register_tb.v
+    Info (12023): Found entity 1: register_tb File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register_tb.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file d_latch_tb.v
+    Info (12023): Found entity 1: d_latch_tb File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch_tb.v Line: 4
+Info (12127): Elaborating entity "d_latch" for the top level hierarchy
+Info (12128): Elaborating entity "mux_2" for hierarchy "mux_2:mx" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 130 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 34 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 64 logic cells
+Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Mon Sep 25 20:49:31 2023
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Mon Sep 25 22:07:54 2023
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:25
 
 
