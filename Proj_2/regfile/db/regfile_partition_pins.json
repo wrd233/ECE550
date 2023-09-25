@@ -2,32 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "Q",
-					"strict" : false
-				},
-				{
-					"name" : "Qbar",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "data",
-					"strict" : false
-				},
-				{
-					"name" : "enable",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }
