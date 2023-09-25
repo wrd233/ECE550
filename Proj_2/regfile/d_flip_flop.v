@@ -1,16 +1,17 @@
 module d_flip_flop (
   clock,
+  enable,
   D,
-  Q,    		// Q is a reg since it is assigned in an always block
+  Q,    		// TODO: Q can be a reg since it is assigned in an always block
   Qbar
 );
-  input clock, D;
+  input clock, D, enable;
   output Q,Qbar;
 
   wire clockBar, Qmiddle, QbarMiddle;
 
-  not_gate ng1(clock, clockBar);
-  d_latch dl1(D, clockBar, Qmiddle, QbarMiddle);
-  d_latch dl2(Qmiddle, clock, Q, Qbar);
+  not ng1(clockBar, clock);
+  d_latch dl1(.data(D), .enable(enable), .clock(clockBar), .Q(Qmiddle), .Qbar(QbarMiddle));
+  d_latch dl2(.data(Qmiddle), .enable(enable), .clock(clock), .Q(Q), .Qbar(Qbar));
 
 endmodule

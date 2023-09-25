@@ -1,14 +1,16 @@
-module d_latch(data, enable, Q, Qbar);
+module d_latch(data, enable, clock, Q, Qbar);
     input data;
-    input enable;
+    input enable, clock;
     output Q, Qbar;
 
+    wire EandClock;
     wire EandDbar,Dbar,EandD;
-    not_gate ng1(data, Dbar);
-    and_gate ag1(Dbar, enable, EandDbar);
-    and_gate ag2(enable, data, EandD);
+    and ag0(EandClock, enable, clock);
+    not ng1(Dbar, data);
+    and ag1(EandDbar, Dbar, EandClock);
+    and ag2(EandD, EandClock, data);
 
-    nor_gate ng2(Qbar, EandDbar,Q);
-    nor_gate ng3(Q, EandD,Qbar);
+    nor ng2(Q, Qbar, EandDbar);
+    nor ng3(Qbar, EandD,Q);
 
 endmodule

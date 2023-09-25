@@ -132,6 +132,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "enable",
+					"strict" : false
+				},
+				{
 					"name" : "clock",
 					"strict" : false
 				},
