@@ -8,47 +8,202 @@ z2
 !i10f 100
 cModel Technology
 Z0 d//Mac/Home/Desktop/ECE550/Proj_2/regfile/simulation/modelsim
-vdec5to32
-Z1 !s110 1695734188
+vd_flip_flop
+Z1 !s110 1695738794
 !i10b 1
-!s100 f6dU0C0ahhVUkQHA:5inE0
-IU_d0XZAQd=Mnzaegzo27Z3
+!s100 Fd`:iNH3U;C8L<A;`BkNl0
+IPRX?j=:88J_OdGG16]lij3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1695734134
-8//Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v
-F//Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v
-L0 45
+w1695651012
+8//Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v
+F//Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v
+L0 1
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1695734188.000000
-!s107 //Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile|//Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v|
+Z4 !s108 1695738794.000000
+!s107 //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile|//Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v|
 !i113 1
 Z5 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile
-Z6 tCvgOpt 0
-vdec5to32_tb
+Z6 !s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile
+Z7 tCvgOpt 0
+vd_latch
 R1
 !i10b 1
-!s100 f=ll8>ICjNELKTfA39U1@2
-I_E5k=z5Kzo_i_8M1P5]6@2
+!s100 :Q_<OSWb_idn`JAFBSR=h2
+I6zR<Ig<zl3N]m^7W`aOiU2
 R2
 R0
-w1695733270
-8/Desktop/ECE550/Proj_2/regfile/dec5to32_tb.v
-F/Desktop/ECE550/Proj_2/regfile/dec5to32_tb.v
-L0 4
+w1695650950
+8//Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v
+F//Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v
+L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 /Desktop/ECE550/Proj_2/regfile/dec5to32_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Proj_2/regfile|/Desktop/ECE550/Proj_2/regfile/dec5to32_tb.v|
+!s107 //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile|//Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v|
+!i113 1
+R5
+R6
+R7
+vdec5to32
+!s110 1695738793
+!i10b 1
+!s100 f6dU0C0ahhVUkQHA:5inE0
+IU_d0XZAQd=Mnzaegzo27Z3
+R2
+R0
+w1695734134
+8//Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v
+F//Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v
+L0 45
+R3
+r1
+!s85 0
+31
+Z8 !s108 1695738793.000000
+!s107 //Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile|//Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v|
+!i113 1
+R5
+R6
+R7
+vE_signal
+R1
+!i10b 1
+!s100 Iz_j9zR]dL_WBVVL0jY9;2
+In][zVNB4J]1`5nij@Vd0h0
+R2
+R0
+Z9 w1695738667
+Z10 8//Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v
+Z11 F//Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z12 !s107 //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile|//Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v|
+!i113 1
+R5
+R6
+R7
+n@e_signal
+vmux_2
+R1
+!i10b 1
+!s100 lYjVWf[a2I@<>L1S364XT1
+I723[5EXD@GUCOnk]8ZBV>3
+R2
+R0
+Z14 w1695650658
+Z15 8//Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v
+Z16 F//Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+Z17 !s107 //Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v|
+Z18 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile|//Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v|
+!i113 1
+R5
+R6
+R7
+vmux_4
+R1
+!i10b 1
+!s100 lLl<zOzkTaR0oFjj<0_I<0
+IhKmP32`_zACV_:J]i]9]i1
+R2
+R0
+R14
+R15
+R16
+L0 8
+R3
+r1
+!s85 0
+31
+R8
+R17
+R18
+!i113 1
+R5
+R6
+R7
+vregfile
+R1
+!i10b 1
+!s100 kF<63;TQ9z^G8JP;R8KKJ2
+IOGUKH8G0nMdZOfzjP2]Qn3
+R2
+R0
+R9
+R10
+R11
+L0 27
+R3
+r1
+!s85 0
+31
+R4
+R12
+R13
+!i113 1
+R5
+R6
+R7
+vregfile_tb
+R1
+!i10b 1
+!s100 [VP:OnD_:UjB@gfiGn=Kn0
+IP46bX0k=an6k53o:CFEd;3
+R2
+R0
+w1695646839
+8/Desktop/ECE550/Proj_2/regfile/regfile_tb.v
+F/Desktop/ECE550/Proj_2/regfile/regfile_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 /Desktop/ECE550/Proj_2/regfile/regfile_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Proj_2/regfile|/Desktop/ECE550/Proj_2/regfile/regfile_tb.v|
 !i113 1
 R5
 !s92 -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_2/regfile
+R7
+vregister
+R1
+!i10b 1
+!s100 WnCh4b`H6m>0K_?C_Q30o3
+I475j4DX3DnB90ogoRIOi^2
+R2
+R0
+w1695735562
+8//Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v
+F//Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_2/regfile|//Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v|
+!i113 1
+R5
 R6
+R7

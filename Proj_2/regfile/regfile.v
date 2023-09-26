@@ -16,6 +16,12 @@ module E_signal(ctrl_writeEnable, ctrl_writeReg, enables);
 endmodule
 
 
+// module readport(Renables, outputs, out);
+//     input [31:0]Renables;
+//     input [31:0]outputs[0:31];
+//     output [31:0]out;
+// endmodule
+
 
 
 module regfile (
@@ -37,17 +43,44 @@ module regfile (
     wire [31:0]Wenables;
     E_signal es(.ctrl_writeEnable(ctrl_writeEnable), .ctrl_writeReg(ctrl_writeReg), .enables(Wenables));
 
-    // wire [31:0]midOut;
+    wire [31:0] out[0:31];
     genvar i;
     generate
         for (i = 0; i < 32; i = i + 1) begin : loop2
-            register rg(.in(data_writeReg), .enable(Wenables[i]), .clock(clock), .out(), .reset(ctrl_reset));
+            register rg(.in(data_writeReg), .enable(Wenables[i]), .clock(clock), .out(out[i]), .reset(ctrl_reset));
         end
     endgenerate
 
    
     // read port
     wire [31:0] RenablesA, RenablesB;
-   
+    dec5to32 dec1(ctrl_readRegA, RenablesA);
+    dec5to32 dec2(ctrl_readRegB, RenablesB);
+
+    wire[31:0] buffer_outputA, buffer_outputB;
+
+    // readport rpA(.Renables(RenablesA), .outputs(out[0:31]), .out(data_readRegA));
+    // readport rpB(.Renables(RenablesB), .outputs(out[0:31]), .out(data_readRegB));
+
+
+    generate
+        for (i = 0; i < 32; i = i + 1) begin : loop3
+            assign data_readRegA = RenablesA[i]?out[i]:32'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
+        end
+    endgenerate
+
+    generate
+        for (i = 0; i < 32; i = i + 1) begin : loop4
+            assign data_readRegB = RenablesB[i]?out[i]:32'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
+        end
+    endgenerate
+
+    // assign buffer_output = buffer_select ? output : 1'bz;
+    // generate
+    //     for (i = 0; i < 32; i = i + 1) begin : loop3
+    //         buffer_output = RenablesA[i] ? output : 1'bz;
+    //         register rg(.in(data_writeReg), .enable(Wenables[i]), .clock(clock), .out(), .reset(ctrl_reset));
+    //     end
+    // endgenerate
 
 endmodule
