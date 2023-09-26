@@ -1,5 +1,5 @@
 Analysis & Synthesis report for regfile
-Mon Sep 25 23:18:42 2023
+Tue Sep 26 21:41:55 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -14,43 +14,75 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "d_flip_flop:dff_loop[31].dff"
- 10. Port Connectivity Checks: "d_flip_flop:dff_loop[30].dff"
- 11. Port Connectivity Checks: "d_flip_flop:dff_loop[29].dff"
- 12. Port Connectivity Checks: "d_flip_flop:dff_loop[28].dff"
- 13. Port Connectivity Checks: "d_flip_flop:dff_loop[27].dff"
- 14. Port Connectivity Checks: "d_flip_flop:dff_loop[26].dff"
- 15. Port Connectivity Checks: "d_flip_flop:dff_loop[25].dff"
- 16. Port Connectivity Checks: "d_flip_flop:dff_loop[24].dff"
- 17. Port Connectivity Checks: "d_flip_flop:dff_loop[23].dff"
- 18. Port Connectivity Checks: "d_flip_flop:dff_loop[22].dff"
- 19. Port Connectivity Checks: "d_flip_flop:dff_loop[21].dff"
- 20. Port Connectivity Checks: "d_flip_flop:dff_loop[20].dff"
- 21. Port Connectivity Checks: "d_flip_flop:dff_loop[19].dff"
- 22. Port Connectivity Checks: "d_flip_flop:dff_loop[18].dff"
- 23. Port Connectivity Checks: "d_flip_flop:dff_loop[17].dff"
- 24. Port Connectivity Checks: "d_flip_flop:dff_loop[16].dff"
- 25. Port Connectivity Checks: "d_flip_flop:dff_loop[15].dff"
- 26. Port Connectivity Checks: "d_flip_flop:dff_loop[14].dff"
- 27. Port Connectivity Checks: "d_flip_flop:dff_loop[13].dff"
- 28. Port Connectivity Checks: "d_flip_flop:dff_loop[12].dff"
- 29. Port Connectivity Checks: "d_flip_flop:dff_loop[11].dff"
- 30. Port Connectivity Checks: "d_flip_flop:dff_loop[10].dff"
- 31. Port Connectivity Checks: "d_flip_flop:dff_loop[9].dff"
- 32. Port Connectivity Checks: "d_flip_flop:dff_loop[8].dff"
- 33. Port Connectivity Checks: "d_flip_flop:dff_loop[7].dff"
- 34. Port Connectivity Checks: "d_flip_flop:dff_loop[6].dff"
- 35. Port Connectivity Checks: "d_flip_flop:dff_loop[5].dff"
- 36. Port Connectivity Checks: "d_flip_flop:dff_loop[4].dff"
- 37. Port Connectivity Checks: "d_flip_flop:dff_loop[3].dff"
- 38. Port Connectivity Checks: "d_flip_flop:dff_loop[2].dff"
- 39. Port Connectivity Checks: "d_flip_flop:dff_loop[1].dff"
- 40. Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx"
- 41. Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff|d_latch:dl1"
- 42. Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff"
- 43. Post-Synthesis Netlist Statistics for Top Partition
- 44. Elapsed Time Per Partition
- 45. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "register:loop2[31].rg"
+ 10. Port Connectivity Checks: "register:loop2[30].rg"
+ 11. Port Connectivity Checks: "register:loop2[29].rg"
+ 12. Port Connectivity Checks: "register:loop2[28].rg"
+ 13. Port Connectivity Checks: "register:loop2[27].rg"
+ 14. Port Connectivity Checks: "register:loop2[26].rg"
+ 15. Port Connectivity Checks: "register:loop2[25].rg"
+ 16. Port Connectivity Checks: "register:loop2[24].rg"
+ 17. Port Connectivity Checks: "register:loop2[23].rg"
+ 18. Port Connectivity Checks: "register:loop2[22].rg"
+ 19. Port Connectivity Checks: "register:loop2[21].rg"
+ 20. Port Connectivity Checks: "register:loop2[20].rg"
+ 21. Port Connectivity Checks: "register:loop2[19].rg"
+ 22. Port Connectivity Checks: "register:loop2[18].rg"
+ 23. Port Connectivity Checks: "register:loop2[17].rg"
+ 24. Port Connectivity Checks: "register:loop2[16].rg"
+ 25. Port Connectivity Checks: "register:loop2[15].rg"
+ 26. Port Connectivity Checks: "register:loop2[14].rg"
+ 27. Port Connectivity Checks: "register:loop2[13].rg"
+ 28. Port Connectivity Checks: "register:loop2[12].rg"
+ 29. Port Connectivity Checks: "register:loop2[11].rg"
+ 30. Port Connectivity Checks: "register:loop2[10].rg"
+ 31. Port Connectivity Checks: "register:loop2[9].rg"
+ 32. Port Connectivity Checks: "register:loop2[8].rg"
+ 33. Port Connectivity Checks: "register:loop2[7].rg"
+ 34. Port Connectivity Checks: "register:loop2[6].rg"
+ 35. Port Connectivity Checks: "register:loop2[5].rg"
+ 36. Port Connectivity Checks: "register:loop2[4].rg"
+ 37. Port Connectivity Checks: "register:loop2[3].rg"
+ 38. Port Connectivity Checks: "register:loop2[2].rg"
+ 39. Port Connectivity Checks: "register:loop2[1].rg"
+ 40. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[31].dff"
+ 41. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[30].dff"
+ 42. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[29].dff"
+ 43. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[28].dff"
+ 44. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[27].dff"
+ 45. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[26].dff"
+ 46. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[25].dff"
+ 47. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[24].dff"
+ 48. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[23].dff"
+ 49. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[22].dff"
+ 50. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[21].dff"
+ 51. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[20].dff"
+ 52. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[19].dff"
+ 53. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[18].dff"
+ 54. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[17].dff"
+ 55. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[16].dff"
+ 56. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[15].dff"
+ 57. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[14].dff"
+ 58. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[13].dff"
+ 59. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[12].dff"
+ 60. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[11].dff"
+ 61. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[10].dff"
+ 62. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[9].dff"
+ 63. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[8].dff"
+ 64. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[7].dff"
+ 65. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[6].dff"
+ 66. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[5].dff"
+ 67. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[4].dff"
+ 68. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[3].dff"
+ 69. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[2].dff"
+ 70. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[1].dff"
+ 71. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx"
+ 72. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1"
+ 73. Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff"
+ 74. Port Connectivity Checks: "register:loop2[0].rg"
+ 75. Post-Synthesis Netlist Statistics for Top Partition
+ 76. Elapsed Time Per Partition
+ 77. Analysis & Synthesis Messages
 
 
 
@@ -76,16 +108,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 25 23:18:41 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 26 21:41:55 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; regfile                                     ;
-; Top-level Entity Name              ; register                                    ;
+; Top-level Entity Name              ; regfile                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 0                                           ;
 ;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 67                                          ;
+; Total pins                         ; 114                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -99,7 +131,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; register           ; regfile            ;
+; Top-level entity name                                            ; regfile            ; regfile            ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -200,7 +232,9 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
+; dec5to32.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v    ;         ;
 ; mux_4.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v       ;         ;
+; regfile.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v     ;         ;
 ; d_flip_flop.v                    ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v ;         ;
 ; register.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v    ;         ;
 ; d_latch.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v     ;         ;
@@ -227,13 +261,13 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 67    ;
+; I/O pins                                    ; 114   ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
-; Maximum fan-out node                        ; in[0] ;
+; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 67    ;
+; Total fan-out                               ; 114   ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -243,7 +277,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |register                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |register           ; register    ; work         ;
+; |regfile                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |regfile            ; regfile     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -263,296 +297,575 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[31].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[31].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[30].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[30].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[29].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[29].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[28].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[28].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[27].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[27].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[26].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[26].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[25].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[25].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[24].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[24].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[23].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[23].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[22].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[22].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[21].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[21].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[20].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[20].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[19].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[19].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[18].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[18].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[17].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[17].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[16].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[16].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[15].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[15].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[14].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[14].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[13].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[13].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[12].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[12].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[11].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[11].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[10].dff" ;
-+------+--------+----------+-------------------------------+
-; Port ; Type   ; Severity ; Details                       ;
-+------+--------+----------+-------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected        ;
-+------+--------+----------+-------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[10].rg" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[9].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[9].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[8].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[8].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[7].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[7].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[6].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[6].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[5].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[5].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[4].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[4].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[3].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[3].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[2].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[2].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[1].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[1].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[31].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[30].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[29].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[28].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[27].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[26].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[25].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[24].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[23].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[22].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[21].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[20].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[19].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[18].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[17].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[16].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[15].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[14].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[13].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[12].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[11].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[10].dff" ;
++------+--------+----------+----------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                            ;
++------+--------+----------+----------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                             ;
++------+--------+----------+----------------------------------------------------+
 
 
 +------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx" ;
-+------+-------+----------+----------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                            ;
-+------+-------+----------+----------------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                                       ;
-+------+-------+----------+----------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[9].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[8].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[7].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[6].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[5].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[4].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[3].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[2].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[1].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx" ;
++------+-------+----------+-------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                 ;
++------+-------+----------+-------------------------------------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                                            ;
++------+-------+----------+-------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff|d_latch:dl1"                                            ;
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1"                       ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -560,13 +873,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "d_flip_flop:dff_loop[0].dff" ;
-+------+--------+----------+------------------------------+
-; Port ; Type   ; Severity ; Details                      ;
-+------+--------+----------+------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected       ;
-+------+--------+----------+------------------------------+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff" ;
++------+--------+----------+---------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                           ;
++------+--------+----------+---------------------------------------------------+
+; Qbar ; Output ; Info     ; Explicitly unconnected                            ;
++------+--------+----------+---------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "register:loop2[0].rg"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; out  ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
 
 
 +-----------------------------------------------------+
@@ -574,7 +896,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 67                          ;
+; boundary_port         ; 114                         ;
 ; cycloneiii_lcell_comb ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
@@ -599,10 +921,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Sep 25 23:18:29 2023
+    Info: Processing started: Tue Sep 26 21:41:21 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off regfile -c regfile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file dec5to32_tb.v
+    Info (12023): Found entity 1: dec5to32_tb File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32_tb.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file dec5to32.v
+    Info (12023): Found entity 1: dec5to32 File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/dec5to32.v Line: 45
 Info (12021): Found 2 design units, including 2 entities, in source file mux_4.v
     Info (12023): Found entity 1: mux_2 File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v Line: 1
     Info (12023): Found entity 2: mux_4 File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/mux_4.v Line: 8
@@ -616,8 +942,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file and_gat
     Info (12023): Found entity 1: and_gate File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/and_gate.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile_tb.v
     Info (12023): Found entity 1: regfile_tb File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
-    Info (12023): Found entity 1: regfile File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file regfile.v
+    Info (12023): Found entity 1: E_signal File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 1
+    Info (12023): Found entity 2: regfile File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file d_flip_flop.v
     Info (12023): Found entity 1: d_flip_flop File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
@@ -628,88 +955,140 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
     Info (12023): Found entity 1: register_tb File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register_tb.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file d_latch_tb.v
     Info (12023): Found entity 1: d_latch_tb File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch_tb.v Line: 4
-Info (12127): Elaborating entity "register" for the top level hierarchy
-Info (12128): Elaborating entity "d_flip_flop" for hierarchy "d_flip_flop:dff_loop[0].dff" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 11
-Info (12128): Elaborating entity "d_latch" for hierarchy "d_flip_flop:dff_loop[0].dff|d_latch:dl1" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v Line: 15
-Info (12128): Elaborating entity "mux_2" for hierarchy "d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v Line: 17
+Info (12127): Elaborating entity "regfile" for the top level hierarchy
+Warning (10034): Output port "data_readRegA" at regfile.v(33) has no driver File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+Warning (10034): Output port "data_readRegB" at regfile.v(33) has no driver File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+Info (12128): Elaborating entity "E_signal" for hierarchy "E_signal:es" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 38
+Info (12128): Elaborating entity "dec5to32" for hierarchy "E_signal:es|dec5to32:dec" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 8
+Info (12128): Elaborating entity "register" for hierarchy "register:loop2[0].rg" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 44
+Info (12128): Elaborating entity "d_flip_flop" for hierarchy "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 9
+Info (12128): Elaborating entity "d_latch" for hierarchy "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_flip_flop.v Line: 15
+Info (12128): Elaborating entity "mux_2" for hierarchy "register:loop2[0].rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/d_latch.v Line: 17
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[5]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[6]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[7]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[8]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[9]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[10]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[11]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[12]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[13]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[14]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[15]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[16]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[17]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[18]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[19]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[20]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[21]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[22]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[23]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[24]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[25]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[26]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[27]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[28]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[29]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[30]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
-    Warning (13410): Pin "out[31]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 4
+    Warning (13410): Pin "data_readRegA[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[5]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[6]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[7]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[8]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[9]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[10]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[11]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[12]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[13]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[14]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[15]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[16]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[17]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[18]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[19]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[20]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[21]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[22]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[23]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[24]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[25]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[26]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[27]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[28]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[29]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[30]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegA[31]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[5]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[6]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[7]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[8]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[9]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[10]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[11]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[12]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[13]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[14]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[15]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[16]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[17]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[18]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[19]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[20]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[21]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[22]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[23]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[24]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[25]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[26]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[27]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[28]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[29]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[30]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
+    Warning (13410): Pin "data_readRegB[31]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 33
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 35 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "in[0]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[1]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[2]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[3]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[4]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[5]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[6]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[7]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[8]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[9]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[10]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[11]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[12]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[13]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[14]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[15]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[16]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[17]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[18]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[19]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[20]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[21]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[22]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[23]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[24]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[25]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[26]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[27]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[28]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[29]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[30]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "in[31]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 2
-    Warning (15610): No output dependent on input pin "enable" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 3
-    Warning (15610): No output dependent on input pin "clock" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 3
-    Warning (15610): No output dependent on input pin "reset" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/register.v Line: 3
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 35 input pins
-    Info (21059): Implemented 32 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
-    Info: Peak virtual memory: 4741 megabytes
-    Info: Processing ended: Mon Sep 25 23:18:42 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+Warning (21074): Design contains 50 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 29
+    Warning (15610): No output dependent on input pin "ctrl_writeEnable" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 29
+    Warning (15610): No output dependent on input pin "ctrl_reset" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 29
+    Warning (15610): No output dependent on input pin "ctrl_writeReg[0]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_writeReg[1]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_writeReg[2]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_writeReg[3]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_writeReg[4]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[0]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[1]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[2]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[3]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[4]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[0]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[1]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[2]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[3]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[4]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 30
+    Warning (15610): No output dependent on input pin "data_writeReg[0]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[1]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[2]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[3]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[4]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[5]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[6]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[7]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[8]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[9]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[10]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[11]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[12]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[13]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[14]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[15]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[16]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[17]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[18]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[19]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[20]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[21]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[22]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[23]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[24]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[25]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[26]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[27]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[28]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[29]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[30]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+    Warning (15610): No output dependent on input pin "data_writeReg[31]" File: //Mac/Home/Desktop/ECE550/Proj_2/regfile/regfile.v Line: 31
+Info (21057): Implemented 114 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 50 input pins
+    Info (21059): Implemented 64 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 119 warnings
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Tue Sep 26 21:41:55 2023
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:36
 
 
