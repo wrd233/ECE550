@@ -9,178 +9,200 @@ z2
 cModel Technology
 Z0 d//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/simulation/modelsim
 vd_flip_flop
-!s110 1695806856
+Z1 !s110 1695822785
 !i10b 1
 !s100 Fd`:iNH3U;C8L<A;`BkNl0
 I_8:BB6m`G6PmEh^o:ZZzJ1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1695800311
 8//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_flip_flop.v
 F//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_flip_flop.v
 L0 1
-Z2 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1695806856.000000
+Z4 !s108 1695822785.000000
 !s107 //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_flip_flop.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter|//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_flip_flop.v|
 !i113 1
-Z3 o-vlog01compat -work work
-Z4 !s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter
-Z5 tCvgOpt 0
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter
+Z7 tCvgOpt 0
 vd_latch
-Z6 !s110 1695806855
+R1
 !i10b 1
 !s100 l7cZZQo=?k5egjj_WZLF_0
 ICXTFP@?7k=LFb_RN6L:LM0
-R1
+R2
 R0
 w1695806488
 8//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v
 F//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v
 L0 1
-R2
+R3
 r1
 !s85 0
 31
-Z7 !s108 1695806855.000000
+R4
 !s107 //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter|//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v|
 !i113 1
-R3
-R4
 R5
-vmod_5_counter
-!s110 1695806852
+R6
+R7
+vdec3to8
+Z8 !s110 1695822784
 !i10b 1
-!s100 Zo?6d4LQY@fW<8YZgD=^@2
-I^aJVjdWDBmAK42QXB39`E1
-R1
-R0
-w1695806834
-8//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v
-F//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v
-L0 1
+!s100 acHD5f>RK[RS6lO9Aon<=2
+IXiDnSL6_X[:TM>29BQlF]0
 R2
+R0
+Z9 w1695822752
+Z10 8//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v
+Z11 F//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v
+L0 1
+R3
 r1
 !s85 0
 31
-!s108 1695806852.000000
-!s107 //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter|//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v|
+Z12 !s108 1695822784.000000
+Z13 !s107 //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v|
+Z14 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter|//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v|
 !i113 1
-R3
-R4
 R5
-vmod_5_counter_tb
-!s110 1695806857
+R6
+R7
+vmod_5_counter
+R8
 !i10b 1
-!s100 3calGV9nYX9W9oG4zFUMT3
-I7jFd7SgJeJgLFT@3z[SEH0
-R1
+!s100 4Y[^3Y5L@C73`eMdaX;jd1
+I`CEk;4;^9`aXC4HRCH2:V2
+R2
 R0
-w1695806790
+R9
+R10
+R11
+L0 23
+R3
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R5
+R6
+R7
+vmod_5_counter_tb
+R1
+!i10b 1
+!s100 eZ8jHak^K:SjeWKaWJ^e]2
+I137L2<ZhYzcIB7T?]3R?X1
+R2
+R0
+w1695822772
 8/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter_tb.v
 F/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter_tb.v
 L0 4
-R2
+R3
 r1
 !s85 0
 31
-!s108 1695806857.000000
+R4
 !s107 /Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Lab_4/mod_5_counter|/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter_tb.v|
 !i113 1
-R3
+R5
 !s92 -vlog01compat -work work +incdir+/Desktop/ECE550/Lab_4/mod_5_counter
-R5
+R7
 vmux_2
-R6
-!i10b 1
-!s100 YIg`8dTSl>9akRgBF:m]P1
-InI;I^5TL`cJZ7379D2Qc@0
 R1
+!i10b 1
+!s100 hzge<X8mTPFVcnE;lS5bJ0
+IU6V5W2N7=Oii[fO<A08_E3
+R2
 R0
-Z8 w1695804111
-Z9 8//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v
-Z10 F//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v
+Z15 w1695822112
+Z16 8//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v
+Z17 F//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v
 L0 1
-R2
+R3
 r1
 !s85 0
 31
-R7
-Z11 !s107 //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v|
-Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter|//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v|
-!i113 1
-R3
 R4
+Z18 !s107 //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v|
+Z19 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter|//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v|
+!i113 1
 R5
+R6
+R7
 vmux_4
-R6
-!i10b 1
-!s100 RjLIeTRa`]Ul[RGHnXJF`3
-INASh=7bIf;P1OJSYocG[j0
 R1
+!i10b 1
+!s100 @e9Z[LA<VkbI2UhChWmgk1
+I=BLFC9WFjzZFc>iYNMIJm0
+R2
 R0
-R8
-R9
-R10
+R15
+R16
+R17
 L0 8
-R2
+R3
 r1
 !s85 0
 31
-R7
-R11
-R12
-!i113 1
-R3
 R4
+R18
+R19
+!i113 1
 R5
-vmux_8
 R6
-!i10b 1
-!s100 XO55eSafJ4^K6eBPPB0V02
-Ih5_FKMho4QX683AeXYBKQ2
+R7
+vmux_8
 R1
-R0
-R8
-R9
-R10
-L0 18
+!i10b 1
+!s100 6n3=WE6oa4]V@Y587VUZ_1
+IPS;Sb`kOMkK5fDnTG<FGZ2
 R2
+R0
+R15
+R16
+R17
+L0 18
+R3
 r1
 !s85 0
 31
-R7
-R11
-R12
-!i113 1
-R3
 R4
+R18
+R19
+!i113 1
 R5
+R6
+R7
 vregister
-!s110 1695806854
+R1
 !i10b 1
 !s100 S^mTKh0W?VOY5Bo29f8zc2
 IFddm>_be8U6XOIoEVUF8K0
-R1
+R2
 R0
 w1695800796
 8//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/register.v
 F//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/register.v
 L0 1
-R2
+R3
 r1
 !s85 0
 31
-!s108 1695806854.000000
+R12
 !s107 //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/register.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter|//Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/register.v|
 !i113 1
-R3
-R4
 R5
+R6
+R7

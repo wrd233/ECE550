@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mod_5_counter
-Wed Sep 27 17:24:23 2023
+Wed Sep 27 22:39:06 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -13,19 +13,13 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Logic Cells Representing Combinational Loops
-  9. General Register Statistics
- 10. Port Connectivity Checks: "mux_8:mx2"
- 11. Port Connectivity Checks: "mux_8:mx"
- 12. Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[2].dff"
- 13. Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[1].dff"
- 14. Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx"
- 15. Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1"
- 16. Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[0].dff"
- 17. Port Connectivity Checks: "register:rg"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+  8. State Machine - |mod_5_counter|tempState
+  9. State Machine - |mod_5_counter|nextState
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -51,16 +45,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 27 17:24:22 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 27 22:39:06 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; mod_5_counter                               ;
 ; Top-level Entity Name              ; mod_5_counter                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 9                                           ;
-;     Total combinational functions  ; 9                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 6                                           ;
+; Total logic elements               ; 17                                          ;
+;     Total combinational functions  ; 6                                           ;
+;     Dedicated logic registers      ; 17                                          ;
+; Total registers                    ; 17                                          ;
+; Total pins                         ; 10                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -163,10 +157,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -176,10 +171,6 @@ refer to the applicable agreement for further details.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                  ; Library ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
 ; mod_5_counter.v                  ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v ;         ;
-; register.v                       ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/register.v      ;         ;
-; mux_8.v                          ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v         ;         ;
-; d_latch.v                        ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v       ;         ;
-; d_flip_flop.v                    ; yes             ; User Verilog HDL File  ; //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_flip_flop.v   ;         ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
 
 
@@ -188,69 +179,83 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 9           ;
+; Estimated Total logic elements              ; 17          ;
 ;                                             ;             ;
-; Total combinational functions               ; 9           ;
+; Total combinational functions               ; 6           ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 3           ;
-;     -- 3 input functions                    ; 6           ;
-;     -- <=2 input functions                  ; 0           ;
+;     -- 4 input functions                    ; 0           ;
+;     -- 3 input functions                    ; 0           ;
+;     -- <=2 input functions                  ; 6           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 9           ;
+;     -- normal mode                          ; 6           ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
+; Total registers                             ; 17          ;
+;     -- Dedicated logic registers            ; 17          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 6           ;
+; I/O pins                                    ; 10          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 8           ;
-; Total fan-out                               ; 40          ;
-; Average fan-out                             ; 1.90        ;
+; Maximum fan-out                             ; 18          ;
+; Total fan-out                               ; 62          ;
+; Average fan-out                             ; 1.44        ;
 +---------------------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Entity Name   ; Library Name ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+---------------+--------------+
-; |mod_5_counter                      ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |mod_5_counter                                                     ; mod_5_counter ; work         ;
-;    |mux_8:mx2|                      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|mux_8:mx2                                           ; mux_8         ; work         ;
-;       |mux_2:third|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|mux_8:mx2|mux_2:third                               ; mux_2         ; work         ;
-;    |register:rg|                    ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg                                         ; register      ; work         ;
-;       |d_flip_flop:dff_loop[0].dff| ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[0].dff             ; d_flip_flop   ; work         ;
-;          |d_latch:dl1|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1 ; d_latch       ; work         ;
-;          |d_latch:dl2|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl2 ; d_latch       ; work         ;
-;       |d_flip_flop:dff_loop[1].dff| ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[1].dff             ; d_flip_flop   ; work         ;
-;          |d_latch:dl1|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[1].dff|d_latch:dl1 ; d_latch       ; work         ;
-;          |d_latch:dl2|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[1].dff|d_latch:dl2 ; d_latch       ; work         ;
-;       |d_flip_flop:dff_loop[2].dff| ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[2].dff             ; d_flip_flop   ; work         ;
-;          |d_latch:dl1|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[2].dff|d_latch:dl1 ; d_latch       ; work         ;
-;          |d_latch:dl2|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mod_5_counter|register:rg|d_flip_flop:dff_loop[2].dff|d_latch:dl2 ; d_latch       ; work         ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+; |mod_5_counter             ; 6 (6)               ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |mod_5_counter      ; mod_5_counter ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                  ;
-+-----------------------------------------------------------+---+
-; Logic Cell Name                                           ;   ;
-+-----------------------------------------------------------+---+
-; register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl2|ng2~0 ;   ;
-; register:rg|d_flip_flop:dff_loop[1].dff|d_latch:dl2|ng2~0 ;   ;
-; register:rg|d_flip_flop:dff_loop[2].dff|d_latch:dl2|ng2~0 ;   ;
-; register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1|ng2~0 ;   ;
-; register:rg|d_flip_flop:dff_loop[1].dff|d_latch:dl1|ng2~0 ;   ;
-; register:rg|d_flip_flop:dff_loop[2].dff|d_latch:dl1|ng2~0 ;   ;
-; Number of logic cells representing combinational loops    ; 6 ;
-+-----------------------------------------------------------+---+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |mod_5_counter|tempState                                                      ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; tempState.011 ; tempState.010 ; tempState.001 ; tempState.000 ; tempState.100 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; tempState.000 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; tempState.001 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; tempState.010 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; tempState.011 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; tempState.100 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |mod_5_counter|nextState                                                      ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; nextState.011 ; nextState.010 ; nextState.001 ; nextState.000 ; nextState.100 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; nextState.000 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; nextState.001 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; nextState.010 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; nextState.011 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; nextState.100 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; out[1]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; tempState~2                           ; Lost fanout                            ;
+; tempState~3                           ; Lost fanout                            ;
+; nextState~2                           ; Lost fanout                            ;
+; nextState~3                           ; Lost fanout                            ;
+; Total Number of Removed Registers = 5 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -258,7 +263,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 17    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -268,124 +273,22 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux_8:mx2"                                                                                                                                  ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                     ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; in0  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in0[2..1]" will be connected to GND. ;
-; in0  ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
-; in1  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in1[2..1]" will be connected to GND. ;
-; in1  ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
-; in2  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in2[2..1]" will be connected to GND. ;
-; in2  ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
-; in3  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in3[2..1]" will be connected to GND. ;
-; in3  ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
-; in4  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in4[2..1]" will be connected to GND. ;
-; in4  ; Input  ; Info     ; Stuck at VCC                                                                                                                                ;
-; in5  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in5[2..1]" will be connected to GND. ;
-; in5  ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
-; in6  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in6[2..1]" will be connected to GND. ;
-; in6  ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
-; in7  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in7[2..1]" will be connected to GND. ;
-; in7  ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
-; out  ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[2..1]" have no fanouts                      ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------+
-; Port Connectivity Checks: "mux_8:mx"        ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; in0[2..1] ; Input ; Info     ; Stuck at GND ;
-; in0[0]    ; Input ; Info     ; Stuck at VCC ;
-; in1[2]    ; Input ; Info     ; Stuck at GND ;
-; in1[1]    ; Input ; Info     ; Stuck at VCC ;
-; in1[0]    ; Input ; Info     ; Stuck at GND ;
-; in2[1..0] ; Input ; Info     ; Stuck at VCC ;
-; in2[2]    ; Input ; Info     ; Stuck at GND ;
-; in3[1..0] ; Input ; Info     ; Stuck at GND ;
-; in3[2]    ; Input ; Info     ; Stuck at VCC ;
-; in4       ; Input ; Info     ; Stuck at GND ;
-; in5       ; Input ; Info     ; Stuck at GND ;
-; in6       ; Input ; Info     ; Stuck at GND ;
-; in7       ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[2].dff" ;
-+------+--------+----------+------------------------------------------+
-; Port ; Type   ; Severity ; Details                                  ;
-+------+--------+----------+------------------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected                   ;
-+------+--------+----------+------------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[1].dff" ;
-+------+--------+----------+------------------------------------------+
-; Port ; Type   ; Severity ; Details                                  ;
-+------+--------+----------+------------------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected                   ;
-+------+--------+----------+------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx"                                                                               ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                     ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; in0  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in0[2..1]" will be connected to GND. ;
-; in1  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "in1[2..1]" will be connected to GND. ;
-; in1  ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
-; out  ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[2..1]" have no fanouts                      ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1"                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "register:rg|d_flip_flop:dff_loop[0].dff" ;
-+------+--------+----------+------------------------------------------+
-; Port ; Type   ; Severity ; Details                                  ;
-+------+--------+----------+------------------------------------------+
-; Qbar ; Output ; Info     ; Explicitly unconnected                   ;
-+------+--------+----------+------------------------------------------+
-
-
-+------------------------------------------+
-; Port Connectivity Checks: "register:rg"  ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; enable ; Input ; Info     ; Stuck at VCC ;
-; reset  ; Input ; Info     ; Stuck at GND ;
-+--------+-------+----------+--------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 6                           ;
-; cycloneiii_lcell_comb ; 12                          ;
-;     normal            ; 12                          ;
-;         1 data inputs ; 3                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 3                           ;
+; boundary_port         ; 10                          ;
+; cycloneiii_ff         ; 17                          ;
+;     plain             ; 17                          ;
+; cycloneiii_lcell_comb ; 7                           ;
+;     normal            ; 7                           ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 4                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.42                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -394,7 +297,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -404,14 +307,15 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Sep 27 17:24:05 2023
+    Info: Processing started: Wed Sep 27 22:38:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mod_5_counter -c mod_5_counter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mod_5_counter_tb.v
     Info (12023): Found entity 1: mod_5_counter_tb File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter_tb.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file mod_5_counter.v
-    Info (12023): Found entity 1: mod_5_counter File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file mod_5_counter.v
+    Info (12023): Found entity 1: dec3to8 File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v Line: 1
+    Info (12023): Found entity 2: mod_5_counter File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
     Info (12023): Found entity 1: register File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/register.v Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file mux_8.v
@@ -423,41 +327,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file d_latch
 Info (12021): Found 1 design units, including 1 entities, in source file d_flip_flop.v
     Info (12023): Found entity 1: d_flip_flop File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_flip_flop.v Line: 1
 Info (12127): Elaborating entity "mod_5_counter" for the top level hierarchy
-Info (12128): Elaborating entity "register" for hierarchy "register:rg" File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v Line: 9
-Info (12128): Elaborating entity "d_flip_flop" for hierarchy "register:rg|d_flip_flop:dff_loop[0].dff" File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/register.v Line: 9
-Info (12128): Elaborating entity "d_latch" for hierarchy "register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1" File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_flip_flop.v Line: 15
-Info (12128): Elaborating entity "mux_2" for hierarchy "register:rg|d_flip_flop:dff_loop[0].dff|d_latch:dl1|mux_2:mx" File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Info (12128): Elaborating entity "mux_8" for hierarchy "mux_8:mx" File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v Line: 11
-Info (12128): Elaborating entity "mux_4" for hierarchy "mux_8:mx|mux_4:first_top" File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mux_8.v Line: 23
-Warning (12010): Port "ordered port 1" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 2" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12030): Port "ordered port 3" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 1" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 2" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12030): Port "ordered port 3" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 1" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 2" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12030): Port "ordered port 3" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 1" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 2" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12030): Port "ordered port 3" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 1" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12010): Port "ordered port 2" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be driven by GND. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12030): Port "ordered port 3" on the entity instantiation of "mx" is connected to a signal of width 1. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/d_latch.v Line: 16
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v Line: 36
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v Line: 3
-Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Wed Sep 27 17:24:23 2023
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:27
+Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 18 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Wed Sep 27 22:39:06 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:23
 
 

@@ -1,0 +1,16 @@
+
+State Machine - |mod_5_counter|tempState
+Name tempState.011 tempState.010 tempState.001 tempState.000 tempState.100 
+tempState.000 0 0 0 0 0 
+tempState.001 0 0 1 1 0 
+tempState.010 0 1 0 1 0 
+tempState.011 1 0 0 1 0 
+tempState.100 0 0 0 1 1 
+
+State Machine - |mod_5_counter|nextState
+Name nextState.011 nextState.010 nextState.001 nextState.000 nextState.100 
+nextState.000 0 0 0 0 0 
+nextState.001 0 0 1 1 0 
+nextState.010 0 1 0 1 0 
+nextState.011 1 0 0 1 0 
+nextState.100 0 0 0 1 1 

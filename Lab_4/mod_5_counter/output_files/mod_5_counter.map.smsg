@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at mod_5_counter.v(36): always construct contains both blocking and non-blocking assignments File: //Mac/Home/Desktop/ECE550/Lab_4/mod_5_counter/mod_5_counter.v Line: 36

@@ -13,7 +13,7 @@ module mod_5_counter_tb;
     reg reset;
 
     // Outputs
-    wire [2:0]out;
+    wire [6:0]out;
     wire reach4;
 
     // Instantiate the DUT
