@@ -1,5 +1,5 @@
 Timing Analyzer report for skeleton
-Wed Oct 11 22:31:12 2023
+Thu Oct 12 15:52:52 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -112,15 +112,15 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.21        ;
+; Average used               ; 1.14        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.5%      ;
-;     Processor 3            ;   4.0%      ;
-;     Processor 4            ;   3.8%      ;
-;     Processors 5-6         ;   3.4%      ;
+;     Processor 2            ;   4.0%      ;
+;     Processor 3            ;   2.8%      ;
+;     Processor 4            ;   2.5%      ;
+;     Processors 5-6         ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -242,8 +242,8 @@ HTML report is unavailable in plain text report export.
 ; 8.599 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a205~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.063     ; 11.376     ;
 ; 8.605 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a117~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.072     ; 11.361     ;
 ; 8.634 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a99~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.118     ; 11.286     ;
-; 8.634 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a23~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.129     ; 11.275     ;
 ; 8.634 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a87~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.115     ; 11.289     ;
+; 8.634 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a23~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.129     ; 11.275     ;
 ; 8.635 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a294~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.092     ; 11.311     ;
 ; 8.690 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a47~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.105     ; 11.243     ;
 ; 8.702 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a164~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.067     ; 11.269     ;
@@ -292,8 +292,8 @@ HTML report is unavailable in plain text report export.
 ; 9.237 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a118~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.077     ; 10.724     ;
 ; 9.237 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a119~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.063     ; 10.738     ;
 ; 9.238 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a260~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.131     ; 10.669     ;
-; 9.249 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a67~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.112     ; 10.677     ;
 ; 9.249 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a111~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.116     ; 10.673     ;
+; 9.249 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a67~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.112     ; 10.677     ;
 ; 9.253 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a98~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.113     ; 10.672     ;
 ; 9.259 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a57~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.105     ; 10.674     ;
 ; 9.269 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a151~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.105     ; 10.664     ;
@@ -1385,8 +1385,8 @@ No synchronizer chains to report.
 ; 13.666 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a52~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.068     ; 6.275      ;
 ; 13.708 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a274~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.089     ; 6.212      ;
 ; 13.768 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a60~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.101     ; 6.140      ;
-; 13.770 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a195~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.070     ; 6.169      ;
 ; 13.770 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a196~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.090     ; 6.149      ;
+; 13.770 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a195~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.070     ; 6.169      ;
 ; 13.859 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a77~porta_address_reg0  ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.040     ; 6.110      ;
 ; 13.867 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a197~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.078     ; 6.064      ;
 ; 13.888 ; vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_pmc1:auto_generated|ram_block1a216~porta_address_reg0 ; vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_89c1:auto_generated|ram_block1a0~porta_address_reg0 ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 20.000       ; -0.077     ; 6.044      ;
@@ -2811,7 +2811,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Oct 11 22:31:08 2023
+    Info: Processing started: Thu Oct 12 15:52:47 2023
 Info: Command: quartus_sta skeleton -c skeleton
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -2907,9 +2907,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.436
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4909 megabytes
-    Info: Processing ended: Wed Oct 11 22:31:12 2023
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Thu Oct 12 15:52:52 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 
