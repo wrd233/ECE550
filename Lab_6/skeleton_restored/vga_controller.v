@@ -5,11 +5,15 @@ module vga_controller(iRST_n,
                       oVS,
                       b_data,
                       g_data,
-                      r_data);
+                      r_data,
+							 ps2_key_pressed,
+							 ps2_out);
 
 	
 input iRST_n;
 input iVGA_CLK;
+input ps2_key_pressed;
+input [7:0] ps2_out;
 output reg oBLANK_n;
 output reg oHS;
 output reg oVS;
@@ -23,6 +27,11 @@ wire VGA_CLK_n;
 wire [7:0] index;
 wire [23:0] bgr_data_raw;
 wire cBLANK_n,cHS,cVS,rst;
+
+reg [15:0] x = 16'd340;
+reg [15:0] y = 16'd200;
+parameter width = 4'd30;
+parameter height = 4'd30;
 ////
 assign rst = ~iRST_n;
 video_sync_generator LTM_ins (.vga_clk(iVGA_CLK),
@@ -52,6 +61,28 @@ img_data	img_data_inst (
 	
 /////////////////////////
 //////Add switch-input logic here
+always@(posedge VGA_CLK_n)
+begin
+  if(ADDR%640 >= x && ADDR%640 <= x + width)
+		if (ADDR/640 >= y && ADDR/640 <= y + height)
+		bgr_data <= 24'hFF0000;
+		else 
+		bgr_data <= bgr_data_raw;
+	else
+	bgr_data <= bgr_data_raw;		
+end
+
+always@(negedge ps2_key_pressed)
+begin
+if(ps2_out == 8'h1c)
+x <= x - 4'hf;
+if(ps2_out == 8'h23)
+x <= x + 4'hf;
+if(ps2_out == 8'h1d)
+y <= y - 4'hf;
+if(ps2_out == 8'h1b)
+y <= y + 4'hf;	
+end
 	
 //////Color table output
 img_index	img_index_inst (
@@ -61,7 +92,7 @@ img_index	img_index_inst (
 	);	
 //////
 //////latch valid data at falling edge;
-always@(posedge VGA_CLK_n) bgr_data <= bgr_data_raw;
+//always@(posedge VGA_CLK_n) bgr_data <= bgr_data_raw;
 assign b_data = bgr_data[23:16];
 assign g_data = bgr_data[15:8];
 assign r_data = bgr_data[7:0]; 
