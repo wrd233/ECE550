@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor
-Sun Nov 05 14:23:28 2023
+Sun Nov 05 20:53:31 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -13,18 +13,23 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Source assignments for imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated
- 10. Source assignments for dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated
- 11. Parameter Settings for User Entity Instance: imem:my_imem|altsyncram:altsyncram_component
- 12. Parameter Settings for User Entity Instance: dmem:my_dmem|altsyncram:altsyncram_component
- 13. altsyncram Parameter Settings by Entity Instance
- 14. Port Connectivity Checks: "processor:my_processor"
- 15. Port Connectivity Checks: "dmem:my_dmem"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Source assignments for skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated
+ 12. Source assignments for skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated
+ 13. Source assignments for imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated
+ 14. Source assignments for dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated
+ 15. Parameter Settings for User Entity Instance: skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: imem:my_imem|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: dmem:my_dmem|altsyncram:altsyncram_component
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "skeleton:student_skeleton|processor:my_processor|register:pc_register"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -50,16 +55,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 05 14:23:28 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 05 20:53:31 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; processor                                   ;
-; Top-level Entity Name              ; skeleton                                    ;
+; Top-level Entity Name              ; skeleton_test                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 6                                           ;
+; Total logic elements               ; 2,410                                       ;
+;     Total combinational functions  ; 1,450                                       ;
+;     Dedicated logic registers      ; 993                                         ;
+; Total registers                    ; 993                                         ;
+; Total pins                         ; 223                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -73,7 +78,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; skeleton           ; processor          ;
+; Top-level entity name                                            ; skeleton_test      ; processor          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,10 +167,15 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -174,10 +184,13 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; skeleton_test.v                  ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v               ;         ;
 ; skeleton.v                       ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v                    ;         ;
+; register.v                       ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v                    ;         ;
 ; regfile.v                        ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v                     ;         ;
 ; processor.v                      ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v                   ;         ;
 ; frequency_divider_by2.v          ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v       ;         ;
+; dffe.v                           ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe.v                        ;         ;
 ; imem.v                           ; yes             ; Auto-Found Wizard-Generated File       ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v                        ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
@@ -195,45 +208,158 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 6     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 6     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                       ;
++---------------------------------------------+---------------------------------------------------------------------+
+; Resource                                    ; Usage                                                               ;
++---------------------------------------------+---------------------------------------------------------------------+
+; Estimated Total logic elements              ; 2,410                                                               ;
+;                                             ;                                                                     ;
+; Total combinational functions               ; 1450                                                                ;
+; Logic element usage by number of LUT inputs ;                                                                     ;
+;     -- 4 input functions                    ; 1399                                                                ;
+;     -- 3 input functions                    ; 6                                                                   ;
+;     -- <=2 input functions                  ; 45                                                                  ;
+;                                             ;                                                                     ;
+; Logic elements by mode                      ;                                                                     ;
+;     -- normal mode                          ; 1450                                                                ;
+;     -- arithmetic mode                      ; 0                                                                   ;
+;                                             ;                                                                     ;
+; Total registers                             ; 993                                                                 ;
+;     -- Dedicated logic registers            ; 993                                                                 ;
+;     -- I/O registers                        ; 0                                                                   ;
+;                                             ;                                                                     ;
+; I/O pins                                    ; 223                                                                 ;
+;                                             ;                                                                     ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                   ;
+;                                             ;                                                                     ;
+; Maximum fan-out node                        ; skeleton:student_skeleton|frequency_divider_by2:divider_by2|out_clk ;
+; Maximum fan-out                             ; 993                                                                 ;
+; Total fan-out                               ; 10025                                                               ;
+; Average fan-out                             ; 3.47                                                                ;
++---------------------------------------------+---------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |skeleton                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |skeleton           ; skeleton    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+-----------------------+--------------+
+; |skeleton_test                            ; 1450 (0)            ; 993 (0)                   ; 0           ; 0            ; 0       ; 0         ; 223  ; 0            ; |skeleton_test                                                             ; skeleton_test         ; work         ;
+;    |mux_2:mux4|                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton_test|mux_2:mux4                                                  ; mux_2                 ; work         ;
+;    |mux_2_5bit:mux1|                      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton_test|mux_2_5bit:mux1                                             ; mux_2_5bit            ; work         ;
+;    |mux_2_5bit:mux2|                      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton_test|mux_2_5bit:mux2                                             ; mux_2_5bit            ; work         ;
+;    |mux_2_5bit:mux3|                      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton_test|mux_2_5bit:mux3                                             ; mux_2_5bit            ; work         ;
+;    |regfile:my_regfile|                   ; 1405 (1405)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton_test|regfile:my_regfile                                          ; regfile               ; work         ;
+;    |skeleton:student_skeleton|            ; 1 (0)               ; 1 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton_test|skeleton:student_skeleton                                   ; skeleton              ; work         ;
+;       |frequency_divider_by2:divider_by2| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton_test|skeleton:student_skeleton|frequency_divider_by2:divider_by2 ; frequency_divider_by2 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                     ;
++--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                                                            ; Reason for Removal                          ;
++--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[31].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[30].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[29].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[28].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[27].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[26].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[25].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[24].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[23].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[22].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[21].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[20].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[19].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[18].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[17].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[16].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[15].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[14].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[13].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[12].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[11].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[10].dffe|Q                           ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[9].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[8].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[7].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[6].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[5].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[4].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[3].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[2].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[1].dffe|Q                            ; Lost fanout                                 ;
+; processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[0].dffe|Q                            ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[31].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[30].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[29].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[28].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[27].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[26].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[25].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[24].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[23].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[22].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[21].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[20].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[19].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[18].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[17].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[16].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[15].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[14].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[13].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[12].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[11].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[10].dffe|Q ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[9].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[8].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[7].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[6].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[5].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[4].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[3].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[2].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[1].dffe|Q  ; Lost fanout                                 ;
+; skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[0].dffe|Q  ; Lost fanout                                 ;
+; regfile:my_regfile|registers[0][0]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][1]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][2]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][3]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][4]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][5]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][6]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][7]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][8]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][9]                                                                                       ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][10]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][11]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][12]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][13]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][14]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][15]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][16]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][17]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][18]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][19]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][20]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][21]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][22]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][23]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][24]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][25]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][26]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][27]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][28]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][29]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][30]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:my_regfile|registers[0][31]                                                                                      ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 96                                                                                   ;                                             ;
++--------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -241,14 +367,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 993   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 992   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 992   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |skeleton_test|regfile:my_regfile|Mux6  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |skeleton_test|regfile:my_regfile|Mux56 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -267,6 +421,128 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+--------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
 +---------------------------------+--------------------+------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                    ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                 ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                 ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                          ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                                          ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                                          ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_B                            ; 1                    ; Untyped                                                 ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                 ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; INIT_FILE                          ; imem.mif             ; Untyped                                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_m591      ; Untyped                                                 ;
++------------------------------------+----------------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                    ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                 ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                 ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                          ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                                          ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                                          ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_B                            ; 1                    ; Untyped                                                 ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                 ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_0jf1      ; Untyped                                                 ;
++------------------------------------+----------------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------------+
@@ -391,58 +667,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                         ;
-+-------------------------------------------+----------------------------------------------+
-; Name                                      ; Value                                        ;
-+-------------------------------------------+----------------------------------------------+
-; Number of entity instances                ; 2                                            ;
-; Entity Instance                           ; imem:my_imem|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                          ;
-;     -- WIDTH_A                            ; 32                                           ;
-;     -- NUMWORDS_A                         ; 4096                                         ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                       ;
-;     -- WIDTH_B                            ; 1                                            ;
-;     -- NUMWORDS_B                         ; 1                                            ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                       ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
-; Entity Instance                           ; dmem:my_dmem|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                  ;
-;     -- WIDTH_A                            ; 32                                           ;
-;     -- NUMWORDS_A                         ; 4096                                         ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                       ;
-;     -- WIDTH_B                            ; 1                                            ;
-;     -- NUMWORDS_B                         ; 1                                            ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                       ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
-+-------------------------------------------+----------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                   ;
++-------------------------------------------+------------------------------------------------------------------------+
+; Name                                      ; Value                                                                  ;
++-------------------------------------------+------------------------------------------------------------------------+
+; Number of entity instances                ; 4                                                                      ;
+; Entity Instance                           ; skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                    ;
+;     -- WIDTH_A                            ; 32                                                                     ;
+;     -- NUMWORDS_A                         ; 4096                                                                   ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                 ;
+;     -- WIDTH_B                            ; 1                                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
+; Entity Instance                           ; skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                            ;
+;     -- WIDTH_A                            ; 32                                                                     ;
+;     -- NUMWORDS_A                         ; 4096                                                                   ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                 ;
+;     -- WIDTH_B                            ; 1                                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
+; Entity Instance                           ; imem:my_imem|altsyncram:altsyncram_component                           ;
+;     -- OPERATION_MODE                     ; ROM                                                                    ;
+;     -- WIDTH_A                            ; 32                                                                     ;
+;     -- NUMWORDS_A                         ; 4096                                                                   ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                 ;
+;     -- WIDTH_B                            ; 1                                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
+; Entity Instance                           ; dmem:my_dmem|altsyncram:altsyncram_component                           ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                            ;
+;     -- WIDTH_A                            ; 32                                                                     ;
+;     -- NUMWORDS_A                         ; 4096                                                                   ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                 ;
+;     -- WIDTH_B                            ; 1                                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
++-------------------------------------------+------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:my_processor"                                                                     ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; address_dmem ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; wren         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------+
-; Port Connectivity Checks: "dmem:my_dmem"             ;
-+---------+--------+----------+------------------------+
-; Port    ; Type   ; Severity ; Details                ;
-+---------+--------+----------+------------------------+
-; address ; Input  ; Info     ; Explicitly unconnected ;
-; data    ; Input  ; Info     ; Explicitly unconnected ;
-; wren    ; Input  ; Info     ; Explicitly unconnected ;
-; q       ; Output ; Info     ; Explicitly unconnected ;
-+---------+--------+----------+------------------------+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "skeleton:student_skeleton|processor:my_processor|register:pc_register" ;
++--------+-------+----------+-----------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                               ;
++--------+-------+----------+-----------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                          ;
++--------+-------+----------+-----------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -450,13 +734,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 6                           ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
+; boundary_port         ; 223                         ;
+; cycloneiii_ff         ; 993                         ;
+;     ENA CLR           ; 992                         ;
+;     plain             ; 1                           ;
+; cycloneiii_io_obuf    ; 64                          ;
+; cycloneiii_lcell_comb ; 1451                        ;
+;     normal            ; 1451                        ;
 ;         0 data inputs ; 1                           ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 1399                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 4.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -465,7 +756,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -475,7 +766,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 05 14:23:14 2023
+    Info: Processing started: Sun Nov 05 20:53:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
 Warning (125092): Tcl Script File dmem.qip not found
     Info (125063): set_global_assignment -name QIP_FILE dmem.qip
@@ -502,19 +793,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file dffe.v
     Info (12023): Found entity 1: DFFE_with_Async_Clear_Posedge File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: alu File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/alu.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(67): created implicit net for "ctrl_reset" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 67
-Info (12127): Elaborating entity "skeleton" for the top level hierarchy
-Warning (10034): Output port "stu_imem_clock" at skeleton.v(14) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
-Warning (10034): Output port "stu_dmem_clock" at skeleton.v(14) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
-Warning (10034): Output port "stu_processor_clock" at skeleton.v(14) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
-Warning (10034): Output port "stu_regfile_clock" at skeleton.v(14) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
-Info (12128): Elaborating entity "frequency_divider_by2" for hierarchy "frequency_divider_by2:divider_by2" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(66): created implicit net for "ctrl_reset" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 66
+Info (12127): Elaborating entity "skeleton_test" for the top level hierarchy
+Warning (10034): Output port "t_test2_out" at skeleton_test.v(34) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+Warning (10034): Output port "t_test3_out" at skeleton_test.v(35) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 35
+Warning (10034): Output port "t_test4_out" at skeleton_test.v(34) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+Warning (10034): Output port "t_test_out" at skeleton_test.v(33) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 33
+Info (12128): Elaborating entity "skeleton" for hierarchy "skeleton:student_skeleton" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 25
+Info (12128): Elaborating entity "frequency_divider_by2" for hierarchy "skeleton:student_skeleton|frequency_divider_by2:divider_by2" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 22
 Warning (12125): Using design file imem.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: imem File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 39
-Info (12128): Elaborating entity "imem" for hierarchy "imem:my_imem" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 41
-Info (12128): Elaborating entity "altsyncram" for hierarchy "imem:my_imem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
-Info (12130): Elaborated megafunction instantiation "imem:my_imem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
-Info (12133): Instantiated megafunction "imem:my_imem|altsyncram:altsyncram_component" with the following parameter: File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
+Info (12128): Elaborating entity "imem" for hierarchy "skeleton:student_skeleton|imem:my_imem" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 40
+Info (12128): Elaborating entity "altsyncram" for hierarchy "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
+Info (12130): Elaborated megafunction instantiation "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
+Info (12133): Instantiated megafunction "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component" with the following parameter: File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -531,13 +823,13 @@ Info (12133): Instantiated megafunction "imem:my_imem|altsyncram:altsyncram_comp
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_m591.tdf
     Info (12023): Found entity 1: altsyncram_m591 File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_m591" for hierarchy "imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "altsyncram_m591" for hierarchy "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (12125): Using design file dmem.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: dmem File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 39
-Info (12128): Elaborating entity "dmem" for hierarchy "dmem:my_dmem" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 56
-Info (12128): Elaborating entity "altsyncram" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
-Info (12130): Elaborated megafunction instantiation "dmem:my_dmem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
-Info (12133): Instantiated megafunction "dmem:my_dmem|altsyncram:altsyncram_component" with the following parameter: File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
+Info (12128): Elaborating entity "dmem" for hierarchy "skeleton:student_skeleton|dmem:my_dmem" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 55
+Info (12128): Elaborating entity "altsyncram" for hierarchy "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
+Info (12130): Elaborated megafunction instantiation "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
+Info (12133): Instantiated megafunction "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component" with the following parameter: File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
@@ -554,11 +846,10 @@ Info (12133): Instantiated megafunction "dmem:my_dmem|altsyncram:altsyncram_comp
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0jf1.tdf
     Info (12023): Found entity 1: altsyncram_0jf1 File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_0jf1" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 74
+Info (12128): Elaborating entity "altsyncram_0jf1" for hierarchy "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "regfile" for hierarchy "skeleton:student_skeleton|regfile:my_regfile" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 73
 Warning (10240): Verilog HDL Always Construct warning at regfile.v(14): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v Line: 14
-Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 100
-Warning (10034): Output port "address_imem" at processor.v(80) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 80
+Info (12128): Elaborating entity "processor" for hierarchy "skeleton:student_skeleton|processor:my_processor" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 99
 Warning (10034): Output port "address_dmem" at processor.v(84) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 84
 Warning (10034): Output port "data" at processor.v(85) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 85
 Warning (10034): Output port "ctrl_writeReg" at processor.v(91) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 91
@@ -567,6 +858,11 @@ Warning (10034): Output port "ctrl_readRegB" at processor.v(91) has no driver Fi
 Warning (10034): Output port "data_writeReg" at processor.v(92) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 92
 Warning (10034): Output port "wren" at processor.v(86) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 86
 Warning (10034): Output port "ctrl_writeEnable" at processor.v(90) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 90
+Info (12128): Elaborating entity "register" for hierarchy "skeleton:student_skeleton|processor:my_processor|register:pc_register" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 99
+Info (12128): Elaborating entity "DFFE_with_Async_Clear_Posedge" for hierarchy "skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[0].dffe" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v Line: 9
+Info (12128): Elaborating entity "mux_2_1bit" for hierarchy "mux_2_1bit:mux0" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 73
+Info (12128): Elaborating entity "mux_2_5bit" for hierarchy "mux_2_5bit:mux1" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 74
+Info (12128): Elaborating entity "mux_2" for hierarchy "mux_2:mux4" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 77
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[0]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 36
@@ -633,25 +929,193 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[29]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 672
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[30]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 694
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[31]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 716
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[0]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 36
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[1]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 59
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[2]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 82
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[3]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 105
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[4]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 128
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[5]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 151
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[6]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 174
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[7]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 197
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[8]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 220
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[9]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 243
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[10]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 266
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[11]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 289
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[12]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 312
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[13]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 335
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[14]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 358
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[15]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 381
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[16]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 404
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[17]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 427
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[18]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 450
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[19]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 473
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[20]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 496
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[21]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 519
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[22]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 542
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[23]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 565
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[24]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 588
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[25]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 611
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[26]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 634
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[27]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 657
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[28]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 680
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[29]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 703
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[30]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 726
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[31]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 749
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[0]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 34
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[1]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 56
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[2]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 78
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[3]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 100
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[4]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 122
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[5]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 144
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[6]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 166
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[7]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 188
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[8]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 210
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[9]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 232
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[10]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 254
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[11]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 276
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[12]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 298
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[13]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 320
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[14]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 342
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[15]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 364
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[16]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 386
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[17]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 408
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[18]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 430
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[19]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 452
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[20]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 474
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[21]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 496
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[22]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 518
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[23]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 540
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[24]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 562
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[25]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 584
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[26]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 606
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[27]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 628
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[28]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 650
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[29]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 672
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[30]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 694
+        Warning (14320): Synthesized away node "skeleton:student_skeleton|imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated|q_a[31]" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_m591.tdf Line: 716
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "stu_imem_clock" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
-    Warning (13410): Pin "stu_dmem_clock" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
-    Warning (13410): Pin "stu_processor_clock" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
-    Warning (13410): Pin "stu_regfile_clock" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
+    Warning (13410): Pin "t_test_out" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 33
+    Warning (13410): Pin "t_test2_out[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[5]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[6]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[7]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[8]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[9]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[10]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[11]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[12]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[13]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[14]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[15]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[16]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[17]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[18]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[19]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[20]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[21]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[22]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[23]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[24]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[25]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[26]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[27]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[28]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[29]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[30]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test2_out[31]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test3_out[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 35
+    Warning (13410): Pin "t_test3_out[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 35
+    Warning (13410): Pin "t_test3_out[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 35
+    Warning (13410): Pin "t_test3_out[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 35
+    Warning (13410): Pin "t_test3_out[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 35
+    Warning (13410): Pin "t_test4_out[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[5]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[6]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[7]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[8]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[9]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[10]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[11]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[12]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[13]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[14]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[15]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[16]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[17]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[18]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[19]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[20]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[21]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[22]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[23]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[24]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[25]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[26]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[27]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[28]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[29]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[30]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "t_test4_out[31]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 34
+    Warning (13410): Pin "o_ctrl_writeEnable" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 36
+    Warning (13410): Pin "o_ctrl_writeReg[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 37
+    Warning (13410): Pin "o_ctrl_writeReg[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 37
+    Warning (13410): Pin "o_ctrl_writeReg[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 37
+    Warning (13410): Pin "o_ctrl_writeReg[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 37
+    Warning (13410): Pin "o_ctrl_writeReg[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 37
+    Warning (13410): Pin "o_data_writeReg[0]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[1]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[2]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[3]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[4]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[5]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[6]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[7]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[8]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[9]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[10]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[11]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[12]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[13]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[14]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[15]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[16]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[17]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[18]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[19]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[20]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[21]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[22]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[23]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[24]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[25]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[26]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[27]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[28]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[29]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[30]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+    Warning (13410): Pin "o_data_writeReg[31]" is stuck at GND File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v Line: 38
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 64 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /Desktop/ECE550/Proj_3/Project_Files/output_files/processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 13
-    Warning (15610): No output dependent on input pin "reset" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 13
-Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 4 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 94 warnings
-    Info: Peak virtual memory: 4754 megabytes
-    Info: Processing ended: Sun Nov 05 14:23:28 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:27
+Info (21057): Implemented 2665 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 51 input pins
+    Info (21059): Implemented 172 output pins
+    Info (21061): Implemented 2442 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 258 warnings
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Sun Nov 05 20:53:31 2023
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+
