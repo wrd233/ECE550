@@ -93,5 +93,16 @@ module processor(
     input [31:0] data_readRegA, data_readRegB;
 
     /* YOUR CODE STARTS HERE */
+    wire[31:0] pc, pc_next, imem_addr;
+    
+    /* 指令获取 */
+    register pc_register(.out(pc), .in(pc_next), .clk(clock), .reset(reset), .enable(1'b1));
+    assign address_imem = pc[11:0];
+    // 此时应该得到了q_imem
+
+
+
+    /* 更新下一个PC */
+    assign pc_next = pc+32'd1;
 
 endmodule
