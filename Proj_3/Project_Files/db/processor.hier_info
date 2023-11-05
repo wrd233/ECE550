@@ -1,10 +1,16 @@
 |skeleton
-clock => clock.IN2
-reset => reset.IN1
+clock => clock.IN1
+reset => reset.IN2
 stu_imem_clock <= <GND>
 stu_dmem_clock <= <GND>
 stu_processor_clock <= <GND>
 stu_regfile_clock <= <GND>
+
+
+|skeleton|frequency_divider_by2:divider_by2
+clk => out_clk~reg0.CLK
+rst => out_clk.OUTPUTSELECT
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton|imem:my_imem

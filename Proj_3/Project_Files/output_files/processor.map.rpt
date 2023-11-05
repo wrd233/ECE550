@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor
-Sun Nov 05 13:33:27 2023
+Sun Nov 05 14:23:28 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 05 13:33:27 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 05 14:23:28 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; processor                                   ;
 ; Top-level Entity Name              ; skeleton                                    ;
@@ -177,6 +177,7 @@ refer to the applicable agreement for further details.
 ; skeleton.v                       ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v                    ;         ;
 ; regfile.v                        ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v                     ;         ;
 ; processor.v                      ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v                   ;         ;
+; frequency_divider_by2.v          ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v       ;         ;
 ; imem.v                           ; yes             ; Auto-Found Wizard-Generated File       ; //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v                        ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
@@ -474,7 +475,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 05 13:33:13 2023
+    Info: Processing started: Sun Nov 05 14:23:14 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
 Warning (125092): Tcl Script File dmem.qip not found
     Info (125063): set_global_assignment -name QIP_FILE dmem.qip
@@ -501,15 +502,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file dffe.v
     Info (12023): Found entity 1: DFFE_with_Async_Clear_Posedge File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: alu File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/alu.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(50): created implicit net for "ctrl_reset" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(67): created implicit net for "ctrl_reset" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 67
 Info (12127): Elaborating entity "skeleton" for the top level hierarchy
 Warning (10034): Output port "stu_imem_clock" at skeleton.v(14) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
 Warning (10034): Output port "stu_dmem_clock" at skeleton.v(14) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
 Warning (10034): Output port "stu_processor_clock" at skeleton.v(14) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
 Warning (10034): Output port "stu_regfile_clock" at skeleton.v(14) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 14
+Info (12128): Elaborating entity "frequency_divider_by2" for hierarchy "frequency_divider_by2:divider_by2" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 23
 Warning (12125): Using design file imem.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: imem File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 39
-Info (12128): Elaborating entity "imem" for hierarchy "imem:my_imem" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 24
+Info (12128): Elaborating entity "imem" for hierarchy "imem:my_imem" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 41
 Info (12128): Elaborating entity "altsyncram" for hierarchy "imem:my_imem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
 Info (12130): Elaborated megafunction instantiation "imem:my_imem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
 Info (12133): Instantiated megafunction "imem:my_imem|altsyncram:altsyncram_component" with the following parameter: File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v Line: 81
@@ -532,7 +534,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_m591" for hierarchy "imem:my_imem|altsyncram:altsyncram_component|altsyncram_m591:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (12125): Using design file dmem.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: dmem File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 39
-Info (12128): Elaborating entity "dmem" for hierarchy "dmem:my_dmem" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 39
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:my_dmem" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 56
 Info (12128): Elaborating entity "altsyncram" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
 Info (12130): Elaborated megafunction instantiation "dmem:my_dmem|altsyncram:altsyncram_component" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
 Info (12133): Instantiated megafunction "dmem:my_dmem|altsyncram:altsyncram_component" with the following parameter: File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v Line: 85
@@ -553,9 +555,9 @@ Info (12133): Instantiated megafunction "dmem:my_dmem|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0jf1.tdf
     Info (12023): Found entity 1: altsyncram_0jf1 File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/db/altsyncram_0jf1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_0jf1" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 57
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 74
 Warning (10240): Verilog HDL Always Construct warning at regfile.v(14): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v Line: 14
-Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 83
+Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v Line: 100
 Warning (10034): Output port "address_imem" at processor.v(80) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 80
 Warning (10034): Output port "address_dmem" at processor.v(84) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 84
 Warning (10034): Output port "data" at processor.v(85) has no driver File: //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v Line: 85
@@ -646,10 +648,10 @@ Info (21057): Implemented 6 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 4 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 94 warnings
-    Info: Peak virtual memory: 4755 megabytes
-    Info: Processing ended: Sun Nov 05 13:33:27 2023
+    Info: Peak virtual memory: 4754 megabytes
+    Info: Processing ended: Sun Nov 05 14:23:28 2023
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+

@@ -12,6 +12,23 @@
 module skeleton(clock, reset, stu_imem_clock, stu_dmem_clock, stu_processor_clock, stu_regfile_clock);
     input clock, reset;
     output stu_imem_clock, stu_dmem_clock, stu_processor_clock, stu_regfile_clock;
+   
+    /* 分时处理 */
+    wire clk_divider_by2;
+    wire processor_clk, regfile_clk, imem_clk, dmem_clk;
+    frequency_divider_by2 divider_by2(
+        .clk        (clock),
+        .rst        (reset),
+        .out_clk    (clk_divider_by2)
+    );
+
+    // 为各个组件分配clock 
+    // TODO: 待更新
+    assign processor_clk = clk_divider_by2;
+    assign regfile_clk = clk_divider_by2;
+    assign imem_clk = ~clock;
+    assign dmem_clk = ~clock;
+
     /** IMEM **/
     // Figure out how to generate a Quartus syncram component and commit the generated verilog file.
     // Make sure you configure it correctly!
@@ -19,7 +36,7 @@ module skeleton(clock, reset, stu_imem_clock, stu_dmem_clock, stu_processor_cloc
     wire [31:0] q_imem;
     imem my_imem(
         .address    (address_imem),            // address of data
-        .clock      (~clock),                  // you may need to invert the clock
+        .clock      (imem_clk),                  // you may need to invert the clock
         .q          (q_imem)                   // the raw instruction
     );
 
@@ -32,7 +49,7 @@ module skeleton(clock, reset, stu_imem_clock, stu_dmem_clock, stu_processor_cloc
     wire [31:0] q_dmem;
     dmem my_dmem(
         .address    (/* 12-bit wire */),       // address of data
-        .clock      (~clock),                  // may need to invert the clock
+        .clock      (dmem_clk),                  // may need to invert the clock
         .data	    (/* 32-bit data in */),    // data you want to write
         .wren	    (/* 1-bit signal */),      // write enable
         .q          (/* 32-bit data out */)    // data from dmem
@@ -45,7 +62,7 @@ module skeleton(clock, reset, stu_imem_clock, stu_dmem_clock, stu_processor_cloc
     wire [31:0] data_writeReg;
     wire [31:0] data_readRegA, data_readRegB;
     regfile my_regfile(
-        clock,
+        regfile_clk,
         ctrl_writeEnable,
         ctrl_reset,
         ctrl_writeReg,
@@ -59,7 +76,7 @@ module skeleton(clock, reset, stu_imem_clock, stu_dmem_clock, stu_processor_cloc
     /** PROCESSOR **/
     processor my_processor(
         // Control signals
-        clock,                          // I: The master clock
+        processor_clk,                  // I: The master clock
         reset,                          // I: A reset signal
 
         // Imem
