@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/simulation/modelsim
 vdffe_ref
-Z1 !s110 1699195206
+Z1 !s110 1699198713
 !i10b 1
 !s100 zzIU9mVER1>_YT7A[hbSN0
 Ig`Oe7cjVdn<9o;P9LNE2S0
@@ -23,13 +23,13 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1699195205.000000
+Z4 !s108 1699198713.000000
 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe_ref.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe_ref.v|
 !i113 1
-Z4 o-vlog01compat -work work
-Z5 !s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files
-Z6 tCvgOpt 0
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files
+Z7 tCvgOpt 0
 vdmem
 R1
 !i10b 1
@@ -40,26 +40,26 @@ R0
 w1699162285
 8//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v
 F//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v
-Z7 L0 39
+Z8 L0 39
 R3
 r1
 !s85 0
 31
-Z8 !s108 1699195206.000000
+R4
 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v|
 !i113 1
-R4
 R5
 R6
+R7
 vfrequency_divider_by2
-Z9 !s110 1699195207
+Z9 !s110 1699198715
 !i10b 1
-!s100 B]H^dTFM13R0J<_lXYU=D0
-I?8YlgWPF<j7_JBkBk_ad02
+!s100 KC9O^j9jBOI^aY^L[9iDG0
+IEnSGcKJ^O0I^EdVDmC^YC2
 R2
 R0
-w1699158011
+w1699198676
 8//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v
 F//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v
 L0 1
@@ -67,13 +67,13 @@ R3
 r1
 !s85 0
 31
-Z10 !s108 1699195207.000000
+Z10 !s108 1699198715.000000
 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v|
 !i113 1
-R4
 R5
 R6
+R7
 vfull_adder
 R1
 !i10b 1
@@ -89,13 +89,13 @@ R3
 r1
 !s85 0
 31
-R8
+R4
 Z14 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/RCA_32bit.v|
 Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/RCA_32bit.v|
 !i113 1
-R4
 R5
 R6
+R7
 vimem
 R1
 !i10b 1
@@ -106,92 +106,92 @@ R0
 w1699162248
 8//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v
 F//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v
-R7
+R8
 R3
 r1
 !s85 0
 31
-R8
+R4
 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v|
 !i113 1
-R4
 R5
 R6
+R7
 vmux_2
-R1
+Z16 !s110 1699198714
 !i10b 1
-!s100 =CnI`ieef;EUb1kZL[^zj2
-IfjP=Z;KEKSR<U4VCEN1jE3
+!s100 YEQdeVe]T5A@1F`@XVf>O3
+I60PK:mAK;A=m[Ch8C=P^32
 R2
 R0
-Z16 w1699193274
-Z17 8//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v
-Z18 F//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v
-L0 162
+Z17 w1699197297
+Z18 8//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v
+Z19 F//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v
+L0 164
 R3
 r1
 !s85 0
 31
-R8
-Z19 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v|
-Z20 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v|
-!i113 1
 R4
+Z20 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v|
+Z21 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v|
+!i113 1
 R5
 R6
+R7
 vmux_2_1bit
-R1
+R16
 !i10b 1
-!s100 QWh0cTh6CCGFa<ERQbJ5_3
-IU:f>X3<ENmYJhE?XZU]j?2
+!s100 ]JRDHA@?JjcQ8LPFEOL3n3
+I672aH73a0Z=3KVKY;T6:11
 R2
 R0
-R16
 R17
 R18
-L0 152
+R19
+L0 154
 R3
 r1
 !s85 0
 31
-R8
-R19
-R20
-!i113 1
 R4
+R20
+R21
+!i113 1
 R5
 R6
+R7
 vmux_2_5bit
 R1
 !i10b 1
-!s100 T3KbNlS@@GRfk^Ook5gQI3
-I=KML9jj9aWFjh3>C3Zo3B3
+!s100 8W??OV8gVh]^Dc@EZA<9B2
+ISAlAOWRTSY9X11z<Q82n60
 R2
 R0
-R16
 R17
 R18
-L0 142
+R19
+L0 144
 R3
 r1
 !s85 0
 31
-R8
-R19
-R20
-!i113 1
 R4
+R20
+R21
+!i113 1
 R5
 R6
+R7
 vprocessor
 R9
 !i10b 1
-!s100 h4Zm8^2OZV?nlbNm_5AT[3
-I4RYFDd_=e728FeNBVhgLR2
+!s100 `I@KX1ZD;^oD;R_8ZPBYN3
+INm=DOO^_JhIjWCcNLn6IH3
 R2
 R0
-w1699195179
+w1699197797
 8//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v
 F//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v
 L0 50
@@ -203,9 +203,9 @@ R10
 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v|
 !i113 1
-R4
 R5
 R6
+R7
 vRCA_32bit
 R1
 !i10b 1
@@ -221,16 +221,16 @@ R3
 r1
 !s85 0
 31
-R8
+R4
 R14
 R15
 !i113 1
-R4
 R5
 R6
+R7
 n@r@c@a_32bit
 vregfile
-R9
+R16
 !i10b 1
 !s100 >EY2WA2fA[Tj>b>>KC1E>2
 IKDmmULgZR3:ga;dfz3]2A0
@@ -244,21 +244,21 @@ R3
 r1
 !s85 0
 31
-R10
+Z22 !s108 1699198714.000000
 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v|
 !i113 1
-R4
 R5
 R6
+R7
 vregister
-R1
+R16
 !i10b 1
 !s100 4_R;5=OQlznE5;R>md:CQ2
 I^`dRU6KUCP`K_AS06OHLT0
 R2
 R0
-w1699190759
+w1699196649
 8//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v
 F//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v
 L0 15
@@ -266,21 +266,21 @@ R3
 r1
 !s85 0
 31
-R8
+R22
 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v|
 !i113 1
-R4
 R5
 R6
+R7
 vskeleton
-R1
+R16
 !i10b 1
-!s100 eY82Z;f=SE2R>E@7`LFF`2
-I?H1e_NRMnW]BXk;`36`AO1
+!s100 ae`=X@05mlj5<_R?W<^Pe0
+I@YT@YXC9EaDHdEn649FR=0
 R2
 R0
-w1699192121
+w1699198691
 8//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v
 F//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v
 L0 12
@@ -288,43 +288,43 @@ R3
 r1
 !s85 0
 31
-R8
+R22
 !s107 //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files|//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v|
 !i113 1
-R4
 R5
 R6
+R7
 vskeleton_test
 R1
 !i10b 1
-!s100 STin1>fZAO6ZBOGoc7Q7W2
-I?ZXDNZ_Q?`4XTYLVYdAA60
+!s100 FB9V:A^LK0G=mE@egofdG3
+IKlz7D10f<ULH;?6cTfD4e3
 R2
 R0
-R16
 R17
 R18
+R19
 L0 5
 R3
 r1
 !s85 0
 31
-R8
-R19
-R20
-!i113 1
 R4
+R20
+R21
+!i113 1
 R5
 R6
+R7
 vskeleton_test_tb
 R9
 !i10b 1
-!s100 TV[1M<Of2cJUe0hi7XYMH2
-I;T104lG;BfTe]Q4ZXd?d62
+!s100 KMzJco_g5_7@W6=95kb6@0
+I:=T3@^DHeHWRi==JVO<@E2
 R2
 R0
-w1699193279
+w1699197748
 8/Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v
 F/Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v
 L0 3
@@ -336,6 +336,6 @@ R10
 !s107 /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/Desktop/ECE550/Proj_3/Project_Files|/Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v|
 !i113 1
-R4
+R5
 !s92 -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_3/Project_Files
-R6
+R7

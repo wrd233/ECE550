@@ -17,6 +17,7 @@ wire [31:0]o_data_writeReg;
 // More test
 wire [11:0]o_address_imem;
 wire [31:0]o_data_q_imem;
+wire o_stu_imem_clock, o_stu_processor_clock;
 
 reg clock;
 reg proc_done;
@@ -31,7 +32,7 @@ skeleton_test st(clock, reset, test, t_ctrl_writeEnable, t_ctrl_writeReg, t_ctrl
 							t_data_writeReg, t_data_readRegA, t_data_readRegB, t_test_out, t_test2_out, t_test3_out, t_test4_out,
 							o_ctrl_writeEnable, o_ctrl_writeReg, o_data_writeReg,
                             o_address_imem, o_data_q_imem,  // 用来检查每次PC使用的地址
-                            o_stu_imem_clock,
+                            o_stu_imem_clock, o_stu_processor_clock               // 用来检查clock
                             );
 
 // Begin Simulation
@@ -57,11 +58,15 @@ always @(o_data_q_imem) begin
   $display("o_data_q_imem = %h", o_data_q_imem);
 end
 
-// 测试clock的
-always @(o_stu_imem_clock) begin
-    $display("o_stu_imem_clock = %h", o_stu_imem_clock);
-end
+// 测试PC的
+// always @(o_stu_imem_clock) begin
+//     $display("test");
+// end
 
+// always @(o_stu_processor_clock) begin
+//     $display("o_data_q_imem = %h", o_data_q_imem);
+//     $display("o_address_imem = %h", o_address_imem);
+// end
 
 // When proc_done is set high, run this code
 always @(posedge proc_done) begin
