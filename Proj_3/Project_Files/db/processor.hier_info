@@ -222,18 +222,69 @@ o_data_writeReg[28] <= data_writeReg[28].DB_MAX_OUTPUT_PORT_TYPE
 o_data_writeReg[29] <= data_writeReg[29].DB_MAX_OUTPUT_PORT_TYPE
 o_data_writeReg[30] <= data_writeReg[30].DB_MAX_OUTPUT_PORT_TYPE
 o_data_writeReg[31] <= data_writeReg[31].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[0] <= address_imem[0].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[1] <= address_imem[1].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[2] <= address_imem[2].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[3] <= address_imem[3].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[4] <= address_imem[4].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[5] <= address_imem[5].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[6] <= address_imem[6].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[7] <= address_imem[7].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[8] <= address_imem[8].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[9] <= address_imem[9].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[10] <= address_imem[10].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[11] <= address_imem[11].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[0] <= q_imem[0].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[1] <= q_imem[1].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[2] <= q_imem[2].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[3] <= q_imem[3].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[4] <= q_imem[4].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[5] <= q_imem[5].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[6] <= q_imem[6].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[7] <= q_imem[7].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[8] <= q_imem[8].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[9] <= q_imem[9].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[10] <= q_imem[10].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[11] <= q_imem[11].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[12] <= q_imem[12].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[13] <= q_imem[13].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[14] <= q_imem[14].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[15] <= q_imem[15].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[16] <= q_imem[16].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[17] <= q_imem[17].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[18] <= q_imem[18].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[19] <= q_imem[19].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[20] <= q_imem[20].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[21] <= q_imem[21].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[22] <= q_imem[22].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[23] <= q_imem[23].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[24] <= q_imem[24].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[25] <= q_imem[25].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[26] <= q_imem[26].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[27] <= q_imem[27].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[28] <= q_imem[28].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[29] <= q_imem[29].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[30] <= q_imem[30].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[31] <= q_imem[31].DB_MAX_OUTPUT_PORT_TYPE
+o_stu_imem_clock <= stu_imem_clock.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton_test|skeleton:student_skeleton
-clock => clock.IN1
-reset => reset.IN2
-stu_imem_clock <= stu_imem_clock.DB_MAX_OUTPUT_PORT_TYPE
-stu_dmem_clock <= stu_dmem_clock.DB_MAX_OUTPUT_PORT_TYPE
-stu_processor_clock <= clk_divider_by2.DB_MAX_OUTPUT_PORT_TYPE
-stu_regfile_clock <= clk_divider_by2.DB_MAX_OUTPUT_PORT_TYPE
+clock => clock.IN3
+reset => reset.IN1
+stu_imem_clock <= clock.DB_MAX_OUTPUT_PORT_TYPE
+stu_dmem_clock <= clock.DB_MAX_OUTPUT_PORT_TYPE
+stu_processor_clock <= stu_processor_clock.DB_MAX_OUTPUT_PORT_TYPE
+stu_regfile_clock <= stu_regfile_clock.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|skeleton_test|skeleton:student_skeleton|frequency_divider_by2:divider_by2
+|skeleton_test|skeleton:student_skeleton|frequency_divider_by2:d1
+clk => out_clk~reg0.CLK
+rst => out_clk.OUTPUTSELECT
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|frequency_divider_by2:d2
 clk => out_clk~reg0.CLK
 rst => out_clk.OUTPUTSELECT
 out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -5031,18 +5082,18 @@ data_readRegB[31] <= data_readRegB[31].DB_MAX_OUTPUT_PORT_TYPE
 |skeleton_test|skeleton:student_skeleton|processor:my_processor
 clock => clock.IN1
 reset => reset.IN1
-address_imem[0] <= register:pc_register.out
-address_imem[1] <= register:pc_register.out
-address_imem[2] <= register:pc_register.out
-address_imem[3] <= register:pc_register.out
-address_imem[4] <= register:pc_register.out
-address_imem[5] <= register:pc_register.out
-address_imem[6] <= register:pc_register.out
-address_imem[7] <= register:pc_register.out
-address_imem[8] <= register:pc_register.out
-address_imem[9] <= register:pc_register.out
-address_imem[10] <= register:pc_register.out
-address_imem[11] <= register:pc_register.out
+address_imem[0] <= clock.DB_MAX_OUTPUT_PORT_TYPE
+address_imem[1] <= <GND>
+address_imem[2] <= <GND>
+address_imem[3] <= <GND>
+address_imem[4] <= <GND>
+address_imem[5] <= <GND>
+address_imem[6] <= <GND>
+address_imem[7] <= <GND>
+address_imem[8] <= <GND>
+address_imem[9] <= <GND>
+address_imem[10] <= <GND>
+address_imem[11] <= <GND>
 q_imem[0] => ~NO_FANOUT~
 q_imem[1] => ~NO_FANOUT~
 q_imem[2] => ~NO_FANOUT~
@@ -5267,38 +5318,38 @@ data_readRegB[31] => ~NO_FANOUT~
 
 
 |skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register
-out[0] <= DFFE_with_Async_Clear_Posedge:dffe_loop[0].dffe.Q
-out[1] <= DFFE_with_Async_Clear_Posedge:dffe_loop[1].dffe.Q
-out[2] <= DFFE_with_Async_Clear_Posedge:dffe_loop[2].dffe.Q
-out[3] <= DFFE_with_Async_Clear_Posedge:dffe_loop[3].dffe.Q
-out[4] <= DFFE_with_Async_Clear_Posedge:dffe_loop[4].dffe.Q
-out[5] <= DFFE_with_Async_Clear_Posedge:dffe_loop[5].dffe.Q
-out[6] <= DFFE_with_Async_Clear_Posedge:dffe_loop[6].dffe.Q
-out[7] <= DFFE_with_Async_Clear_Posedge:dffe_loop[7].dffe.Q
-out[8] <= DFFE_with_Async_Clear_Posedge:dffe_loop[8].dffe.Q
-out[9] <= DFFE_with_Async_Clear_Posedge:dffe_loop[9].dffe.Q
-out[10] <= DFFE_with_Async_Clear_Posedge:dffe_loop[10].dffe.Q
-out[11] <= DFFE_with_Async_Clear_Posedge:dffe_loop[11].dffe.Q
-out[12] <= DFFE_with_Async_Clear_Posedge:dffe_loop[12].dffe.Q
-out[13] <= DFFE_with_Async_Clear_Posedge:dffe_loop[13].dffe.Q
-out[14] <= DFFE_with_Async_Clear_Posedge:dffe_loop[14].dffe.Q
-out[15] <= DFFE_with_Async_Clear_Posedge:dffe_loop[15].dffe.Q
-out[16] <= DFFE_with_Async_Clear_Posedge:dffe_loop[16].dffe.Q
-out[17] <= DFFE_with_Async_Clear_Posedge:dffe_loop[17].dffe.Q
-out[18] <= DFFE_with_Async_Clear_Posedge:dffe_loop[18].dffe.Q
-out[19] <= DFFE_with_Async_Clear_Posedge:dffe_loop[19].dffe.Q
-out[20] <= DFFE_with_Async_Clear_Posedge:dffe_loop[20].dffe.Q
-out[21] <= DFFE_with_Async_Clear_Posedge:dffe_loop[21].dffe.Q
-out[22] <= DFFE_with_Async_Clear_Posedge:dffe_loop[22].dffe.Q
-out[23] <= DFFE_with_Async_Clear_Posedge:dffe_loop[23].dffe.Q
-out[24] <= DFFE_with_Async_Clear_Posedge:dffe_loop[24].dffe.Q
-out[25] <= DFFE_with_Async_Clear_Posedge:dffe_loop[25].dffe.Q
-out[26] <= DFFE_with_Async_Clear_Posedge:dffe_loop[26].dffe.Q
-out[27] <= DFFE_with_Async_Clear_Posedge:dffe_loop[27].dffe.Q
-out[28] <= DFFE_with_Async_Clear_Posedge:dffe_loop[28].dffe.Q
-out[29] <= DFFE_with_Async_Clear_Posedge:dffe_loop[29].dffe.Q
-out[30] <= DFFE_with_Async_Clear_Posedge:dffe_loop[30].dffe.Q
-out[31] <= DFFE_with_Async_Clear_Posedge:dffe_loop[31].dffe.Q
+out[0] <= dffe_ref:register_intialize[0].dff.port0
+out[1] <= dffe_ref:register_intialize[1].dff.port0
+out[2] <= dffe_ref:register_intialize[2].dff.port0
+out[3] <= dffe_ref:register_intialize[3].dff.port0
+out[4] <= dffe_ref:register_intialize[4].dff.port0
+out[5] <= dffe_ref:register_intialize[5].dff.port0
+out[6] <= dffe_ref:register_intialize[6].dff.port0
+out[7] <= dffe_ref:register_intialize[7].dff.port0
+out[8] <= dffe_ref:register_intialize[8].dff.port0
+out[9] <= dffe_ref:register_intialize[9].dff.port0
+out[10] <= dffe_ref:register_intialize[10].dff.port0
+out[11] <= dffe_ref:register_intialize[11].dff.port0
+out[12] <= dffe_ref:register_intialize[12].dff.port0
+out[13] <= dffe_ref:register_intialize[13].dff.port0
+out[14] <= dffe_ref:register_intialize[14].dff.port0
+out[15] <= dffe_ref:register_intialize[15].dff.port0
+out[16] <= dffe_ref:register_intialize[16].dff.port0
+out[17] <= dffe_ref:register_intialize[17].dff.port0
+out[18] <= dffe_ref:register_intialize[18].dff.port0
+out[19] <= dffe_ref:register_intialize[19].dff.port0
+out[20] <= dffe_ref:register_intialize[20].dff.port0
+out[21] <= dffe_ref:register_intialize[21].dff.port0
+out[22] <= dffe_ref:register_intialize[22].dff.port0
+out[23] <= dffe_ref:register_intialize[23].dff.port0
+out[24] <= dffe_ref:register_intialize[24].dff.port0
+out[25] <= dffe_ref:register_intialize[25].dff.port0
+out[26] <= dffe_ref:register_intialize[26].dff.port0
+out[27] <= dffe_ref:register_intialize[27].dff.port0
+out[28] <= dffe_ref:register_intialize[28].dff.port0
+out[29] <= dffe_ref:register_intialize[29].dff.port0
+out[30] <= dffe_ref:register_intialize[30].dff.port0
+out[31] <= dffe_ref:register_intialize[31].dff.port0
 in[0] => in[0].IN1
 in[1] => in[1].IN1
 in[2] => in[2].IN1
@@ -5332,264 +5383,715 @@ in[29] => in[29].IN1
 in[30] => in[30].IN1
 in[31] => in[31].IN1
 clk => clk.IN32
-reset => reset.IN32
 enable => enable.IN32
+reset => reset.IN32
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[0].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[0].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[1].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[1].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[2].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[2].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[3].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[3].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[4].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[4].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[5].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[5].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[6].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[6].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[7].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[7].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[8].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[8].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[9].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[9].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[10].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[10].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[11].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[11].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[12].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[13].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[14].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[15].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[16].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[17].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[18].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[19].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[20].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[21].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[22].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[23].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[24].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[25].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[26].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[27].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[28].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[29].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[30].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[31].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[12].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[13].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[14].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[15].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[16].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[17].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[18].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[19].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[20].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[21].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[22].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[23].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[24].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[25].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[26].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[27].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[28].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[29].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[30].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|register:pc_register|dffe_ref:register_intialize[31].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1
+s[0] <= full_adder:full_adder0.port3
+s[1] <= full_adder:full_adder1.port3
+s[2] <= full_adder:full_adder2.port3
+s[3] <= full_adder:full_adder3.port3
+s[4] <= full_adder:full_adder4.port3
+s[5] <= full_adder:full_adder5.port3
+s[6] <= full_adder:full_adder6.port3
+s[7] <= full_adder:full_adder7.port3
+s[8] <= full_adder:full_adder8.port3
+s[9] <= full_adder:full_adder9.port3
+s[10] <= full_adder:full_adder10.port3
+s[11] <= full_adder:full_adder11.port3
+s[12] <= full_adder:full_adder12.port3
+s[13] <= full_adder:full_adder13.port3
+s[14] <= full_adder:full_adder14.port3
+s[15] <= full_adder:full_adder15.port3
+s[16] <= full_adder:full_adder16.port3
+s[17] <= full_adder:full_adder17.port3
+s[18] <= full_adder:full_adder18.port3
+s[19] <= full_adder:full_adder19.port3
+s[20] <= full_adder:full_adder20.port3
+s[21] <= full_adder:full_adder21.port3
+s[22] <= full_adder:full_adder22.port3
+s[23] <= full_adder:full_adder23.port3
+s[24] <= full_adder:full_adder24.port3
+s[25] <= full_adder:full_adder25.port3
+s[26] <= full_adder:full_adder26.port3
+s[27] <= full_adder:full_adder27.port3
+s[28] <= full_adder:full_adder28.port3
+s[29] <= full_adder:full_adder29.port3
+s[30] <= full_adder:full_adder30.port3
+s[31] <= full_adder:full_adder31.port3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder0
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder1
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder2
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder3
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder4
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder5
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder6
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder7
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder8
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder9
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder10
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder11
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder12
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder13
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder14
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder15
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder16
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder17
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder18
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder19
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder20
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder21
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder22
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder23
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder24
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder25
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder26
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder27
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder28
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder29
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder30
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder31
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton_test|imem:my_imem
@@ -10591,18 +11093,18 @@ data_readRegB[31] <= data_readRegB[31].DB_MAX_OUTPUT_PORT_TYPE
 |skeleton_test|processor:my_processor
 clock => clock.IN1
 reset => reset.IN1
-address_imem[0] <= register:pc_register.out
-address_imem[1] <= register:pc_register.out
-address_imem[2] <= register:pc_register.out
-address_imem[3] <= register:pc_register.out
-address_imem[4] <= register:pc_register.out
-address_imem[5] <= register:pc_register.out
-address_imem[6] <= register:pc_register.out
-address_imem[7] <= register:pc_register.out
-address_imem[8] <= register:pc_register.out
-address_imem[9] <= register:pc_register.out
-address_imem[10] <= register:pc_register.out
-address_imem[11] <= register:pc_register.out
+address_imem[0] <= clock.DB_MAX_OUTPUT_PORT_TYPE
+address_imem[1] <= <GND>
+address_imem[2] <= <GND>
+address_imem[3] <= <GND>
+address_imem[4] <= <GND>
+address_imem[5] <= <GND>
+address_imem[6] <= <GND>
+address_imem[7] <= <GND>
+address_imem[8] <= <GND>
+address_imem[9] <= <GND>
+address_imem[10] <= <GND>
+address_imem[11] <= <GND>
 q_imem[0] => ~NO_FANOUT~
 q_imem[1] => ~NO_FANOUT~
 q_imem[2] => ~NO_FANOUT~
@@ -10827,38 +11329,38 @@ data_readRegB[31] => ~NO_FANOUT~
 
 
 |skeleton_test|processor:my_processor|register:pc_register
-out[0] <= DFFE_with_Async_Clear_Posedge:dffe_loop[0].dffe.Q
-out[1] <= DFFE_with_Async_Clear_Posedge:dffe_loop[1].dffe.Q
-out[2] <= DFFE_with_Async_Clear_Posedge:dffe_loop[2].dffe.Q
-out[3] <= DFFE_with_Async_Clear_Posedge:dffe_loop[3].dffe.Q
-out[4] <= DFFE_with_Async_Clear_Posedge:dffe_loop[4].dffe.Q
-out[5] <= DFFE_with_Async_Clear_Posedge:dffe_loop[5].dffe.Q
-out[6] <= DFFE_with_Async_Clear_Posedge:dffe_loop[6].dffe.Q
-out[7] <= DFFE_with_Async_Clear_Posedge:dffe_loop[7].dffe.Q
-out[8] <= DFFE_with_Async_Clear_Posedge:dffe_loop[8].dffe.Q
-out[9] <= DFFE_with_Async_Clear_Posedge:dffe_loop[9].dffe.Q
-out[10] <= DFFE_with_Async_Clear_Posedge:dffe_loop[10].dffe.Q
-out[11] <= DFFE_with_Async_Clear_Posedge:dffe_loop[11].dffe.Q
-out[12] <= DFFE_with_Async_Clear_Posedge:dffe_loop[12].dffe.Q
-out[13] <= DFFE_with_Async_Clear_Posedge:dffe_loop[13].dffe.Q
-out[14] <= DFFE_with_Async_Clear_Posedge:dffe_loop[14].dffe.Q
-out[15] <= DFFE_with_Async_Clear_Posedge:dffe_loop[15].dffe.Q
-out[16] <= DFFE_with_Async_Clear_Posedge:dffe_loop[16].dffe.Q
-out[17] <= DFFE_with_Async_Clear_Posedge:dffe_loop[17].dffe.Q
-out[18] <= DFFE_with_Async_Clear_Posedge:dffe_loop[18].dffe.Q
-out[19] <= DFFE_with_Async_Clear_Posedge:dffe_loop[19].dffe.Q
-out[20] <= DFFE_with_Async_Clear_Posedge:dffe_loop[20].dffe.Q
-out[21] <= DFFE_with_Async_Clear_Posedge:dffe_loop[21].dffe.Q
-out[22] <= DFFE_with_Async_Clear_Posedge:dffe_loop[22].dffe.Q
-out[23] <= DFFE_with_Async_Clear_Posedge:dffe_loop[23].dffe.Q
-out[24] <= DFFE_with_Async_Clear_Posedge:dffe_loop[24].dffe.Q
-out[25] <= DFFE_with_Async_Clear_Posedge:dffe_loop[25].dffe.Q
-out[26] <= DFFE_with_Async_Clear_Posedge:dffe_loop[26].dffe.Q
-out[27] <= DFFE_with_Async_Clear_Posedge:dffe_loop[27].dffe.Q
-out[28] <= DFFE_with_Async_Clear_Posedge:dffe_loop[28].dffe.Q
-out[29] <= DFFE_with_Async_Clear_Posedge:dffe_loop[29].dffe.Q
-out[30] <= DFFE_with_Async_Clear_Posedge:dffe_loop[30].dffe.Q
-out[31] <= DFFE_with_Async_Clear_Posedge:dffe_loop[31].dffe.Q
+out[0] <= dffe_ref:register_intialize[0].dff.port0
+out[1] <= dffe_ref:register_intialize[1].dff.port0
+out[2] <= dffe_ref:register_intialize[2].dff.port0
+out[3] <= dffe_ref:register_intialize[3].dff.port0
+out[4] <= dffe_ref:register_intialize[4].dff.port0
+out[5] <= dffe_ref:register_intialize[5].dff.port0
+out[6] <= dffe_ref:register_intialize[6].dff.port0
+out[7] <= dffe_ref:register_intialize[7].dff.port0
+out[8] <= dffe_ref:register_intialize[8].dff.port0
+out[9] <= dffe_ref:register_intialize[9].dff.port0
+out[10] <= dffe_ref:register_intialize[10].dff.port0
+out[11] <= dffe_ref:register_intialize[11].dff.port0
+out[12] <= dffe_ref:register_intialize[12].dff.port0
+out[13] <= dffe_ref:register_intialize[13].dff.port0
+out[14] <= dffe_ref:register_intialize[14].dff.port0
+out[15] <= dffe_ref:register_intialize[15].dff.port0
+out[16] <= dffe_ref:register_intialize[16].dff.port0
+out[17] <= dffe_ref:register_intialize[17].dff.port0
+out[18] <= dffe_ref:register_intialize[18].dff.port0
+out[19] <= dffe_ref:register_intialize[19].dff.port0
+out[20] <= dffe_ref:register_intialize[20].dff.port0
+out[21] <= dffe_ref:register_intialize[21].dff.port0
+out[22] <= dffe_ref:register_intialize[22].dff.port0
+out[23] <= dffe_ref:register_intialize[23].dff.port0
+out[24] <= dffe_ref:register_intialize[24].dff.port0
+out[25] <= dffe_ref:register_intialize[25].dff.port0
+out[26] <= dffe_ref:register_intialize[26].dff.port0
+out[27] <= dffe_ref:register_intialize[27].dff.port0
+out[28] <= dffe_ref:register_intialize[28].dff.port0
+out[29] <= dffe_ref:register_intialize[29].dff.port0
+out[30] <= dffe_ref:register_intialize[30].dff.port0
+out[31] <= dffe_ref:register_intialize[31].dff.port0
 in[0] => in[0].IN1
 in[1] => in[1].IN1
 in[2] => in[2].IN1
@@ -10892,263 +11394,714 @@ in[29] => in[29].IN1
 in[30] => in[30].IN1
 in[31] => in[31].IN1
 clk => clk.IN32
-reset => reset.IN32
 enable => enable.IN32
+reset => reset.IN32
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[0].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[0].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[1].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[1].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[2].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[2].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[3].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[3].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[4].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[4].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[5].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[5].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[6].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[6].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[7].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[7].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[8].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[8].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[9].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[9].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[10].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[10].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[11].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[11].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[12].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[13].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[14].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[15].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[16].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[17].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[18].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[19].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[20].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[21].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[22].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[23].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[24].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[25].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[26].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[27].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[28].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[29].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[30].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
-
-
-|skeleton_test|processor:my_processor|register:pc_register|DFFE_with_Async_Clear_Posedge:dffe_loop[31].dffe
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-D => Q~reg0.DATAIN
-clk => Q~reg0.CLK
-reset => Q~reg0.ACLR
-enable => Q~reg0.ENA
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[12].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[13].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[14].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[15].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[16].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[17].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[18].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[19].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[20].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[21].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[22].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[23].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[24].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[25].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[26].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[27].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[28].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[29].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[30].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|register:pc_register|dffe_ref:register_intialize[31].dff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1
+s[0] <= full_adder:full_adder0.port3
+s[1] <= full_adder:full_adder1.port3
+s[2] <= full_adder:full_adder2.port3
+s[3] <= full_adder:full_adder3.port3
+s[4] <= full_adder:full_adder4.port3
+s[5] <= full_adder:full_adder5.port3
+s[6] <= full_adder:full_adder6.port3
+s[7] <= full_adder:full_adder7.port3
+s[8] <= full_adder:full_adder8.port3
+s[9] <= full_adder:full_adder9.port3
+s[10] <= full_adder:full_adder10.port3
+s[11] <= full_adder:full_adder11.port3
+s[12] <= full_adder:full_adder12.port3
+s[13] <= full_adder:full_adder13.port3
+s[14] <= full_adder:full_adder14.port3
+s[15] <= full_adder:full_adder15.port3
+s[16] <= full_adder:full_adder16.port3
+s[17] <= full_adder:full_adder17.port3
+s[18] <= full_adder:full_adder18.port3
+s[19] <= full_adder:full_adder19.port3
+s[20] <= full_adder:full_adder20.port3
+s[21] <= full_adder:full_adder21.port3
+s[22] <= full_adder:full_adder22.port3
+s[23] <= full_adder:full_adder23.port3
+s[24] <= full_adder:full_adder24.port3
+s[25] <= full_adder:full_adder25.port3
+s[26] <= full_adder:full_adder26.port3
+s[27] <= full_adder:full_adder27.port3
+s[28] <= full_adder:full_adder28.port3
+s[29] <= full_adder:full_adder29.port3
+s[30] <= full_adder:full_adder30.port3
+s[31] <= full_adder:full_adder31.port3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+a[16] => a[16].IN1
+a[17] => a[17].IN1
+a[18] => a[18].IN1
+a[19] => a[19].IN1
+a[20] => a[20].IN1
+a[21] => a[21].IN1
+a[22] => a[22].IN1
+a[23] => a[23].IN1
+a[24] => a[24].IN1
+a[25] => a[25].IN1
+a[26] => a[26].IN1
+a[27] => a[27].IN1
+a[28] => a[28].IN1
+a[29] => a[29].IN1
+a[30] => a[30].IN1
+a[31] => a[31].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+b[16] => b[16].IN1
+b[17] => b[17].IN1
+b[18] => b[18].IN1
+b[19] => b[19].IN1
+b[20] => b[20].IN1
+b[21] => b[21].IN1
+b[22] => b[22].IN1
+b[23] => b[23].IN1
+b[24] => b[24].IN1
+b[25] => b[25].IN1
+b[26] => b[26].IN1
+b[27] => b[27].IN1
+b[28] => b[28].IN1
+b[29] => b[29].IN1
+b[30] => b[30].IN1
+b[31] => b[31].IN1
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder0
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder1
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder2
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder3
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder4
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder5
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder6
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder7
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder8
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder9
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder10
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder11
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder12
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder13
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder14
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder15
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder16
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder17
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder18
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder19
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder20
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder21
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder22
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder23
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder24
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder25
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder26
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder27
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder28
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder29
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder30
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder31
+a => xor0.IN0
+a => and1.IN0
+b => xor0.IN1
+b => and1.IN1
+Cin => xor1.IN1
+Cin => and0.IN1
+sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 

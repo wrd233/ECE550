@@ -260,7 +260,167 @@
 					"strict" : false
 				},
 				{
+					"name" : "o_data_q_imem[0]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[1]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[2]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[3]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[4]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[5]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[6]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[7]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[8]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[9]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[10]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[11]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[12]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[13]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[14]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[15]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[16]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[17]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[18]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[19]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[20]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[21]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[22]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[23]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[24]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[25]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[26]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[27]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[28]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[29]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[30]",
+					"strict" : false
+				},
+				{
+					"name" : "o_data_q_imem[31]",
+					"strict" : false
+				},
+				{
+					"name" : "o_stu_imem_clock",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
 					"name" : "test",
+					"strict" : false
+				},
+				{
+					"name" : "t_ctrl_writeEnable",
+					"strict" : false
+				},
+				{
+					"name" : "t_ctrl_readRegA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "t_ctrl_writeReg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "t_ctrl_writeReg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "t_ctrl_readRegA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "t_ctrl_writeReg[3]",
 					"strict" : false
 				},
 				{
@@ -272,11 +432,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "t_ctrl_readRegA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "t_ctrl_readRegA[1]",
+					"name" : "t_ctrl_writeReg[2]",
 					"strict" : false
 				},
 				{
@@ -284,35 +440,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "t_ctrl_writeEnable",
-					"strict" : false
-				},
-				{
-					"name" : "t_ctrl_writeReg[0]",
-					"strict" : false
-				},
-				{
-					"name" : "t_ctrl_writeReg[2]",
-					"strict" : false
-				},
-				{
-					"name" : "t_ctrl_writeReg[3]",
-					"strict" : false
-				},
-				{
-					"name" : "t_ctrl_writeReg[1]",
-					"strict" : false
-				},
-				{
 					"name" : "t_ctrl_writeReg[4]",
-					"strict" : false
-				},
-				{
-					"name" : "t_ctrl_readRegB[3]",
-					"strict" : false
-				},
-				{
-					"name" : "t_ctrl_readRegB[2]",
 					"strict" : false
 				},
 				{
@@ -324,143 +452,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "t_ctrl_readRegB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "t_ctrl_readRegB[2]",
+					"strict" : false
+				},
+				{
 					"name" : "t_ctrl_readRegB[4]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[0]",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[1]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[2]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[3]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[4]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[5]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[6]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[7]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[8]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[9]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[10]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[11]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[12]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[13]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[14]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[15]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[16]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[17]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[18]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[19]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[20]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[21]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[22]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[23]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[24]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[25]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[26]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[27]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[28]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[29]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[30]",
-					"strict" : false
-				},
-				{
-					"name" : "t_data_writeReg[31]",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
 					"strict" : false
 				}
 			]

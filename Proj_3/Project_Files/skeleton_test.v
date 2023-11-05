@@ -4,7 +4,10 @@
 
 module skeleton_test(clock, reset, test, t_ctrl_writeEnable, t_ctrl_writeReg, t_ctrl_readRegA, t_ctrl_readRegB,
 							t_data_writeReg, t_data_readRegA, t_data_readRegB, t_test_out, t_test2_out, t_test3_out, t_test4_out,
-							o_ctrl_writeEnable, o_ctrl_writeReg, o_data_writeReg);
+							o_ctrl_writeEnable, o_ctrl_writeReg, o_data_writeReg,
+                            o_address_imem, o_data_q_imem,  // 用来检查每次PC使用的地址
+                            o_stu_imem_clock,               // 用来检查clock
+                            );
     input clock, reset, test;
 	 
     /** clock **/
@@ -21,6 +24,8 @@ module skeleton_test(clock, reset, test, t_ctrl_writeEnable, t_ctrl_writeReg, t_
     assign dmem_clock = stu_dmem_clock;
     assign processor_clock = stu_processor_clock;
     assign regfile_clock = stu_regfile_clock;
+
+    assign o_stu_imem_clock = stu_imem_clock;
 
     skeleton student_skeleton(clock, reset, stu_imem_clock, stu_dmem_clock, stu_processor_clock, stu_regfile_clock);
 
@@ -42,6 +47,13 @@ module skeleton_test(clock, reset, test, t_ctrl_writeEnable, t_ctrl_writeReg, t_
     wire [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
     wire [31:0] data_writeReg;
 
+    // More test: PC
+    output [11:0]o_address_imem;
+    output [31:0]o_data_q_imem;
+
+    // More test: clock
+    output o_stu_imem_clock;
+
     /** IMEM **/
     wire [11:0] address_imem;
     wire [31:0] q_imem;
@@ -50,6 +62,9 @@ module skeleton_test(clock, reset, test, t_ctrl_writeEnable, t_ctrl_writeReg, t_
         .clock      (imem_clock),              // you may need to invert the clock
         .q          (q_imem)                   // the raw instruction
     );
+
+    assign o_address_imem = address_imem;
+    assign o_data_q_imem = q_imem;
 
     /** DMEM **/
     wire [11:0] address_dmem;

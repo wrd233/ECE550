@@ -93,16 +93,25 @@ module processor(
     input [31:0] data_readRegA, data_readRegB;
 
     /* YOUR CODE STARTS HERE */
-    wire[31:0] pc, pc_next, imem_addr;
+    wire[31:0] pc, pc_next;
     
     /* 指令获取 */
     register pc_register(.out(pc), .in(pc_next), .clk(clock), .reset(reset), .enable(1'b1));
-    assign address_imem = pc[11:0];
+    // assign address_imem = pc[11:0];
+    // assign address_imem[0] = clock; 
+    
+    // assign address_imem = 12'b000000000111;
     // 此时应该得到了q_imem
 
+    // wire[31:0] pc_plus1;
+    // pc mypc1(.clock(clock), .reset(reset), .pc_in(pc_next), .pc_out(pc)); 
+    // RCA_32bit myRCA1(pc_plus1, pc, 32'd1);
+    // assign pc_next = pc_plus1;
 
 
     /* 更新下一个PC */
-    assign pc_next = pc+32'd1;
+    // assign pc_next = pc + 32'd1;
+    // assign pc_next = 32'b10100101010110100101101001010101;
+    // RCA_32bit myRCA1(pc_next, pc, 32'd1);
 
 endmodule

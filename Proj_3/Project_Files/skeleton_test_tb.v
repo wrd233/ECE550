@@ -14,6 +14,10 @@ wire o_ctrl_writeEnable;
 wire [4:0]o_ctrl_writeReg;
 wire [31:0]o_data_writeReg;
 
+// More test
+wire [11:0]o_address_imem;
+wire [31:0]o_data_q_imem;
+
 reg clock;
 reg proc_done;
 
@@ -25,7 +29,10 @@ integer clock_count_max;	// How many clock cycles to run
 // The test skeleton
 skeleton_test st(clock, reset, test, t_ctrl_writeEnable, t_ctrl_writeReg, t_ctrl_readRegA, t_ctrl_readRegB,
 							t_data_writeReg, t_data_readRegA, t_data_readRegB, t_test_out, t_test2_out, t_test3_out, t_test4_out,
-							o_ctrl_writeEnable, o_ctrl_writeReg, o_data_writeReg);
+							o_ctrl_writeEnable, o_ctrl_writeReg, o_data_writeReg,
+                            o_address_imem, o_data_q_imem,  // 用来检查每次PC使用的地址
+                            o_stu_imem_clock,
+                            );
 
 // Begin Simulation
 initial begin
@@ -39,6 +46,20 @@ initial begin
 	
 	$display("@ece550:test:start");
 	clock = 1'b0;
+end
+
+// 测试PC的
+always @(o_address_imem) begin
+  $display("o_address_imem = %h", o_address_imem);
+end
+
+always @(o_data_q_imem) begin
+  $display("o_data_q_imem = %h", o_data_q_imem);
+end
+
+// 测试clock的
+always @(o_stu_imem_clock) begin
+    $display("o_stu_imem_clock = %h", o_stu_imem_clock);
 end
 
 
