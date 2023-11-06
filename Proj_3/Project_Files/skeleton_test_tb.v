@@ -63,10 +63,9 @@ end
 //     $display("test");
 // end
 
-// always @(o_stu_processor_clock) begin
-//     $display("o_data_q_imem = %h", o_data_q_imem);
-//     $display("o_address_imem = %h", o_address_imem);
-// end
+always @(o_stu_processor_clock) begin
+    $display("o_stu_processor_clock = %h", o_stu_processor_clock);
+end
 
 // When proc_done is set high, run this code
 always @(posedge proc_done) begin

@@ -12,58 +12,58 @@
 # 
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/inst_decoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:38 on Nov 06,2023
+# Start time: 21:58:30 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/inst_decoder.v 
 # -- Compiling module inst_decoder
 # 
 # Top level modules:
 # 	inst_decoder
-# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:01
+# End time: 21:58:30 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe_ref.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:39 on Nov 06,2023
+# Start time: 21:58:30 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe_ref.v 
 # -- Compiling module dffe_ref
 # 
 # Top level modules:
 # 	dffe_ref
-# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:30 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:39 on Nov 06,2023
+# Start time: 21:58:30 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v 
 # -- Compiling module imem
 # 
 # Top level modules:
 # 	imem
-# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:31 on Nov 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:39 on Nov 06,2023
+# Start time: 21:58:31 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v 
 # -- Compiling module dmem
 # 
 # Top level modules:
 # 	dmem
-# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:31 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/RCA_32bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:39 on Nov 06,2023
+# Start time: 21:58:31 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/RCA_32bit.v 
 # -- Compiling module full_adder
 # -- Compiling module RCA_32bit
 # 
 # Top level modules:
 # 	RCA_32bit
-# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:31 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:39 on Nov 06,2023
+# Start time: 21:58:31 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v 
 # -- Compiling module skeleton_test
 # -- Compiling module mux_2_5bit
@@ -72,83 +72,83 @@
 # 
 # Top level modules:
 # 	skeleton_test
-# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:31 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:39 on Nov 06,2023
+# Start time: 21:58:31 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v 
 # -- Compiling module skeleton
 # 
 # Top level modules:
 # 	skeleton
-# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:01
+# End time: 21:58:31 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:40 on Nov 06,2023
+# Start time: 21:58:31 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:32 on Nov 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:40 on Nov 06,2023
+# Start time: 21:58:32 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:32 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:40 on Nov 06,2023
+# Start time: 21:58:32 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:32 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:40 on Nov 06,2023
+# Start time: 21:58:32 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v 
 # -- Compiling module frequency_divider_by2
 # 
 # Top level modules:
 # 	frequency_divider_by2
-# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:32 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/alu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:40 on Nov 06,2023
+# Start time: 21:58:32 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 21:58:32 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_3/Project_Files {/Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:40 on Nov 06,2023
+# Start time: 21:58:32 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/Desktop/ECE550/Proj_3/Project_Files" /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v 
 # -- Compiling module skeleton_test_tb
 # 
 # Top level modules:
 # 	skeleton_test_tb
-# End time: 21:44:41 on Nov 06,2023, Elapsed time: 0:00:01
+# End time: 21:58:32 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  skeleton_test_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" skeleton_test_tb 
-# Start time: 21:44:43 on Nov 06,2023
+# Start time: 21:58:32 on Nov 06,2023
 # Loading work.skeleton_test_tb
 # Loading work.skeleton_test
 # Loading work.skeleton
@@ -180,11 +180,9 @@
 # @ece550:test:start
 # o_data_q_imem = 00000000
 # o_address_imem = 000
-# o_address_imem = zzz
-# o_data_q_imem = xxxxxxxx
 # @ece550:test:end
-# ** Note: $stop    : /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v(87)
+# ** Note: $stop    : /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v(86)
 #    Time: 40 us  Iteration: 1  Instance: /skeleton_test_tb
-# Break in Module skeleton_test_tb at /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v line 87
+# Break in Module skeleton_test_tb at /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v line 86
 # Error opening ///Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v
 # Path name '///Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v' doesn't exist.

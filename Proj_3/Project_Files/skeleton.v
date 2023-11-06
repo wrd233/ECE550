@@ -15,23 +15,23 @@ module skeleton(clock, reset, stu_imem_clock, stu_dmem_clock, stu_processor_cloc
    
     /* 分时处理 */
     wire clk_divider_by2, clk_divider_by4;
-    // frequency_divider_by2 divider_by2(
-    //     .clk        (clock),
-    //     .rst        (reset),
-    //     .out_clk    (clk_divider_by2)
-    // );
+    // // frequency_divider_by2 divider_by2(
+    // //     .clk        (clock),
+    // //     .rst        (reset),
+    // //     .out_clk    (clk_divider_by2)
+    // // );
 
     frequency_divider_by2 d1( clock , reset ,clk_divider_by2 );
     frequency_divider_by2 d2( clk_divider_by2 , reset ,clk_divider_by4 );
 
     // 为各个组件分配clock 
     // TODO: 待更新
-    // assign stu_processor_clock = clk_divider_by2;
-    // assign stu_regfile_clock = clk_divider_by2;
-    assign stu_processor_clock = clock;
-    assign stu_regfile_clock = clock;
-    assign stu_imem_clock = clock;
-    assign stu_dmem_clock = clock;
+    assign stu_processor_clock = clk_divider_by4;
+    assign stu_regfile_clock = clk_divider_by4;
+    // assign stu_processor_clock = clock;
+    // assign stu_regfile_clock = clock;
+    assign stu_imem_clock = ~clock;
+    assign stu_dmem_clock = ~clock;
 
     /** IMEM **/
     // Figure out how to generate a Quartus syncram component and commit the generated verilog file.
