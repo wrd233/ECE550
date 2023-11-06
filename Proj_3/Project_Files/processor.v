@@ -115,9 +115,14 @@ module processor(
     );
 
     /* 得到立即数和跳转地址(符号拓展) */
+    wire [31:0]signex_N, unsignex_T;
+    assign signex_N[31:16] = q_imem[16] ? 16'hFFFF:16'h0000;
+    assign signex_N[15:0] = q_imem[15:0]; 
+	
+    assign unsignex_T[31:27] = 5'd0;
+    assign unsignex_T[26:0] = q_imem[26:0]; 
 
     /* Register file的read和write指定 */
-    //(之后应该得到了操作数)
 
     /* ALU运算执行(overflow的指定) */
     wire [31:0] ovf_wrdata;
@@ -127,8 +132,6 @@ module processor(
     /* DMem更新值 */
 
     /* PC更新 */
-
-
 
     /* 更新下一个PC */
     assign pc_next = pc + 32'd1;
