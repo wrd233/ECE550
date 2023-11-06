@@ -96,7 +96,6 @@ module processor(
     wire[31:0] pc, pc_next;
     
     /* 指令获取 */
-    wire [31:0] pc_plus1, pc_plusN1, mux_BR_out, mux_JP_out;
     register pc_register(.out(pc), .in(pc_next), .clk(clock), .reset(reset), .enable(1'b1));
     assign address_imem = pc[11:0];
 
@@ -112,7 +111,7 @@ module processor(
         .opcode(opcode), .ALUop(ALUop), .shamt(shamt), .Rs(Rs), .Rt(Rt), .Rd(Rd), .N(N), .T(T),
         .Rtar(Rtar), .ALUinB(ALUinB), .ALUop_ctrl(ALUop_ctrl), .BR(BR), .Rwd(Rwd), .JP(JP), .DMwe(DMwe), .Rwe(Rwe),
         .is_addi(is_addi), .is_sw(is_sw), .is_lw(is_lw), .is_j(is_j), .is_bne(is_bne), .is_jal(is_jal), .is_jr(is_jr), .is_blt(is_blt), .is_bex(is_bex), .is_setx(is_setx),
-        .is_R(is_R), .isR_add(isR_add), .isR_sub(isR_sub)
+        .is_R(is_R), .isR_add(isR_add), .isR_sub(isR_sub),
     );
 
     /* 得到立即数和跳转地址(符号拓展) */
@@ -126,6 +125,7 @@ module processor(
     /* Register file的read和write指定 */
     assign ctrl_readRegA = is_bex? 5'b00000: Rs;
     assign ctrl_readRegB = is_bex? 5'b11110: Rtar? Rd: Rt;
+    assign ctrl_writeReg = is_setx? 5'b11110: is_jal? 5'b11111:((isR_add|isR_sub|is_addi)? (is_ovf? 5'b11110: Rd): Rd); // TODO: 好好拆解一下
 
     /* ALU运算执行(overflow的指定) */
     wire[31:0] data_operandB, alu_out, ovf_wrdata;
@@ -136,21 +136,19 @@ module processor(
 
     /* 寄存器更新值 */
     wire [31:0] regf_wrdata;
-    wire [31:0] dmem_out;
-    assign regf_wrdata = is_setx? unsignex_T: is_jal? pc_plus1:(is_lw? dmem_out:(isR_add|isR_sub|is_addi)?(is_ovf?ovf_wrdata:alu_out):alu_out); // TODO: 好好拆解一下
-    assign ctrl_writeReg = is_setx? 5'b11110: is_jal? 5'b11111:((isR_add|isR_sub|is_addi)? (is_ovf? 5'b11110: Rd): Rd); // TODO: 好好拆解一下
+    // assign regf_wrdata = is_setx? unsignex_T: is_jal? pc_plus1:(is_lw? dmem_out:(isR_add|isR_sub|is_addi)?(is_ovf?ovf_wrdata:alu_out):alu_out); // TODO: 好好拆解一下
 
     /* DMem更新值 */
+    wire 
     assign address_dmem = alu_out[11:0];  //output_dmem
     assign data = data_readRegB;
     assign dmem_out = q_dmem; //input_dmem
     assign wren = DMwe;       //output_dmem
 
     /* PC更新 */
-    // TODO: 逻辑简化一下， 这里用了太多中间变量，我觉得可以将其类似if-else展开，然后每一步说明原因
-    RCA_32bit myRCA1(pc_plus1,pc, 32'd1);
-    RCA_32bit myRCA2(pc_plusN1, pc_plus1, signex_N);
-    assign mux_BR_out = (is_bne&is_ne|is_blt&(~is_lt)&is_ne)? pc_plusN1:pc_plus1;
-    assign mux_JP_out = is_jr?data_readRegB: (is_bex&is_ne)? unsignex_T: (JP?unsignex_T: mux_BR_out);
+    
+
+    /* 更新下一个PC */
+    assign pc_next = pc + 32'd1;
 
 endmodule

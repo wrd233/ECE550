@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/inst_decoder.v}
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe_ref.v}
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v}
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v}
@@ -15,6 +16,7 @@ vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_F
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v}
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v}
 vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v}
+vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/alu.v}
 
 vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_3/Project_Files {/Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v}
 

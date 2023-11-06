@@ -1,5 +1,5 @@
 EDA Netlist Writer report for processor
-Mon Nov 06 17:38:11 2023
+Mon Nov 06 21:40:19 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 06 17:38:11 2023 ;
+; EDA Netlist Writer Status ; Successful - Mon Nov 06 21:40:19 2023 ;
 ; Revision Name             ; processor                             ;
 ; Top-level Entity Name     ; skeleton_test                         ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,7 +88,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 06 17:38:07 2023
+    Info: Processing started: Mon Nov 06 21:40:15 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off processor -c processor
 Warning (125092): Tcl Script File dmem.qip not found
     Info (125063): set_global_assignment -name QIP_FILE dmem.qip
@@ -104,9 +104,9 @@ Info (204019): Generated file processor_7_1200mv_0c_v_slow.sdo in folder "/Deskt
 Info (204019): Generated file processor_min_1200mv_0c_v_fast.sdo in folder "/Desktop/ECE550/Proj_3/Project_Files/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file processor_v.sdo in folder "/Desktop/ECE550/Proj_3/Project_Files/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4681 megabytes
-    Info: Processing ended: Mon Nov 06 17:38:11 2023
+    Info: Peak virtual memory: 4682 megabytes
+    Info: Processing ended: Mon Nov 06 21:40:19 2023
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

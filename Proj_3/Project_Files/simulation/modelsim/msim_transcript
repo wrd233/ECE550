@@ -10,50 +10,60 @@
 # Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/inst_decoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:44:38 on Nov 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/inst_decoder.v 
+# -- Compiling module inst_decoder
+# 
+# Top level modules:
+# 	inst_decoder
+# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe_ref.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:33 on Nov 05,2023
+# Start time: 21:44:39 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dffe_ref.v 
 # -- Compiling module dffe_ref
 # 
 # Top level modules:
 # 	dffe_ref
-# End time: 23:38:33 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:33 on Nov 05,2023
+# Start time: 21:44:39 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/imem.v 
 # -- Compiling module imem
 # 
 # Top level modules:
 # 	imem
-# End time: 23:38:33 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:33 on Nov 05,2023
+# Start time: 21:44:39 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/dmem.v 
 # -- Compiling module dmem
 # 
 # Top level modules:
 # 	dmem
-# End time: 23:38:33 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/RCA_32bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:33 on Nov 05,2023
+# Start time: 21:44:39 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/RCA_32bit.v 
 # -- Compiling module full_adder
 # -- Compiling module RCA_32bit
 # 
 # Top level modules:
 # 	RCA_32bit
-# End time: 23:38:33 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:33 on Nov 05,2023
+# Start time: 21:44:39 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton_test.v 
 # -- Compiling module skeleton_test
 # -- Compiling module mux_2_5bit
@@ -62,73 +72,83 @@
 # 
 # Top level modules:
 # 	skeleton_test
-# End time: 23:38:34 on Nov 05,2023, Elapsed time: 0:00:01
+# End time: 21:44:39 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:34 on Nov 05,2023
+# Start time: 21:44:39 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/skeleton.v 
 # -- Compiling module skeleton
 # 
 # Top level modules:
 # 	skeleton
-# End time: 23:38:34 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:34 on Nov 05,2023
+# Start time: 21:44:40 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 23:38:34 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:34 on Nov 05,2023
+# Start time: 21:44:40 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 23:38:34 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:35 on Nov 05,2023
+# Start time: 21:44:40 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/processor.v 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 23:38:35 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:35 on Nov 05,2023
+# Start time: 21:44:40 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/frequency_divider_by2.v 
 # -- Compiling module frequency_divider_by2
 # 
 # Top level modules:
 # 	frequency_divider_by2
-# End time: 23:38:35 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files {//Mac/Home/Desktop/ECE550/Proj_3/Project_Files/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:44:40 on Nov 06,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+//Mac/Home/Desktop/ECE550/Proj_3/Project_Files" //Mac/Home/Desktop/ECE550/Proj_3/Project_Files/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 21:44:40 on Nov 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/Desktop/ECE550/Proj_3/Project_Files {/Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:38:35 on Nov 05,2023
+# Start time: 21:44:40 on Nov 06,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/Desktop/ECE550/Proj_3/Project_Files" /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v 
 # -- Compiling module skeleton_test_tb
 # 
 # Top level modules:
 # 	skeleton_test_tb
-# End time: 23:38:35 on Nov 05,2023, Elapsed time: 0:00:00
+# End time: 21:44:41 on Nov 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  skeleton_test_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" skeleton_test_tb 
-# Start time: 23:38:35 on Nov 05,2023
+# Start time: 21:44:43 on Nov 06,2023
 # Loading work.skeleton_test_tb
 # Loading work.skeleton_test
 # Loading work.skeleton
@@ -139,6 +159,10 @@
 # Loading work.regfile
 # Loading work.processor
 # Loading work.register
+# Loading work.inst_decoder
+# Loading work.alu
+# Loading work.RCA_32bit
+# Loading work.full_adder
 # Loading work.mux_2_1bit
 # Loading work.mux_2_5bit
 # Loading work.mux_2
@@ -156,1067 +180,11 @@
 # @ece550:test:start
 # o_data_q_imem = 00000000
 # o_address_imem = 000
-# o_address_imem = 001
-# o_address_imem = 002
-# o_address_imem = 003
-# o_data_q_imem = 28400001
-# o_address_imem = 004
-# o_data_q_imem = 08000005
-# o_address_imem = 005
-# o_data_q_imem = 28420001
-# o_address_imem = 006
-# o_data_q_imem = 28420002
-# o_address_imem = 007
-# o_data_q_imem = 29400000
-# o_address_imem = 008
-# o_data_q_imem = 08000009
-# o_address_imem = 009
-# o_data_q_imem = 014a1000
-# o_address_imem = 00a
-# o_address_imem = 00b
-# o_data_q_imem = 28800001
-# o_address_imem = 00c
-# o_data_q_imem = 28c00001
-# o_address_imem = 00d
-# o_data_q_imem = 29000000
-# o_address_imem = 00e
-# o_data_q_imem = 10860001
-# o_address_imem = 00f
-# o_data_q_imem = 29080001
-# o_address_imem = 010
-# o_address_imem = 011
-# o_data_q_imem = 29800000
-# o_address_imem = 012
-# o_data_q_imem = 10800001
-# o_address_imem = 013
-# o_data_q_imem = 298c0001
-# o_address_imem = 014
-# o_address_imem = 015
-# o_data_q_imem = 2b000000
-# o_address_imem = 016
-# o_data_q_imem = 2b400000
-# o_address_imem = 017
-# o_data_q_imem = 18000018
-# o_address_imem = 018
-# o_data_q_imem = 2b180001
-# o_address_imem = 019
-# o_address_imem = 01a
-# o_data_q_imem = 0341f000
-# o_address_imem = 01b
-# o_data_q_imem = 2b800000
-# o_address_imem = 01c
-# o_data_q_imem = 2bc0001e
-# o_address_imem = 01d
-# o_data_q_imem = 23c00000
-# o_address_imem = 01e
-# o_data_q_imem = 2b9c0001
-# o_address_imem = 01f
-# o_address_imem = 020
-# o_data_q_imem = 2a000000
-# o_address_imem = 021
-# o_data_q_imem = 2a400001
-# o_address_imem = 022
-# o_data_q_imem = 2ac00002
-# o_address_imem = 023
-# o_data_q_imem = 18000027
-# o_address_imem = 024
-# o_data_q_imem = 29c0002b
-# o_address_imem = 025
-# o_data_q_imem = 02109004
-# o_address_imem = 026
-# o_data_q_imem = 02909000
-# o_address_imem = 027
-# o_data_q_imem = 21c00000
-# o_address_imem = 028
-# o_data_q_imem = 2a100001
-# o_address_imem = 029
-# o_data_q_imem = 2a520001
-# o_address_imem = 02a
-# o_data_q_imem = 02909000
-# o_address_imem = 02b
-# o_data_q_imem = 27c00000
-# o_address_imem = 02c
-# o_data_q_imem = 2c000001
-# o_address_imem = 02d
-# o_data_q_imem = 2c400001
-# o_address_imem = 02e
-# o_data_q_imem = 2c800000
-# o_address_imem = 02f
-# o_data_q_imem = 34220001
-# o_address_imem = 030
-# o_data_q_imem = 2ca40001
-# o_address_imem = 031
-# o_address_imem = 032
-# o_data_q_imem = 2cc00000
-# o_address_imem = 033
-# o_data_q_imem = 30200001
-# o_address_imem = 034
-# o_data_q_imem = 2ce60001
-# o_address_imem = 035
-# o_address_imem = 036
-# o_data_q_imem = 2d000000
-# o_address_imem = 037
-# o_data_q_imem = 34000001
-# o_address_imem = 038
-# o_data_q_imem = 2d280001
-# o_address_imem = 039
-# o_address_imem = 03a
-# o_data_q_imem = a8000001
-# o_address_imem = 03b
-# o_data_q_imem = 2d400001
-# o_address_imem = 03c
-# o_data_q_imem = b000003d
-# o_address_imem = 03d
-# o_data_q_imem = 2d6a0001
-# o_address_imem = 03e
-# o_address_imem = 03f
-# o_data_q_imem = a8000000
-# o_address_imem = 040
-# o_data_q_imem = 2d800001
-# o_address_imem = 041
-# o_data_q_imem = b0000042
-# o_address_imem = 042
-# o_data_q_imem = 2dac0001
-# o_address_imem = 043
-# o_address_imem = 044
-# o_data_q_imem = 00000000
-# o_address_imem = 045
-# o_address_imem = 046
-# o_address_imem = 047
-# o_address_imem = 048
-# o_address_imem = 049
-# o_address_imem = 04a
-# o_address_imem = 04b
-# o_address_imem = 04c
-# o_address_imem = 04d
-# o_address_imem = 04e
-# o_address_imem = 04f
-# o_address_imem = 050
-# o_address_imem = 051
-# o_address_imem = 052
-# o_address_imem = 053
-# o_address_imem = 054
-# o_address_imem = 055
-# o_address_imem = 056
-# o_address_imem = 057
-# o_address_imem = 058
-# o_address_imem = 059
-# o_address_imem = 05a
-# o_address_imem = 05b
-# o_address_imem = 05c
-# o_address_imem = 05d
-# o_address_imem = 05e
-# o_address_imem = 05f
-# o_address_imem = 060
-# o_address_imem = 061
-# o_address_imem = 062
-# o_address_imem = 063
-# o_address_imem = 064
-# o_address_imem = 065
-# o_address_imem = 066
-# o_address_imem = 067
-# o_address_imem = 068
-# o_address_imem = 069
-# o_address_imem = 06a
-# o_address_imem = 06b
-# o_address_imem = 06c
-# o_address_imem = 06d
-# o_address_imem = 06e
-# o_address_imem = 06f
-# o_address_imem = 070
-# o_address_imem = 071
-# o_address_imem = 072
-# o_address_imem = 073
-# o_address_imem = 074
-# o_address_imem = 075
-# o_address_imem = 076
-# o_address_imem = 077
-# o_address_imem = 078
-# o_address_imem = 079
-# o_address_imem = 07a
-# o_address_imem = 07b
-# o_address_imem = 07c
-# o_address_imem = 07d
-# o_address_imem = 07e
-# o_address_imem = 07f
-# o_address_imem = 080
-# o_address_imem = 081
-# o_address_imem = 082
-# o_address_imem = 083
-# o_address_imem = 084
-# o_address_imem = 085
-# o_address_imem = 086
-# o_address_imem = 087
-# o_address_imem = 088
-# o_address_imem = 089
-# o_address_imem = 08a
-# o_address_imem = 08b
-# o_address_imem = 08c
-# o_address_imem = 08d
-# o_address_imem = 08e
-# o_address_imem = 08f
-# o_address_imem = 090
-# o_address_imem = 091
-# o_address_imem = 092
-# o_address_imem = 093
-# o_address_imem = 094
-# o_address_imem = 095
-# o_address_imem = 096
-# o_address_imem = 097
-# o_address_imem = 098
-# o_address_imem = 099
-# o_address_imem = 09a
-# o_address_imem = 09b
-# o_address_imem = 09c
-# o_address_imem = 09d
-# o_address_imem = 09e
-# o_address_imem = 09f
-# o_address_imem = 0a0
-# o_address_imem = 0a1
-# o_address_imem = 0a2
-# o_address_imem = 0a3
-# o_address_imem = 0a4
-# o_address_imem = 0a5
-# o_address_imem = 0a6
-# o_address_imem = 0a7
-# o_address_imem = 0a8
-# o_address_imem = 0a9
-# o_address_imem = 0aa
-# o_address_imem = 0ab
-# o_address_imem = 0ac
-# o_address_imem = 0ad
-# o_address_imem = 0ae
-# o_address_imem = 0af
-# o_address_imem = 0b0
-# o_address_imem = 0b1
-# o_address_imem = 0b2
-# o_address_imem = 0b3
-# o_address_imem = 0b4
-# o_address_imem = 0b5
-# o_address_imem = 0b6
-# o_address_imem = 0b7
-# o_address_imem = 0b8
-# o_address_imem = 0b9
-# o_address_imem = 0ba
-# o_address_imem = 0bb
-# o_address_imem = 0bc
-# o_address_imem = 0bd
-# o_address_imem = 0be
-# o_address_imem = 0bf
-# o_address_imem = 0c0
-# o_address_imem = 0c1
-# o_address_imem = 0c2
-# o_address_imem = 0c3
-# o_address_imem = 0c4
-# o_address_imem = 0c5
-# o_address_imem = 0c6
-# o_address_imem = 0c7
-# o_address_imem = 0c8
-# o_address_imem = 0c9
-# o_address_imem = 0ca
-# o_address_imem = 0cb
-# o_address_imem = 0cc
-# o_address_imem = 0cd
-# o_address_imem = 0ce
-# o_address_imem = 0cf
-# o_address_imem = 0d0
-# o_address_imem = 0d1
-# o_address_imem = 0d2
-# o_address_imem = 0d3
-# o_address_imem = 0d4
-# o_address_imem = 0d5
-# o_address_imem = 0d6
-# o_address_imem = 0d7
-# o_address_imem = 0d8
-# o_address_imem = 0d9
-# o_address_imem = 0da
-# o_address_imem = 0db
-# o_address_imem = 0dc
-# o_address_imem = 0dd
-# o_address_imem = 0de
-# o_address_imem = 0df
-# o_address_imem = 0e0
-# o_address_imem = 0e1
-# o_address_imem = 0e2
-# o_address_imem = 0e3
-# o_address_imem = 0e4
-# o_address_imem = 0e5
-# o_address_imem = 0e6
-# o_address_imem = 0e7
-# o_address_imem = 0e8
-# o_address_imem = 0e9
-# o_address_imem = 0ea
-# o_address_imem = 0eb
-# o_address_imem = 0ec
-# o_address_imem = 0ed
-# o_address_imem = 0ee
-# o_address_imem = 0ef
-# o_address_imem = 0f0
-# o_address_imem = 0f1
-# o_address_imem = 0f2
-# o_address_imem = 0f3
-# o_address_imem = 0f4
-# o_address_imem = 0f5
-# o_address_imem = 0f6
-# o_address_imem = 0f7
-# o_address_imem = 0f8
-# o_address_imem = 0f9
-# o_address_imem = 0fa
-# o_address_imem = 0fb
-# o_address_imem = 0fc
-# o_address_imem = 0fd
-# o_address_imem = 0fe
-# o_address_imem = 0ff
-# o_address_imem = 100
-# o_address_imem = 101
-# o_address_imem = 102
-# o_address_imem = 103
-# o_address_imem = 104
-# o_address_imem = 105
-# o_address_imem = 106
-# o_address_imem = 107
-# o_address_imem = 108
-# o_address_imem = 109
-# o_address_imem = 10a
-# o_address_imem = 10b
-# o_address_imem = 10c
-# o_address_imem = 10d
-# o_address_imem = 10e
-# o_address_imem = 10f
-# o_address_imem = 110
-# o_address_imem = 111
-# o_address_imem = 112
-# o_address_imem = 113
-# o_address_imem = 114
-# o_address_imem = 115
-# o_address_imem = 116
-# o_address_imem = 117
-# o_address_imem = 118
-# o_address_imem = 119
-# o_address_imem = 11a
-# o_address_imem = 11b
-# o_address_imem = 11c
-# o_address_imem = 11d
-# o_address_imem = 11e
-# o_address_imem = 11f
-# o_address_imem = 120
-# o_address_imem = 121
-# o_address_imem = 122
-# o_address_imem = 123
-# o_address_imem = 124
-# o_address_imem = 125
-# o_address_imem = 126
-# o_address_imem = 127
-# o_address_imem = 128
-# o_address_imem = 129
-# o_address_imem = 12a
-# o_address_imem = 12b
-# o_address_imem = 12c
-# o_address_imem = 12d
-# o_address_imem = 12e
-# o_address_imem = 12f
-# o_address_imem = 130
-# o_address_imem = 131
-# o_address_imem = 132
-# o_address_imem = 133
-# o_address_imem = 134
-# o_address_imem = 135
-# o_address_imem = 136
-# o_address_imem = 137
-# o_address_imem = 138
-# o_address_imem = 139
-# o_address_imem = 13a
-# o_address_imem = 13b
-# o_address_imem = 13c
-# o_address_imem = 13d
-# o_address_imem = 13e
-# o_address_imem = 13f
-# o_address_imem = 140
-# o_address_imem = 141
-# o_address_imem = 142
-# o_address_imem = 143
-# o_address_imem = 144
-# o_address_imem = 145
-# o_address_imem = 146
-# o_address_imem = 147
-# o_address_imem = 148
-# o_address_imem = 149
-# o_address_imem = 14a
-# o_address_imem = 14b
-# o_address_imem = 14c
-# o_address_imem = 14d
-# o_address_imem = 14e
-# o_address_imem = 14f
-# o_address_imem = 150
-# o_address_imem = 151
-# o_address_imem = 152
-# o_address_imem = 153
-# o_address_imem = 154
-# o_address_imem = 155
-# o_address_imem = 156
-# o_address_imem = 157
-# o_address_imem = 158
-# o_address_imem = 159
-# o_address_imem = 15a
-# o_address_imem = 15b
-# o_address_imem = 15c
-# o_address_imem = 15d
-# o_address_imem = 15e
-# o_address_imem = 15f
-# o_address_imem = 160
-# o_address_imem = 161
-# o_address_imem = 162
-# o_address_imem = 163
-# o_address_imem = 164
-# o_address_imem = 165
-# o_address_imem = 166
-# o_address_imem = 167
-# o_address_imem = 168
-# o_address_imem = 169
-# o_address_imem = 16a
-# o_address_imem = 16b
-# o_address_imem = 16c
-# o_address_imem = 16d
-# o_address_imem = 16e
-# o_address_imem = 16f
-# o_address_imem = 170
-# o_address_imem = 171
-# o_address_imem = 172
-# o_address_imem = 173
-# o_address_imem = 174
-# o_address_imem = 175
-# o_address_imem = 176
-# o_address_imem = 177
-# o_address_imem = 178
-# o_address_imem = 179
-# o_address_imem = 17a
-# o_address_imem = 17b
-# o_address_imem = 17c
-# o_address_imem = 17d
-# o_address_imem = 17e
-# o_address_imem = 17f
-# o_address_imem = 180
-# o_address_imem = 181
-# o_address_imem = 182
-# o_address_imem = 183
-# o_address_imem = 184
-# o_address_imem = 185
-# o_address_imem = 186
-# o_address_imem = 187
-# o_address_imem = 188
-# o_address_imem = 189
-# o_address_imem = 18a
-# o_address_imem = 18b
-# o_address_imem = 18c
-# o_address_imem = 18d
-# o_address_imem = 18e
-# o_address_imem = 18f
-# o_address_imem = 190
-# o_address_imem = 191
-# o_address_imem = 192
-# o_address_imem = 193
-# o_address_imem = 194
-# o_address_imem = 195
-# o_address_imem = 196
-# o_address_imem = 197
-# o_address_imem = 198
-# o_address_imem = 199
-# o_address_imem = 19a
-# o_address_imem = 19b
-# o_address_imem = 19c
-# o_address_imem = 19d
-# o_address_imem = 19e
-# o_address_imem = 19f
-# o_address_imem = 1a0
-# o_address_imem = 1a1
-# o_address_imem = 1a2
-# o_address_imem = 1a3
-# o_address_imem = 1a4
-# o_address_imem = 1a5
-# o_address_imem = 1a6
-# o_address_imem = 1a7
-# o_address_imem = 1a8
-# o_address_imem = 1a9
-# o_address_imem = 1aa
-# o_address_imem = 1ab
-# o_address_imem = 1ac
-# o_address_imem = 1ad
-# o_address_imem = 1ae
-# o_address_imem = 1af
-# o_address_imem = 1b0
-# o_address_imem = 1b1
-# o_address_imem = 1b2
-# o_address_imem = 1b3
-# o_address_imem = 1b4
-# o_address_imem = 1b5
-# o_address_imem = 1b6
-# o_address_imem = 1b7
-# o_address_imem = 1b8
-# o_address_imem = 1b9
-# o_address_imem = 1ba
-# o_address_imem = 1bb
-# o_address_imem = 1bc
-# o_address_imem = 1bd
-# o_address_imem = 1be
-# o_address_imem = 1bf
-# o_address_imem = 1c0
-# o_address_imem = 1c1
-# o_address_imem = 1c2
-# o_address_imem = 1c3
-# o_address_imem = 1c4
-# o_address_imem = 1c5
-# o_address_imem = 1c6
-# o_address_imem = 1c7
-# o_address_imem = 1c8
-# o_address_imem = 1c9
-# o_address_imem = 1ca
-# o_address_imem = 1cb
-# o_address_imem = 1cc
-# o_address_imem = 1cd
-# o_address_imem = 1ce
-# o_address_imem = 1cf
-# o_address_imem = 1d0
-# o_address_imem = 1d1
-# o_address_imem = 1d2
-# o_address_imem = 1d3
-# o_address_imem = 1d4
-# o_address_imem = 1d5
-# o_address_imem = 1d6
-# o_address_imem = 1d7
-# o_address_imem = 1d8
-# o_address_imem = 1d9
-# o_address_imem = 1da
-# o_address_imem = 1db
-# o_address_imem = 1dc
-# o_address_imem = 1dd
-# o_address_imem = 1de
-# o_address_imem = 1df
-# o_address_imem = 1e0
-# o_address_imem = 1e1
-# o_address_imem = 1e2
-# o_address_imem = 1e3
-# o_address_imem = 1e4
-# o_address_imem = 1e5
-# o_address_imem = 1e6
-# o_address_imem = 1e7
-# o_address_imem = 1e8
-# o_address_imem = 1e9
-# o_address_imem = 1ea
-# o_address_imem = 1eb
-# o_address_imem = 1ec
-# o_address_imem = 1ed
-# o_address_imem = 1ee
-# o_address_imem = 1ef
-# o_address_imem = 1f0
-# o_address_imem = 1f1
-# o_address_imem = 1f2
-# o_address_imem = 1f3
-# o_address_imem = 1f4
-# o_address_imem = 1f5
-# o_address_imem = 1f6
-# o_address_imem = 1f7
-# o_address_imem = 1f8
-# o_address_imem = 1f9
-# o_address_imem = 1fa
-# o_address_imem = 1fb
-# o_address_imem = 1fc
-# o_address_imem = 1fd
-# o_address_imem = 1fe
-# o_address_imem = 1ff
-# o_address_imem = 200
-# o_address_imem = 201
-# o_address_imem = 202
-# o_address_imem = 203
-# o_address_imem = 204
-# o_address_imem = 205
-# o_address_imem = 206
-# o_address_imem = 207
-# o_address_imem = 208
-# o_address_imem = 209
-# o_address_imem = 20a
-# o_address_imem = 20b
-# o_address_imem = 20c
-# o_address_imem = 20d
-# o_address_imem = 20e
-# o_address_imem = 20f
-# o_address_imem = 210
-# o_address_imem = 211
-# o_address_imem = 212
-# o_address_imem = 213
-# o_address_imem = 214
-# o_address_imem = 215
-# o_address_imem = 216
-# o_address_imem = 217
-# o_address_imem = 218
-# o_address_imem = 219
-# o_address_imem = 21a
-# o_address_imem = 21b
-# o_address_imem = 21c
-# o_address_imem = 21d
-# o_address_imem = 21e
-# o_address_imem = 21f
-# o_address_imem = 220
-# o_address_imem = 221
-# o_address_imem = 222
-# o_address_imem = 223
-# o_address_imem = 224
-# o_address_imem = 225
-# o_address_imem = 226
-# o_address_imem = 227
-# o_address_imem = 228
-# o_address_imem = 229
-# o_address_imem = 22a
-# o_address_imem = 22b
-# o_address_imem = 22c
-# o_address_imem = 22d
-# o_address_imem = 22e
-# o_address_imem = 22f
-# o_address_imem = 230
-# o_address_imem = 231
-# o_address_imem = 232
-# o_address_imem = 233
-# o_address_imem = 234
-# o_address_imem = 235
-# o_address_imem = 236
-# o_address_imem = 237
-# o_address_imem = 238
-# o_address_imem = 239
-# o_address_imem = 23a
-# o_address_imem = 23b
-# o_address_imem = 23c
-# o_address_imem = 23d
-# o_address_imem = 23e
-# o_address_imem = 23f
-# o_address_imem = 240
-# o_address_imem = 241
-# o_address_imem = 242
-# o_address_imem = 243
-# o_address_imem = 244
-# o_address_imem = 245
-# o_address_imem = 246
-# o_address_imem = 247
-# o_address_imem = 248
-# o_address_imem = 249
-# o_address_imem = 24a
-# o_address_imem = 24b
-# o_address_imem = 24c
-# o_address_imem = 24d
-# o_address_imem = 24e
-# o_address_imem = 24f
-# o_address_imem = 250
-# o_address_imem = 251
-# o_address_imem = 252
-# o_address_imem = 253
-# o_address_imem = 254
-# o_address_imem = 255
-# o_address_imem = 256
-# o_address_imem = 257
-# o_address_imem = 258
-# o_address_imem = 259
-# o_address_imem = 25a
-# o_address_imem = 25b
-# o_address_imem = 25c
-# o_address_imem = 25d
-# o_address_imem = 25e
-# o_address_imem = 25f
-# o_address_imem = 260
-# o_address_imem = 261
-# o_address_imem = 262
-# o_address_imem = 263
-# o_address_imem = 264
-# o_address_imem = 265
-# o_address_imem = 266
-# o_address_imem = 267
-# o_address_imem = 268
-# o_address_imem = 269
-# o_address_imem = 26a
-# o_address_imem = 26b
-# o_address_imem = 26c
-# o_address_imem = 26d
-# o_address_imem = 26e
-# o_address_imem = 26f
-# o_address_imem = 270
-# o_address_imem = 271
-# o_address_imem = 272
-# o_address_imem = 273
-# o_address_imem = 274
-# o_address_imem = 275
-# o_address_imem = 276
-# o_address_imem = 277
-# o_address_imem = 278
-# o_address_imem = 279
-# o_address_imem = 27a
-# o_address_imem = 27b
-# o_address_imem = 27c
-# o_address_imem = 27d
-# o_address_imem = 27e
-# o_address_imem = 27f
-# o_address_imem = 280
-# o_address_imem = 281
-# o_address_imem = 282
-# o_address_imem = 283
-# o_address_imem = 284
-# o_address_imem = 285
-# o_address_imem = 286
-# o_address_imem = 287
-# o_address_imem = 288
-# o_address_imem = 289
-# o_address_imem = 28a
-# o_address_imem = 28b
-# o_address_imem = 28c
-# o_address_imem = 28d
-# o_address_imem = 28e
-# o_address_imem = 28f
-# o_address_imem = 290
-# o_address_imem = 291
-# o_address_imem = 292
-# o_address_imem = 293
-# o_address_imem = 294
-# o_address_imem = 295
-# o_address_imem = 296
-# o_address_imem = 297
-# o_address_imem = 298
-# o_address_imem = 299
-# o_address_imem = 29a
-# o_address_imem = 29b
-# o_address_imem = 29c
-# o_address_imem = 29d
-# o_address_imem = 29e
-# o_address_imem = 29f
-# o_address_imem = 2a0
-# o_address_imem = 2a1
-# o_address_imem = 2a2
-# o_address_imem = 2a3
-# o_address_imem = 2a4
-# o_address_imem = 2a5
-# o_address_imem = 2a6
-# o_address_imem = 2a7
-# o_address_imem = 2a8
-# o_address_imem = 2a9
-# o_address_imem = 2aa
-# o_address_imem = 2ab
-# o_address_imem = 2ac
-# o_address_imem = 2ad
-# o_address_imem = 2ae
-# o_address_imem = 2af
-# o_address_imem = 2b0
-# o_address_imem = 2b1
-# o_address_imem = 2b2
-# o_address_imem = 2b3
-# o_address_imem = 2b4
-# o_address_imem = 2b5
-# o_address_imem = 2b6
-# o_address_imem = 2b7
-# o_address_imem = 2b8
-# o_address_imem = 2b9
-# o_address_imem = 2ba
-# o_address_imem = 2bb
-# o_address_imem = 2bc
-# o_address_imem = 2bd
-# o_address_imem = 2be
-# o_address_imem = 2bf
-# o_address_imem = 2c0
-# o_address_imem = 2c1
-# o_address_imem = 2c2
-# o_address_imem = 2c3
-# o_address_imem = 2c4
-# o_address_imem = 2c5
-# o_address_imem = 2c6
-# o_address_imem = 2c7
-# o_address_imem = 2c8
-# o_address_imem = 2c9
-# o_address_imem = 2ca
-# o_address_imem = 2cb
-# o_address_imem = 2cc
-# o_address_imem = 2cd
-# o_address_imem = 2ce
-# o_address_imem = 2cf
-# o_address_imem = 2d0
-# o_address_imem = 2d1
-# o_address_imem = 2d2
-# o_address_imem = 2d3
-# o_address_imem = 2d4
-# o_address_imem = 2d5
-# o_address_imem = 2d6
-# o_address_imem = 2d7
-# o_address_imem = 2d8
-# o_address_imem = 2d9
-# o_address_imem = 2da
-# o_address_imem = 2db
-# o_address_imem = 2dc
-# o_address_imem = 2dd
-# o_address_imem = 2de
-# o_address_imem = 2df
-# o_address_imem = 2e0
-# o_address_imem = 2e1
-# o_address_imem = 2e2
-# o_address_imem = 2e3
-# o_address_imem = 2e4
-# o_address_imem = 2e5
-# o_address_imem = 2e6
-# o_address_imem = 2e7
-# o_address_imem = 2e8
-# o_address_imem = 2e9
-# o_address_imem = 2ea
-# o_address_imem = 2eb
-# o_address_imem = 2ec
-# o_address_imem = 2ed
-# o_address_imem = 2ee
-# o_address_imem = 2ef
-# o_address_imem = 2f0
-# o_address_imem = 2f1
-# o_address_imem = 2f2
-# o_address_imem = 2f3
-# o_address_imem = 2f4
-# o_address_imem = 2f5
-# o_address_imem = 2f6
-# o_address_imem = 2f7
-# o_address_imem = 2f8
-# o_address_imem = 2f9
-# o_address_imem = 2fa
-# o_address_imem = 2fb
-# o_address_imem = 2fc
-# o_address_imem = 2fd
-# o_address_imem = 2fe
-# o_address_imem = 2ff
-# o_address_imem = 300
-# o_address_imem = 301
-# o_address_imem = 302
-# o_address_imem = 303
-# o_address_imem = 304
-# o_address_imem = 305
-# o_address_imem = 306
-# o_address_imem = 307
-# o_address_imem = 308
-# o_address_imem = 309
-# o_address_imem = 30a
-# o_address_imem = 30b
-# o_address_imem = 30c
-# o_address_imem = 30d
-# o_address_imem = 30e
-# o_address_imem = 30f
-# o_address_imem = 310
-# o_address_imem = 311
-# o_address_imem = 312
-# o_address_imem = 313
-# o_address_imem = 314
-# o_address_imem = 315
-# o_address_imem = 316
-# o_address_imem = 317
-# o_address_imem = 318
-# o_address_imem = 319
-# o_address_imem = 31a
-# o_address_imem = 31b
-# o_address_imem = 31c
-# o_address_imem = 31d
-# o_address_imem = 31e
-# o_address_imem = 31f
-# o_address_imem = 320
-# o_address_imem = 321
-# o_address_imem = 322
-# o_address_imem = 323
-# o_address_imem = 324
-# o_address_imem = 325
-# o_address_imem = 326
-# o_address_imem = 327
-# o_address_imem = 328
-# o_address_imem = 329
-# o_address_imem = 32a
-# o_address_imem = 32b
-# o_address_imem = 32c
-# o_address_imem = 32d
-# o_address_imem = 32e
-# o_address_imem = 32f
-# o_address_imem = 330
-# o_address_imem = 331
-# o_address_imem = 332
-# o_address_imem = 333
-# o_address_imem = 334
-# o_address_imem = 335
-# o_address_imem = 336
-# o_address_imem = 337
-# o_address_imem = 338
-# o_address_imem = 339
-# o_address_imem = 33a
-# o_address_imem = 33b
-# o_address_imem = 33c
-# o_address_imem = 33d
-# o_address_imem = 33e
-# o_address_imem = 33f
-# o_address_imem = 340
-# o_address_imem = 341
-# o_address_imem = 342
-# o_address_imem = 343
-# o_address_imem = 344
-# o_address_imem = 345
-# o_address_imem = 346
-# o_address_imem = 347
-# o_address_imem = 348
-# o_address_imem = 349
-# o_address_imem = 34a
-# o_address_imem = 34b
-# o_address_imem = 34c
-# o_address_imem = 34d
-# o_address_imem = 34e
-# o_address_imem = 34f
-# o_address_imem = 350
-# o_address_imem = 351
-# o_address_imem = 352
-# o_address_imem = 353
-# o_address_imem = 354
-# o_address_imem = 355
-# o_address_imem = 356
-# o_address_imem = 357
-# o_address_imem = 358
-# o_address_imem = 359
-# o_address_imem = 35a
-# o_address_imem = 35b
-# o_address_imem = 35c
-# o_address_imem = 35d
-# o_address_imem = 35e
-# o_address_imem = 35f
-# o_address_imem = 360
-# o_address_imem = 361
-# o_address_imem = 362
-# o_address_imem = 363
-# o_address_imem = 364
-# o_address_imem = 365
-# o_address_imem = 366
-# o_address_imem = 367
-# o_address_imem = 368
-# o_address_imem = 369
-# o_address_imem = 36a
-# o_address_imem = 36b
-# o_address_imem = 36c
-# o_address_imem = 36d
-# o_address_imem = 36e
-# o_address_imem = 36f
-# o_address_imem = 370
-# o_address_imem = 371
-# o_address_imem = 372
-# o_address_imem = 373
-# o_address_imem = 374
-# o_address_imem = 375
-# o_address_imem = 376
-# o_address_imem = 377
-# o_address_imem = 378
-# o_address_imem = 379
-# o_address_imem = 37a
-# o_address_imem = 37b
-# o_address_imem = 37c
-# o_address_imem = 37d
-# o_address_imem = 37e
-# o_address_imem = 37f
-# o_address_imem = 380
-# o_address_imem = 381
-# o_address_imem = 382
-# o_address_imem = 383
-# o_address_imem = 384
-# o_address_imem = 385
-# o_address_imem = 386
-# o_address_imem = 387
-# o_address_imem = 388
-# o_address_imem = 389
-# o_address_imem = 38a
-# o_address_imem = 38b
-# o_address_imem = 38c
-# o_address_imem = 38d
-# o_address_imem = 38e
-# o_address_imem = 38f
-# o_address_imem = 390
-# o_address_imem = 391
-# o_address_imem = 392
-# o_address_imem = 393
-# o_address_imem = 394
-# o_address_imem = 395
-# o_address_imem = 396
-# o_address_imem = 397
-# o_address_imem = 398
-# o_address_imem = 399
-# o_address_imem = 39a
-# o_address_imem = 39b
-# o_address_imem = 39c
-# o_address_imem = 39d
-# o_address_imem = 39e
-# o_address_imem = 39f
-# o_address_imem = 3a0
-# o_address_imem = 3a1
-# o_address_imem = 3a2
-# o_address_imem = 3a3
-# o_address_imem = 3a4
-# o_address_imem = 3a5
-# o_address_imem = 3a6
-# o_address_imem = 3a7
-# o_address_imem = 3a8
-# o_address_imem = 3a9
-# o_address_imem = 3aa
-# o_address_imem = 3ab
-# o_address_imem = 3ac
-# o_address_imem = 3ad
-# o_address_imem = 3ae
-# o_address_imem = 3af
-# o_address_imem = 3b0
-# o_address_imem = 3b1
-# o_address_imem = 3b2
-# o_address_imem = 3b3
-# o_address_imem = 3b4
-# o_address_imem = 3b5
-# o_address_imem = 3b6
-# o_address_imem = 3b7
-# o_address_imem = 3b8
-# o_address_imem = 3b9
-# o_address_imem = 3ba
-# o_address_imem = 3bb
-# o_address_imem = 3bc
-# o_address_imem = 3bd
-# o_address_imem = 3be
-# o_address_imem = 3bf
-# o_address_imem = 3c0
-# o_address_imem = 3c1
-# o_address_imem = 3c2
-# o_address_imem = 3c3
-# o_address_imem = 3c4
-# o_address_imem = 3c5
-# o_address_imem = 3c6
-# o_address_imem = 3c7
-# o_address_imem = 3c8
-# o_address_imem = 3c9
-# o_address_imem = 3ca
-# o_address_imem = 3cb
-# o_address_imem = 3cc
-# o_address_imem = 3cd
-# o_address_imem = 3ce
-# o_address_imem = 3cf
-# o_address_imem = 3d0
-# o_address_imem = 3d1
-# o_address_imem = 3d2
-# o_address_imem = 3d3
-# o_address_imem = 3d4
-# o_address_imem = 3d5
-# o_address_imem = 3d6
-# o_address_imem = 3d7
-# o_address_imem = 3d8
-# o_address_imem = 3d9
-# o_address_imem = 3da
-# o_address_imem = 3db
-# o_address_imem = 3dc
-# o_address_imem = 3dd
-# o_address_imem = 3de
-# o_address_imem = 3df
-# o_address_imem = 3e0
-# o_address_imem = 3e1
-# o_address_imem = 3e2
-# o_address_imem = 3e3
-# o_address_imem = 3e4
-# o_address_imem = 3e5
-# o_address_imem = 3e6
-# o_address_imem = 3e7
-# o_address_imem = 3e8
+# o_address_imem = zzz
+# o_data_q_imem = xxxxxxxx
 # @ece550:test:end
 # ** Note: $stop    : /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v(87)
 #    Time: 40 us  Iteration: 1  Instance: /skeleton_test_tb
 # Break in Module skeleton_test_tb at /Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v line 87
 # Error opening ///Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v
 # Path name '///Desktop/ECE550/Proj_3/Project_Files/skeleton_test_tb.v' doesn't exist.
-# End time: 23:38:42 on Nov 05,2023, Elapsed time: 0:00:07
-# Errors: 1, Warnings: 0

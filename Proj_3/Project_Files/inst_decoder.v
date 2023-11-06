@@ -1,7 +1,7 @@
 /*
 N->imme
 T->target
-Rtar->Rdst
+Rtar->Rdst(这个有两种选择，第一种是删掉，然后外面用is_sw|is_bne|is_jr|is_blt进行判断，第二种是所有这种多个与的判断，都整成这种单个的控制信号)
 is_R->is_alu
 is_Radd->is_add
 is_Rsub->is_sub
