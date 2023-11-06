@@ -50,232 +50,233 @@ t_data_writeReg[28] => t_data_writeReg[28].IN1
 t_data_writeReg[29] => t_data_writeReg[29].IN1
 t_data_writeReg[30] => t_data_writeReg[30].IN1
 t_data_writeReg[31] => t_data_writeReg[31].IN1
-t_data_readRegA[0] <= r_data_readRegA[0].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[1] <= r_data_readRegA[1].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[2] <= r_data_readRegA[2].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[3] <= r_data_readRegA[3].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[4] <= r_data_readRegA[4].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[5] <= r_data_readRegA[5].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[6] <= r_data_readRegA[6].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[7] <= r_data_readRegA[7].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[8] <= r_data_readRegA[8].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[9] <= r_data_readRegA[9].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[10] <= r_data_readRegA[10].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[11] <= r_data_readRegA[11].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[12] <= r_data_readRegA[12].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[13] <= r_data_readRegA[13].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[14] <= r_data_readRegA[14].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[15] <= r_data_readRegA[15].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[16] <= r_data_readRegA[16].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[17] <= r_data_readRegA[17].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[18] <= r_data_readRegA[18].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[19] <= r_data_readRegA[19].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[20] <= r_data_readRegA[20].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[21] <= r_data_readRegA[21].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[22] <= r_data_readRegA[22].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[23] <= r_data_readRegA[23].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[24] <= r_data_readRegA[24].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[25] <= r_data_readRegA[25].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[26] <= r_data_readRegA[26].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[27] <= r_data_readRegA[27].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[28] <= r_data_readRegA[28].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[29] <= r_data_readRegA[29].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[30] <= r_data_readRegA[30].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegA[31] <= r_data_readRegA[31].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[0] <= r_data_readRegB[0].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[1] <= r_data_readRegB[1].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[2] <= r_data_readRegB[2].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[3] <= r_data_readRegB[3].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[4] <= r_data_readRegB[4].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[5] <= r_data_readRegB[5].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[6] <= r_data_readRegB[6].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[7] <= r_data_readRegB[7].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[8] <= r_data_readRegB[8].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[9] <= r_data_readRegB[9].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[10] <= r_data_readRegB[10].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[11] <= r_data_readRegB[11].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[12] <= r_data_readRegB[12].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[13] <= r_data_readRegB[13].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[14] <= r_data_readRegB[14].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[15] <= r_data_readRegB[15].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[16] <= r_data_readRegB[16].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[17] <= r_data_readRegB[17].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[18] <= r_data_readRegB[18].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[19] <= r_data_readRegB[19].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[20] <= r_data_readRegB[20].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[21] <= r_data_readRegB[21].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[22] <= r_data_readRegB[22].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[23] <= r_data_readRegB[23].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[24] <= r_data_readRegB[24].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[25] <= r_data_readRegB[25].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[26] <= r_data_readRegB[26].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[27] <= r_data_readRegB[27].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[28] <= r_data_readRegB[28].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[29] <= r_data_readRegB[29].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[30] <= r_data_readRegB[30].DB_MAX_OUTPUT_PORT_TYPE
-t_data_readRegB[31] <= r_data_readRegB[31].DB_MAX_OUTPUT_PORT_TYPE
-t_test_out <= <GND>
-t_test2_out[0] <= <GND>
-t_test2_out[1] <= <GND>
-t_test2_out[2] <= <GND>
-t_test2_out[3] <= <GND>
-t_test2_out[4] <= <GND>
-t_test2_out[5] <= <GND>
-t_test2_out[6] <= <GND>
-t_test2_out[7] <= <GND>
-t_test2_out[8] <= <GND>
-t_test2_out[9] <= <GND>
-t_test2_out[10] <= <GND>
-t_test2_out[11] <= <GND>
-t_test2_out[12] <= <GND>
-t_test2_out[13] <= <GND>
-t_test2_out[14] <= <GND>
-t_test2_out[15] <= <GND>
-t_test2_out[16] <= <GND>
-t_test2_out[17] <= <GND>
-t_test2_out[18] <= <GND>
-t_test2_out[19] <= <GND>
-t_test2_out[20] <= <GND>
-t_test2_out[21] <= <GND>
-t_test2_out[22] <= <GND>
-t_test2_out[23] <= <GND>
-t_test2_out[24] <= <GND>
-t_test2_out[25] <= <GND>
-t_test2_out[26] <= <GND>
-t_test2_out[27] <= <GND>
-t_test2_out[28] <= <GND>
-t_test2_out[29] <= <GND>
-t_test2_out[30] <= <GND>
-t_test2_out[31] <= <GND>
-t_test3_out[0] <= <GND>
-t_test3_out[1] <= <GND>
-t_test3_out[2] <= <GND>
-t_test3_out[3] <= <GND>
-t_test3_out[4] <= <GND>
-t_test4_out[0] <= <GND>
-t_test4_out[1] <= <GND>
-t_test4_out[2] <= <GND>
-t_test4_out[3] <= <GND>
-t_test4_out[4] <= <GND>
-t_test4_out[5] <= <GND>
-t_test4_out[6] <= <GND>
-t_test4_out[7] <= <GND>
-t_test4_out[8] <= <GND>
-t_test4_out[9] <= <GND>
-t_test4_out[10] <= <GND>
-t_test4_out[11] <= <GND>
-t_test4_out[12] <= <GND>
-t_test4_out[13] <= <GND>
-t_test4_out[14] <= <GND>
-t_test4_out[15] <= <GND>
-t_test4_out[16] <= <GND>
-t_test4_out[17] <= <GND>
-t_test4_out[18] <= <GND>
-t_test4_out[19] <= <GND>
-t_test4_out[20] <= <GND>
-t_test4_out[21] <= <GND>
-t_test4_out[22] <= <GND>
-t_test4_out[23] <= <GND>
-t_test4_out[24] <= <GND>
-t_test4_out[25] <= <GND>
-t_test4_out[26] <= <GND>
-t_test4_out[27] <= <GND>
-t_test4_out[28] <= <GND>
-t_test4_out[29] <= <GND>
-t_test4_out[30] <= <GND>
-t_test4_out[31] <= <GND>
-o_ctrl_writeEnable <= ctrl_writeEnable.DB_MAX_OUTPUT_PORT_TYPE
-o_ctrl_writeReg[0] <= ctrl_writeReg[0].DB_MAX_OUTPUT_PORT_TYPE
-o_ctrl_writeReg[1] <= ctrl_writeReg[1].DB_MAX_OUTPUT_PORT_TYPE
-o_ctrl_writeReg[2] <= ctrl_writeReg[2].DB_MAX_OUTPUT_PORT_TYPE
-o_ctrl_writeReg[3] <= ctrl_writeReg[3].DB_MAX_OUTPUT_PORT_TYPE
-o_ctrl_writeReg[4] <= ctrl_writeReg[4].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[0] <= data_writeReg[0].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[1] <= data_writeReg[1].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[2] <= data_writeReg[2].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[3] <= data_writeReg[3].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[4] <= data_writeReg[4].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[5] <= data_writeReg[5].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[6] <= data_writeReg[6].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[7] <= data_writeReg[7].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[8] <= data_writeReg[8].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[9] <= data_writeReg[9].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[10] <= data_writeReg[10].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[11] <= data_writeReg[11].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[12] <= data_writeReg[12].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[13] <= data_writeReg[13].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[14] <= data_writeReg[14].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[15] <= data_writeReg[15].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[16] <= data_writeReg[16].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[17] <= data_writeReg[17].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[18] <= data_writeReg[18].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[19] <= data_writeReg[19].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[20] <= data_writeReg[20].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[21] <= data_writeReg[21].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[22] <= data_writeReg[22].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[23] <= data_writeReg[23].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[24] <= data_writeReg[24].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[25] <= data_writeReg[25].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[26] <= data_writeReg[26].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[27] <= data_writeReg[27].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[28] <= data_writeReg[28].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[29] <= data_writeReg[29].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[30] <= data_writeReg[30].DB_MAX_OUTPUT_PORT_TYPE
-o_data_writeReg[31] <= data_writeReg[31].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[0] <= address_imem[0].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[1] <= address_imem[1].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[2] <= address_imem[2].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[3] <= address_imem[3].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[4] <= address_imem[4].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[5] <= address_imem[5].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[6] <= address_imem[6].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[7] <= address_imem[7].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[8] <= address_imem[8].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[9] <= address_imem[9].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[10] <= address_imem[10].DB_MAX_OUTPUT_PORT_TYPE
-o_address_imem[11] <= address_imem[11].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[0] <= q_imem[0].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[1] <= q_imem[1].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[2] <= q_imem[2].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[3] <= q_imem[3].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[4] <= q_imem[4].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[5] <= q_imem[5].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[6] <= q_imem[6].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[7] <= q_imem[7].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[8] <= q_imem[8].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[9] <= q_imem[9].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[10] <= q_imem[10].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[11] <= q_imem[11].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[12] <= q_imem[12].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[13] <= q_imem[13].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[14] <= q_imem[14].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[15] <= q_imem[15].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[16] <= q_imem[16].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[17] <= q_imem[17].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[18] <= q_imem[18].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[19] <= q_imem[19].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[20] <= q_imem[20].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[21] <= q_imem[21].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[22] <= q_imem[22].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[23] <= q_imem[23].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[24] <= q_imem[24].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[25] <= q_imem[25].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[26] <= q_imem[26].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[27] <= q_imem[27].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[28] <= q_imem[28].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[29] <= q_imem[29].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[30] <= q_imem[30].DB_MAX_OUTPUT_PORT_TYPE
-o_data_q_imem[31] <= q_imem[31].DB_MAX_OUTPUT_PORT_TYPE
-o_stu_imem_clock <= stu_imem_clock.DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[0] << r_data_readRegA[0].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[1] << r_data_readRegA[1].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[2] << r_data_readRegA[2].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[3] << r_data_readRegA[3].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[4] << r_data_readRegA[4].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[5] << r_data_readRegA[5].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[6] << r_data_readRegA[6].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[7] << r_data_readRegA[7].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[8] << r_data_readRegA[8].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[9] << r_data_readRegA[9].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[10] << r_data_readRegA[10].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[11] << r_data_readRegA[11].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[12] << r_data_readRegA[12].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[13] << r_data_readRegA[13].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[14] << r_data_readRegA[14].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[15] << r_data_readRegA[15].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[16] << r_data_readRegA[16].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[17] << r_data_readRegA[17].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[18] << r_data_readRegA[18].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[19] << r_data_readRegA[19].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[20] << r_data_readRegA[20].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[21] << r_data_readRegA[21].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[22] << r_data_readRegA[22].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[23] << r_data_readRegA[23].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[24] << r_data_readRegA[24].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[25] << r_data_readRegA[25].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[26] << r_data_readRegA[26].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[27] << r_data_readRegA[27].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[28] << r_data_readRegA[28].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[29] << r_data_readRegA[29].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[30] << r_data_readRegA[30].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegA[31] << r_data_readRegA[31].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[0] << r_data_readRegB[0].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[1] << r_data_readRegB[1].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[2] << r_data_readRegB[2].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[3] << r_data_readRegB[3].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[4] << r_data_readRegB[4].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[5] << r_data_readRegB[5].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[6] << r_data_readRegB[6].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[7] << r_data_readRegB[7].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[8] << r_data_readRegB[8].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[9] << r_data_readRegB[9].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[10] << r_data_readRegB[10].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[11] << r_data_readRegB[11].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[12] << r_data_readRegB[12].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[13] << r_data_readRegB[13].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[14] << r_data_readRegB[14].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[15] << r_data_readRegB[15].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[16] << r_data_readRegB[16].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[17] << r_data_readRegB[17].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[18] << r_data_readRegB[18].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[19] << r_data_readRegB[19].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[20] << r_data_readRegB[20].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[21] << r_data_readRegB[21].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[22] << r_data_readRegB[22].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[23] << r_data_readRegB[23].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[24] << r_data_readRegB[24].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[25] << r_data_readRegB[25].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[26] << r_data_readRegB[26].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[27] << r_data_readRegB[27].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[28] << r_data_readRegB[28].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[29] << r_data_readRegB[29].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[30] << r_data_readRegB[30].DB_MAX_OUTPUT_PORT_TYPE
+t_data_readRegB[31] << r_data_readRegB[31].DB_MAX_OUTPUT_PORT_TYPE
+t_test_out << <GND>
+t_test2_out[0] << <GND>
+t_test2_out[1] << <GND>
+t_test2_out[2] << <GND>
+t_test2_out[3] << <GND>
+t_test2_out[4] << <GND>
+t_test2_out[5] << <GND>
+t_test2_out[6] << <GND>
+t_test2_out[7] << <GND>
+t_test2_out[8] << <GND>
+t_test2_out[9] << <GND>
+t_test2_out[10] << <GND>
+t_test2_out[11] << <GND>
+t_test2_out[12] << <GND>
+t_test2_out[13] << <GND>
+t_test2_out[14] << <GND>
+t_test2_out[15] << <GND>
+t_test2_out[16] << <GND>
+t_test2_out[17] << <GND>
+t_test2_out[18] << <GND>
+t_test2_out[19] << <GND>
+t_test2_out[20] << <GND>
+t_test2_out[21] << <GND>
+t_test2_out[22] << <GND>
+t_test2_out[23] << <GND>
+t_test2_out[24] << <GND>
+t_test2_out[25] << <GND>
+t_test2_out[26] << <GND>
+t_test2_out[27] << <GND>
+t_test2_out[28] << <GND>
+t_test2_out[29] << <GND>
+t_test2_out[30] << <GND>
+t_test2_out[31] << <GND>
+t_test3_out[0] << <GND>
+t_test3_out[1] << <GND>
+t_test3_out[2] << <GND>
+t_test3_out[3] << <GND>
+t_test3_out[4] << <GND>
+t_test4_out[0] << <GND>
+t_test4_out[1] << <GND>
+t_test4_out[2] << <GND>
+t_test4_out[3] << <GND>
+t_test4_out[4] << <GND>
+t_test4_out[5] << <GND>
+t_test4_out[6] << <GND>
+t_test4_out[7] << <GND>
+t_test4_out[8] << <GND>
+t_test4_out[9] << <GND>
+t_test4_out[10] << <GND>
+t_test4_out[11] << <GND>
+t_test4_out[12] << <GND>
+t_test4_out[13] << <GND>
+t_test4_out[14] << <GND>
+t_test4_out[15] << <GND>
+t_test4_out[16] << <GND>
+t_test4_out[17] << <GND>
+t_test4_out[18] << <GND>
+t_test4_out[19] << <GND>
+t_test4_out[20] << <GND>
+t_test4_out[21] << <GND>
+t_test4_out[22] << <GND>
+t_test4_out[23] << <GND>
+t_test4_out[24] << <GND>
+t_test4_out[25] << <GND>
+t_test4_out[26] << <GND>
+t_test4_out[27] << <GND>
+t_test4_out[28] << <GND>
+t_test4_out[29] << <GND>
+t_test4_out[30] << <GND>
+t_test4_out[31] << <GND>
+o_ctrl_writeEnable << ctrl_writeEnable.DB_MAX_OUTPUT_PORT_TYPE
+o_ctrl_writeReg[0] << ctrl_writeReg[0].DB_MAX_OUTPUT_PORT_TYPE
+o_ctrl_writeReg[1] << ctrl_writeReg[1].DB_MAX_OUTPUT_PORT_TYPE
+o_ctrl_writeReg[2] << ctrl_writeReg[2].DB_MAX_OUTPUT_PORT_TYPE
+o_ctrl_writeReg[3] << ctrl_writeReg[3].DB_MAX_OUTPUT_PORT_TYPE
+o_ctrl_writeReg[4] << ctrl_writeReg[4].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[0] << data_writeReg[0].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[1] << data_writeReg[1].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[2] << data_writeReg[2].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[3] << data_writeReg[3].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[4] << data_writeReg[4].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[5] << data_writeReg[5].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[6] << data_writeReg[6].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[7] << data_writeReg[7].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[8] << data_writeReg[8].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[9] << data_writeReg[9].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[10] << data_writeReg[10].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[11] << data_writeReg[11].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[12] << data_writeReg[12].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[13] << data_writeReg[13].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[14] << data_writeReg[14].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[15] << data_writeReg[15].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[16] << data_writeReg[16].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[17] << data_writeReg[17].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[18] << data_writeReg[18].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[19] << data_writeReg[19].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[20] << data_writeReg[20].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[21] << data_writeReg[21].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[22] << data_writeReg[22].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[23] << data_writeReg[23].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[24] << data_writeReg[24].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[25] << data_writeReg[25].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[26] << data_writeReg[26].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[27] << data_writeReg[27].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[28] << data_writeReg[28].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[29] << data_writeReg[29].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[30] << data_writeReg[30].DB_MAX_OUTPUT_PORT_TYPE
+o_data_writeReg[31] << data_writeReg[31].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[0] << address_imem[0].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[1] << address_imem[1].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[2] << address_imem[2].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[3] << address_imem[3].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[4] << address_imem[4].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[5] << address_imem[5].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[6] << address_imem[6].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[7] << address_imem[7].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[8] << address_imem[8].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[9] << address_imem[9].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[10] << address_imem[10].DB_MAX_OUTPUT_PORT_TYPE
+o_address_imem[11] << address_imem[11].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[0] << q_imem[0].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[1] << q_imem[1].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[2] << q_imem[2].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[3] << q_imem[3].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[4] << q_imem[4].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[5] << q_imem[5].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[6] << q_imem[6].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[7] << q_imem[7].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[8] << q_imem[8].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[9] << q_imem[9].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[10] << q_imem[10].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[11] << q_imem[11].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[12] << q_imem[12].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[13] << q_imem[13].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[14] << q_imem[14].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[15] << q_imem[15].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[16] << q_imem[16].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[17] << q_imem[17].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[18] << q_imem[18].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[19] << q_imem[19].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[20] << q_imem[20].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[21] << q_imem[21].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[22] << q_imem[22].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[23] << q_imem[23].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[24] << q_imem[24].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[25] << q_imem[25].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[26] << q_imem[26].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[27] << q_imem[27].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[28] << q_imem[28].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[29] << q_imem[29].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[30] << q_imem[30].DB_MAX_OUTPUT_PORT_TYPE
+o_data_q_imem[31] << q_imem[31].DB_MAX_OUTPUT_PORT_TYPE
+o_stu_imem_clock << stu_imem_clock.DB_MAX_OUTPUT_PORT_TYPE
+o_stu_processor_clock << stu_processor_clock.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton_test|skeleton:student_skeleton
-clock => clock.IN3
-reset => reset.IN1
+clock => clock.IN5
+reset => reset.IN3
 stu_imem_clock <= clock.DB_MAX_OUTPUT_PORT_TYPE
 stu_dmem_clock <= clock.DB_MAX_OUTPUT_PORT_TYPE
-stu_processor_clock <= stu_processor_clock.DB_MAX_OUTPUT_PORT_TYPE
-stu_regfile_clock <= stu_regfile_clock.DB_MAX_OUTPUT_PORT_TYPE
+stu_processor_clock <= clock.DB_MAX_OUTPUT_PORT_TYPE
+stu_regfile_clock <= clock.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton_test|skeleton:student_skeleton|frequency_divider_by2:d1
@@ -5082,50 +5083,50 @@ data_readRegB[31] <= data_readRegB[31].DB_MAX_OUTPUT_PORT_TYPE
 |skeleton_test|skeleton:student_skeleton|processor:my_processor
 clock => clock.IN1
 reset => reset.IN1
-address_imem[0] <= clock.DB_MAX_OUTPUT_PORT_TYPE
-address_imem[1] <= <GND>
-address_imem[2] <= <GND>
-address_imem[3] <= <GND>
-address_imem[4] <= <GND>
-address_imem[5] <= <GND>
-address_imem[6] <= <GND>
-address_imem[7] <= <GND>
-address_imem[8] <= <GND>
-address_imem[9] <= <GND>
-address_imem[10] <= <GND>
-address_imem[11] <= <GND>
-q_imem[0] => ~NO_FANOUT~
-q_imem[1] => ~NO_FANOUT~
-q_imem[2] => ~NO_FANOUT~
-q_imem[3] => ~NO_FANOUT~
-q_imem[4] => ~NO_FANOUT~
-q_imem[5] => ~NO_FANOUT~
-q_imem[6] => ~NO_FANOUT~
-q_imem[7] => ~NO_FANOUT~
-q_imem[8] => ~NO_FANOUT~
-q_imem[9] => ~NO_FANOUT~
-q_imem[10] => ~NO_FANOUT~
-q_imem[11] => ~NO_FANOUT~
-q_imem[12] => ~NO_FANOUT~
-q_imem[13] => ~NO_FANOUT~
-q_imem[14] => ~NO_FANOUT~
-q_imem[15] => ~NO_FANOUT~
-q_imem[16] => ~NO_FANOUT~
-q_imem[17] => ~NO_FANOUT~
-q_imem[18] => ~NO_FANOUT~
-q_imem[19] => ~NO_FANOUT~
-q_imem[20] => ~NO_FANOUT~
-q_imem[21] => ~NO_FANOUT~
-q_imem[22] => ~NO_FANOUT~
-q_imem[23] => ~NO_FANOUT~
-q_imem[24] => ~NO_FANOUT~
-q_imem[25] => ~NO_FANOUT~
-q_imem[26] => ~NO_FANOUT~
-q_imem[27] => ~NO_FANOUT~
-q_imem[28] => ~NO_FANOUT~
-q_imem[29] => ~NO_FANOUT~
-q_imem[30] => ~NO_FANOUT~
-q_imem[31] => ~NO_FANOUT~
+address_imem[0] <= register:pc_register.out
+address_imem[1] <= register:pc_register.out
+address_imem[2] <= register:pc_register.out
+address_imem[3] <= register:pc_register.out
+address_imem[4] <= register:pc_register.out
+address_imem[5] <= register:pc_register.out
+address_imem[6] <= register:pc_register.out
+address_imem[7] <= register:pc_register.out
+address_imem[8] <= register:pc_register.out
+address_imem[9] <= register:pc_register.out
+address_imem[10] <= register:pc_register.out
+address_imem[11] <= register:pc_register.out
+q_imem[0] => q_imem[0].IN1
+q_imem[1] => q_imem[1].IN1
+q_imem[2] => q_imem[2].IN1
+q_imem[3] => q_imem[3].IN1
+q_imem[4] => q_imem[4].IN1
+q_imem[5] => q_imem[5].IN1
+q_imem[6] => q_imem[6].IN1
+q_imem[7] => q_imem[7].IN1
+q_imem[8] => q_imem[8].IN1
+q_imem[9] => q_imem[9].IN1
+q_imem[10] => q_imem[10].IN1
+q_imem[11] => q_imem[11].IN1
+q_imem[12] => q_imem[12].IN1
+q_imem[13] => q_imem[13].IN1
+q_imem[14] => q_imem[14].IN1
+q_imem[15] => q_imem[15].IN1
+q_imem[16] => q_imem[16].IN1
+q_imem[17] => q_imem[17].IN1
+q_imem[18] => q_imem[18].IN1
+q_imem[19] => q_imem[19].IN1
+q_imem[20] => q_imem[20].IN1
+q_imem[21] => q_imem[21].IN1
+q_imem[22] => q_imem[22].IN1
+q_imem[23] => q_imem[23].IN1
+q_imem[24] => q_imem[24].IN1
+q_imem[25] => q_imem[25].IN1
+q_imem[26] => q_imem[26].IN1
+q_imem[27] => q_imem[27].IN1
+q_imem[28] => q_imem[28].IN1
+q_imem[29] => q_imem[29].IN1
+q_imem[30] => q_imem[30].IN1
+q_imem[31] => q_imem[31].IN1
 address_dmem[0] <= <GND>
 address_dmem[1] <= <GND>
 address_dmem[2] <= <GND>
@@ -5643,455 +5644,199 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1
-s[0] <= full_adder:full_adder0.port3
-s[1] <= full_adder:full_adder1.port3
-s[2] <= full_adder:full_adder2.port3
-s[3] <= full_adder:full_adder3.port3
-s[4] <= full_adder:full_adder4.port3
-s[5] <= full_adder:full_adder5.port3
-s[6] <= full_adder:full_adder6.port3
-s[7] <= full_adder:full_adder7.port3
-s[8] <= full_adder:full_adder8.port3
-s[9] <= full_adder:full_adder9.port3
-s[10] <= full_adder:full_adder10.port3
-s[11] <= full_adder:full_adder11.port3
-s[12] <= full_adder:full_adder12.port3
-s[13] <= full_adder:full_adder13.port3
-s[14] <= full_adder:full_adder14.port3
-s[15] <= full_adder:full_adder15.port3
-s[16] <= full_adder:full_adder16.port3
-s[17] <= full_adder:full_adder17.port3
-s[18] <= full_adder:full_adder18.port3
-s[19] <= full_adder:full_adder19.port3
-s[20] <= full_adder:full_adder20.port3
-s[21] <= full_adder:full_adder21.port3
-s[22] <= full_adder:full_adder22.port3
-s[23] <= full_adder:full_adder23.port3
-s[24] <= full_adder:full_adder24.port3
-s[25] <= full_adder:full_adder25.port3
-s[26] <= full_adder:full_adder26.port3
-s[27] <= full_adder:full_adder27.port3
-s[28] <= full_adder:full_adder28.port3
-s[29] <= full_adder:full_adder29.port3
-s[30] <= full_adder:full_adder30.port3
-s[31] <= full_adder:full_adder31.port3
-a[0] => a[0].IN1
-a[1] => a[1].IN1
-a[2] => a[2].IN1
-a[3] => a[3].IN1
-a[4] => a[4].IN1
-a[5] => a[5].IN1
-a[6] => a[6].IN1
-a[7] => a[7].IN1
-a[8] => a[8].IN1
-a[9] => a[9].IN1
-a[10] => a[10].IN1
-a[11] => a[11].IN1
-a[12] => a[12].IN1
-a[13] => a[13].IN1
-a[14] => a[14].IN1
-a[15] => a[15].IN1
-a[16] => a[16].IN1
-a[17] => a[17].IN1
-a[18] => a[18].IN1
-a[19] => a[19].IN1
-a[20] => a[20].IN1
-a[21] => a[21].IN1
-a[22] => a[22].IN1
-a[23] => a[23].IN1
-a[24] => a[24].IN1
-a[25] => a[25].IN1
-a[26] => a[26].IN1
-a[27] => a[27].IN1
-a[28] => a[28].IN1
-a[29] => a[29].IN1
-a[30] => a[30].IN1
-a[31] => a[31].IN1
-b[0] => b[0].IN1
-b[1] => b[1].IN1
-b[2] => b[2].IN1
-b[3] => b[3].IN1
-b[4] => b[4].IN1
-b[5] => b[5].IN1
-b[6] => b[6].IN1
-b[7] => b[7].IN1
-b[8] => b[8].IN1
-b[9] => b[9].IN1
-b[10] => b[10].IN1
-b[11] => b[11].IN1
-b[12] => b[12].IN1
-b[13] => b[13].IN1
-b[14] => b[14].IN1
-b[15] => b[15].IN1
-b[16] => b[16].IN1
-b[17] => b[17].IN1
-b[18] => b[18].IN1
-b[19] => b[19].IN1
-b[20] => b[20].IN1
-b[21] => b[21].IN1
-b[22] => b[22].IN1
-b[23] => b[23].IN1
-b[24] => b[24].IN1
-b[25] => b[25].IN1
-b[26] => b[26].IN1
-b[27] => b[27].IN1
-b[28] => b[28].IN1
-b[29] => b[29].IN1
-b[30] => b[30].IN1
-b[31] => b[31].IN1
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder0
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder1
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder2
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder3
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder4
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder5
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder6
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder7
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder8
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder9
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder10
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder11
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder12
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder13
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder14
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder15
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder16
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder17
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder18
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder19
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder20
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder21
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder22
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder23
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder24
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder25
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder26
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder27
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder28
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder29
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder30
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|skeleton:student_skeleton|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder31
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+|skeleton_test|skeleton:student_skeleton|processor:my_processor|inst_decoder:decoder
+inst[0] => T[0].DATAIN
+inst[0] => N[0].DATAIN
+inst[1] => T[1].DATAIN
+inst[1] => N[1].DATAIN
+inst[2] => T[2].DATAIN
+inst[2] => N[2].DATAIN
+inst[3] => T[3].DATAIN
+inst[3] => N[3].DATAIN
+inst[4] => T[4].DATAIN
+inst[4] => N[4].DATAIN
+inst[5] => T[5].DATAIN
+inst[5] => N[5].DATAIN
+inst[6] => T[6].DATAIN
+inst[6] => N[6].DATAIN
+inst[7] => shamt.DATAB
+inst[7] => N[7].DATAIN
+inst[7] => T[7].DATAIN
+inst[8] => shamt.DATAB
+inst[8] => N[8].DATAIN
+inst[8] => T[8].DATAIN
+inst[9] => shamt.DATAB
+inst[9] => N[9].DATAIN
+inst[9] => T[9].DATAIN
+inst[10] => shamt.DATAB
+inst[10] => N[10].DATAIN
+inst[10] => T[10].DATAIN
+inst[11] => shamt.DATAB
+inst[11] => N[11].DATAIN
+inst[11] => T[11].DATAIN
+inst[12] => T[12].DATAIN
+inst[12] => Rt[0].DATAIN
+inst[12] => N[12].DATAIN
+inst[13] => T[13].DATAIN
+inst[13] => Rt[1].DATAIN
+inst[13] => N[13].DATAIN
+inst[14] => T[14].DATAIN
+inst[14] => Rt[2].DATAIN
+inst[14] => N[14].DATAIN
+inst[15] => T[15].DATAIN
+inst[15] => Rt[3].DATAIN
+inst[15] => N[15].DATAIN
+inst[16] => T[16].DATAIN
+inst[16] => Rt[4].DATAIN
+inst[16] => N[16].DATAIN
+inst[17] => T[17].DATAIN
+inst[17] => Rs[0].DATAIN
+inst[18] => T[18].DATAIN
+inst[18] => Rs[1].DATAIN
+inst[19] => T[19].DATAIN
+inst[19] => Rs[2].DATAIN
+inst[20] => T[20].DATAIN
+inst[20] => Rs[3].DATAIN
+inst[21] => T[21].DATAIN
+inst[21] => Rs[4].DATAIN
+inst[22] => T[22].DATAIN
+inst[22] => Rd[0].DATAIN
+inst[23] => T[23].DATAIN
+inst[23] => Rd[1].DATAIN
+inst[24] => T[24].DATAIN
+inst[24] => Rd[2].DATAIN
+inst[25] => T[25].DATAIN
+inst[25] => Rd[3].DATAIN
+inst[26] => T[26].DATAIN
+inst[26] => Rd[4].DATAIN
+inst[27] => is_addi.IN1
+inst[27] => is_sw.IN1
+inst[27] => is_j.IN1
+inst[27] => is_jal.IN1
+inst[27] => is_setx.IN1
+inst[27] => opcode[0].DATAIN
+inst[27] => is_R.IN1
+inst[27] => is_blt.IN1
+inst[27] => is_jr.IN1
+inst[27] => is_bne.IN1
+inst[27] => is_lw.IN1
+inst[27] => is_bex.IN1
+inst[28] => is_bne.IN1
+inst[28] => is_blt.IN1
+inst[28] => is_bex.IN1
+inst[28] => opcode[1].DATAIN
+inst[28] => is_R.IN1
+inst[28] => is_jr.IN1
+inst[28] => is_lw.IN1
+inst[28] => is_setx.IN1
+inst[29] => is_blt.IN1
+inst[29] => is_bex.IN1
+inst[29] => opcode[2].DATAIN
+inst[29] => is_R.IN1
+inst[29] => is_lw.IN1
+inst[30] => is_lw.IN0
+inst[30] => opcode[3].DATAIN
+inst[30] => is_R.IN0
+inst[30] => is_bex.IN0
+inst[31] => is_bex.IN1
+inst[31] => opcode[4].DATAIN
+inst[31] => is_R.IN1
+inst[31] => is_lw.IN1
+opcode[0] <= inst[27].DB_MAX_OUTPUT_PORT_TYPE
+opcode[1] <= inst[28].DB_MAX_OUTPUT_PORT_TYPE
+opcode[2] <= inst[29].DB_MAX_OUTPUT_PORT_TYPE
+opcode[3] <= inst[30].DB_MAX_OUTPUT_PORT_TYPE
+opcode[4] <= inst[31].DB_MAX_OUTPUT_PORT_TYPE
+ALUop[0] <= <GND>
+ALUop[1] <= <GND>
+ALUop[2] <= <GND>
+ALUop[3] <= <GND>
+ALUop[4] <= <GND>
+shamt[0] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+shamt[1] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+shamt[2] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+shamt[3] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+shamt[4] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+Rs[0] <= inst[17].DB_MAX_OUTPUT_PORT_TYPE
+Rs[1] <= inst[18].DB_MAX_OUTPUT_PORT_TYPE
+Rs[2] <= inst[19].DB_MAX_OUTPUT_PORT_TYPE
+Rs[3] <= inst[20].DB_MAX_OUTPUT_PORT_TYPE
+Rs[4] <= inst[21].DB_MAX_OUTPUT_PORT_TYPE
+Rt[0] <= inst[12].DB_MAX_OUTPUT_PORT_TYPE
+Rt[1] <= inst[13].DB_MAX_OUTPUT_PORT_TYPE
+Rt[2] <= inst[14].DB_MAX_OUTPUT_PORT_TYPE
+Rt[3] <= inst[15].DB_MAX_OUTPUT_PORT_TYPE
+Rt[4] <= inst[16].DB_MAX_OUTPUT_PORT_TYPE
+Rd[0] <= inst[22].DB_MAX_OUTPUT_PORT_TYPE
+Rd[1] <= inst[23].DB_MAX_OUTPUT_PORT_TYPE
+Rd[2] <= inst[24].DB_MAX_OUTPUT_PORT_TYPE
+Rd[3] <= inst[25].DB_MAX_OUTPUT_PORT_TYPE
+Rd[4] <= inst[26].DB_MAX_OUTPUT_PORT_TYPE
+N[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
+N[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
+N[3] <= inst[3].DB_MAX_OUTPUT_PORT_TYPE
+N[4] <= inst[4].DB_MAX_OUTPUT_PORT_TYPE
+N[5] <= inst[5].DB_MAX_OUTPUT_PORT_TYPE
+N[6] <= inst[6].DB_MAX_OUTPUT_PORT_TYPE
+N[7] <= inst[7].DB_MAX_OUTPUT_PORT_TYPE
+N[8] <= inst[8].DB_MAX_OUTPUT_PORT_TYPE
+N[9] <= inst[9].DB_MAX_OUTPUT_PORT_TYPE
+N[10] <= inst[10].DB_MAX_OUTPUT_PORT_TYPE
+N[11] <= inst[11].DB_MAX_OUTPUT_PORT_TYPE
+N[12] <= inst[12].DB_MAX_OUTPUT_PORT_TYPE
+N[13] <= inst[13].DB_MAX_OUTPUT_PORT_TYPE
+N[14] <= inst[14].DB_MAX_OUTPUT_PORT_TYPE
+N[15] <= inst[15].DB_MAX_OUTPUT_PORT_TYPE
+N[16] <= inst[16].DB_MAX_OUTPUT_PORT_TYPE
+T[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
+T[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
+T[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
+T[3] <= inst[3].DB_MAX_OUTPUT_PORT_TYPE
+T[4] <= inst[4].DB_MAX_OUTPUT_PORT_TYPE
+T[5] <= inst[5].DB_MAX_OUTPUT_PORT_TYPE
+T[6] <= inst[6].DB_MAX_OUTPUT_PORT_TYPE
+T[7] <= inst[7].DB_MAX_OUTPUT_PORT_TYPE
+T[8] <= inst[8].DB_MAX_OUTPUT_PORT_TYPE
+T[9] <= inst[9].DB_MAX_OUTPUT_PORT_TYPE
+T[10] <= inst[10].DB_MAX_OUTPUT_PORT_TYPE
+T[11] <= inst[11].DB_MAX_OUTPUT_PORT_TYPE
+T[12] <= inst[12].DB_MAX_OUTPUT_PORT_TYPE
+T[13] <= inst[13].DB_MAX_OUTPUT_PORT_TYPE
+T[14] <= inst[14].DB_MAX_OUTPUT_PORT_TYPE
+T[15] <= inst[15].DB_MAX_OUTPUT_PORT_TYPE
+T[16] <= inst[16].DB_MAX_OUTPUT_PORT_TYPE
+T[17] <= inst[17].DB_MAX_OUTPUT_PORT_TYPE
+T[18] <= inst[18].DB_MAX_OUTPUT_PORT_TYPE
+T[19] <= inst[19].DB_MAX_OUTPUT_PORT_TYPE
+T[20] <= inst[20].DB_MAX_OUTPUT_PORT_TYPE
+T[21] <= inst[21].DB_MAX_OUTPUT_PORT_TYPE
+T[22] <= inst[22].DB_MAX_OUTPUT_PORT_TYPE
+T[23] <= inst[23].DB_MAX_OUTPUT_PORT_TYPE
+T[24] <= inst[24].DB_MAX_OUTPUT_PORT_TYPE
+T[25] <= inst[25].DB_MAX_OUTPUT_PORT_TYPE
+T[26] <= inst[26].DB_MAX_OUTPUT_PORT_TYPE
+Rtar <= Rtar.DB_MAX_OUTPUT_PORT_TYPE
+ALUinB <= ALUinB.DB_MAX_OUTPUT_PORT_TYPE
+ALUop_ctrl <= ALUop_ctrl.DB_MAX_OUTPUT_PORT_TYPE
+BR <= ALUop_ctrl.DB_MAX_OUTPUT_PORT_TYPE
+Rwd <= is_lw.DB_MAX_OUTPUT_PORT_TYPE
+JP <= JP.DB_MAX_OUTPUT_PORT_TYPE
+DMwe <= is_sw.DB_MAX_OUTPUT_PORT_TYPE
+Rwe <= Rwe.DB_MAX_OUTPUT_PORT_TYPE
+is_addi <= is_addi.DB_MAX_OUTPUT_PORT_TYPE
+is_sw <= is_sw.DB_MAX_OUTPUT_PORT_TYPE
+is_lw <= is_lw.DB_MAX_OUTPUT_PORT_TYPE
+is_j <= is_j.DB_MAX_OUTPUT_PORT_TYPE
+is_bne <= is_bne.DB_MAX_OUTPUT_PORT_TYPE
+is_jal <= is_jal.DB_MAX_OUTPUT_PORT_TYPE
+is_jr <= is_jr.DB_MAX_OUTPUT_PORT_TYPE
+is_blt <= is_blt.DB_MAX_OUTPUT_PORT_TYPE
+is_bex <= is_bex.DB_MAX_OUTPUT_PORT_TYPE
+is_setx <= is_setx.DB_MAX_OUTPUT_PORT_TYPE
+is_R <= is_R.DB_MAX_OUTPUT_PORT_TYPE
+isR_add <= is_R.DB_MAX_OUTPUT_PORT_TYPE
+isR_sub <= <GND>
 
 
 |skeleton_test|imem:my_imem
@@ -11093,50 +10838,50 @@ data_readRegB[31] <= data_readRegB[31].DB_MAX_OUTPUT_PORT_TYPE
 |skeleton_test|processor:my_processor
 clock => clock.IN1
 reset => reset.IN1
-address_imem[0] <= clock.DB_MAX_OUTPUT_PORT_TYPE
-address_imem[1] <= <GND>
-address_imem[2] <= <GND>
-address_imem[3] <= <GND>
-address_imem[4] <= <GND>
-address_imem[5] <= <GND>
-address_imem[6] <= <GND>
-address_imem[7] <= <GND>
-address_imem[8] <= <GND>
-address_imem[9] <= <GND>
-address_imem[10] <= <GND>
-address_imem[11] <= <GND>
-q_imem[0] => ~NO_FANOUT~
-q_imem[1] => ~NO_FANOUT~
-q_imem[2] => ~NO_FANOUT~
-q_imem[3] => ~NO_FANOUT~
-q_imem[4] => ~NO_FANOUT~
-q_imem[5] => ~NO_FANOUT~
-q_imem[6] => ~NO_FANOUT~
-q_imem[7] => ~NO_FANOUT~
-q_imem[8] => ~NO_FANOUT~
-q_imem[9] => ~NO_FANOUT~
-q_imem[10] => ~NO_FANOUT~
-q_imem[11] => ~NO_FANOUT~
-q_imem[12] => ~NO_FANOUT~
-q_imem[13] => ~NO_FANOUT~
-q_imem[14] => ~NO_FANOUT~
-q_imem[15] => ~NO_FANOUT~
-q_imem[16] => ~NO_FANOUT~
-q_imem[17] => ~NO_FANOUT~
-q_imem[18] => ~NO_FANOUT~
-q_imem[19] => ~NO_FANOUT~
-q_imem[20] => ~NO_FANOUT~
-q_imem[21] => ~NO_FANOUT~
-q_imem[22] => ~NO_FANOUT~
-q_imem[23] => ~NO_FANOUT~
-q_imem[24] => ~NO_FANOUT~
-q_imem[25] => ~NO_FANOUT~
-q_imem[26] => ~NO_FANOUT~
-q_imem[27] => ~NO_FANOUT~
-q_imem[28] => ~NO_FANOUT~
-q_imem[29] => ~NO_FANOUT~
-q_imem[30] => ~NO_FANOUT~
-q_imem[31] => ~NO_FANOUT~
+address_imem[0] <= register:pc_register.out
+address_imem[1] <= register:pc_register.out
+address_imem[2] <= register:pc_register.out
+address_imem[3] <= register:pc_register.out
+address_imem[4] <= register:pc_register.out
+address_imem[5] <= register:pc_register.out
+address_imem[6] <= register:pc_register.out
+address_imem[7] <= register:pc_register.out
+address_imem[8] <= register:pc_register.out
+address_imem[9] <= register:pc_register.out
+address_imem[10] <= register:pc_register.out
+address_imem[11] <= register:pc_register.out
+q_imem[0] => q_imem[0].IN1
+q_imem[1] => q_imem[1].IN1
+q_imem[2] => q_imem[2].IN1
+q_imem[3] => q_imem[3].IN1
+q_imem[4] => q_imem[4].IN1
+q_imem[5] => q_imem[5].IN1
+q_imem[6] => q_imem[6].IN1
+q_imem[7] => q_imem[7].IN1
+q_imem[8] => q_imem[8].IN1
+q_imem[9] => q_imem[9].IN1
+q_imem[10] => q_imem[10].IN1
+q_imem[11] => q_imem[11].IN1
+q_imem[12] => q_imem[12].IN1
+q_imem[13] => q_imem[13].IN1
+q_imem[14] => q_imem[14].IN1
+q_imem[15] => q_imem[15].IN1
+q_imem[16] => q_imem[16].IN1
+q_imem[17] => q_imem[17].IN1
+q_imem[18] => q_imem[18].IN1
+q_imem[19] => q_imem[19].IN1
+q_imem[20] => q_imem[20].IN1
+q_imem[21] => q_imem[21].IN1
+q_imem[22] => q_imem[22].IN1
+q_imem[23] => q_imem[23].IN1
+q_imem[24] => q_imem[24].IN1
+q_imem[25] => q_imem[25].IN1
+q_imem[26] => q_imem[26].IN1
+q_imem[27] => q_imem[27].IN1
+q_imem[28] => q_imem[28].IN1
+q_imem[29] => q_imem[29].IN1
+q_imem[30] => q_imem[30].IN1
+q_imem[31] => q_imem[31].IN1
 address_dmem[0] <= <GND>
 address_dmem[1] <= <GND>
 address_dmem[2] <= <GND>
@@ -11654,454 +11399,198 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1
-s[0] <= full_adder:full_adder0.port3
-s[1] <= full_adder:full_adder1.port3
-s[2] <= full_adder:full_adder2.port3
-s[3] <= full_adder:full_adder3.port3
-s[4] <= full_adder:full_adder4.port3
-s[5] <= full_adder:full_adder5.port3
-s[6] <= full_adder:full_adder6.port3
-s[7] <= full_adder:full_adder7.port3
-s[8] <= full_adder:full_adder8.port3
-s[9] <= full_adder:full_adder9.port3
-s[10] <= full_adder:full_adder10.port3
-s[11] <= full_adder:full_adder11.port3
-s[12] <= full_adder:full_adder12.port3
-s[13] <= full_adder:full_adder13.port3
-s[14] <= full_adder:full_adder14.port3
-s[15] <= full_adder:full_adder15.port3
-s[16] <= full_adder:full_adder16.port3
-s[17] <= full_adder:full_adder17.port3
-s[18] <= full_adder:full_adder18.port3
-s[19] <= full_adder:full_adder19.port3
-s[20] <= full_adder:full_adder20.port3
-s[21] <= full_adder:full_adder21.port3
-s[22] <= full_adder:full_adder22.port3
-s[23] <= full_adder:full_adder23.port3
-s[24] <= full_adder:full_adder24.port3
-s[25] <= full_adder:full_adder25.port3
-s[26] <= full_adder:full_adder26.port3
-s[27] <= full_adder:full_adder27.port3
-s[28] <= full_adder:full_adder28.port3
-s[29] <= full_adder:full_adder29.port3
-s[30] <= full_adder:full_adder30.port3
-s[31] <= full_adder:full_adder31.port3
-a[0] => a[0].IN1
-a[1] => a[1].IN1
-a[2] => a[2].IN1
-a[3] => a[3].IN1
-a[4] => a[4].IN1
-a[5] => a[5].IN1
-a[6] => a[6].IN1
-a[7] => a[7].IN1
-a[8] => a[8].IN1
-a[9] => a[9].IN1
-a[10] => a[10].IN1
-a[11] => a[11].IN1
-a[12] => a[12].IN1
-a[13] => a[13].IN1
-a[14] => a[14].IN1
-a[15] => a[15].IN1
-a[16] => a[16].IN1
-a[17] => a[17].IN1
-a[18] => a[18].IN1
-a[19] => a[19].IN1
-a[20] => a[20].IN1
-a[21] => a[21].IN1
-a[22] => a[22].IN1
-a[23] => a[23].IN1
-a[24] => a[24].IN1
-a[25] => a[25].IN1
-a[26] => a[26].IN1
-a[27] => a[27].IN1
-a[28] => a[28].IN1
-a[29] => a[29].IN1
-a[30] => a[30].IN1
-a[31] => a[31].IN1
-b[0] => b[0].IN1
-b[1] => b[1].IN1
-b[2] => b[2].IN1
-b[3] => b[3].IN1
-b[4] => b[4].IN1
-b[5] => b[5].IN1
-b[6] => b[6].IN1
-b[7] => b[7].IN1
-b[8] => b[8].IN1
-b[9] => b[9].IN1
-b[10] => b[10].IN1
-b[11] => b[11].IN1
-b[12] => b[12].IN1
-b[13] => b[13].IN1
-b[14] => b[14].IN1
-b[15] => b[15].IN1
-b[16] => b[16].IN1
-b[17] => b[17].IN1
-b[18] => b[18].IN1
-b[19] => b[19].IN1
-b[20] => b[20].IN1
-b[21] => b[21].IN1
-b[22] => b[22].IN1
-b[23] => b[23].IN1
-b[24] => b[24].IN1
-b[25] => b[25].IN1
-b[26] => b[26].IN1
-b[27] => b[27].IN1
-b[28] => b[28].IN1
-b[29] => b[29].IN1
-b[30] => b[30].IN1
-b[31] => b[31].IN1
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder0
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder1
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder2
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder3
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder4
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder5
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder6
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder7
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder8
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder9
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder10
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder11
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder12
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder13
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder14
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder15
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder16
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder17
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder18
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder19
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder20
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder21
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder22
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder23
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder24
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder25
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder26
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder27
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder28
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder29
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder30
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton_test|processor:my_processor|RCA_32bit:myRCA1|full_adder:full_adder31
-a => xor0.IN0
-a => and1.IN0
-b => xor0.IN1
-b => and1.IN1
-Cin => xor1.IN1
-Cin => and0.IN1
-sum <= xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= or0.DB_MAX_OUTPUT_PORT_TYPE
+|skeleton_test|processor:my_processor|inst_decoder:decoder
+inst[0] => T[0].DATAIN
+inst[0] => N[0].DATAIN
+inst[1] => T[1].DATAIN
+inst[1] => N[1].DATAIN
+inst[2] => T[2].DATAIN
+inst[2] => N[2].DATAIN
+inst[3] => T[3].DATAIN
+inst[3] => N[3].DATAIN
+inst[4] => T[4].DATAIN
+inst[4] => N[4].DATAIN
+inst[5] => T[5].DATAIN
+inst[5] => N[5].DATAIN
+inst[6] => T[6].DATAIN
+inst[6] => N[6].DATAIN
+inst[7] => shamt.DATAB
+inst[7] => N[7].DATAIN
+inst[7] => T[7].DATAIN
+inst[8] => shamt.DATAB
+inst[8] => N[8].DATAIN
+inst[8] => T[8].DATAIN
+inst[9] => shamt.DATAB
+inst[9] => N[9].DATAIN
+inst[9] => T[9].DATAIN
+inst[10] => shamt.DATAB
+inst[10] => N[10].DATAIN
+inst[10] => T[10].DATAIN
+inst[11] => shamt.DATAB
+inst[11] => N[11].DATAIN
+inst[11] => T[11].DATAIN
+inst[12] => T[12].DATAIN
+inst[12] => Rt[0].DATAIN
+inst[12] => N[12].DATAIN
+inst[13] => T[13].DATAIN
+inst[13] => Rt[1].DATAIN
+inst[13] => N[13].DATAIN
+inst[14] => T[14].DATAIN
+inst[14] => Rt[2].DATAIN
+inst[14] => N[14].DATAIN
+inst[15] => T[15].DATAIN
+inst[15] => Rt[3].DATAIN
+inst[15] => N[15].DATAIN
+inst[16] => T[16].DATAIN
+inst[16] => Rt[4].DATAIN
+inst[16] => N[16].DATAIN
+inst[17] => T[17].DATAIN
+inst[17] => Rs[0].DATAIN
+inst[18] => T[18].DATAIN
+inst[18] => Rs[1].DATAIN
+inst[19] => T[19].DATAIN
+inst[19] => Rs[2].DATAIN
+inst[20] => T[20].DATAIN
+inst[20] => Rs[3].DATAIN
+inst[21] => T[21].DATAIN
+inst[21] => Rs[4].DATAIN
+inst[22] => T[22].DATAIN
+inst[22] => Rd[0].DATAIN
+inst[23] => T[23].DATAIN
+inst[23] => Rd[1].DATAIN
+inst[24] => T[24].DATAIN
+inst[24] => Rd[2].DATAIN
+inst[25] => T[25].DATAIN
+inst[25] => Rd[3].DATAIN
+inst[26] => T[26].DATAIN
+inst[26] => Rd[4].DATAIN
+inst[27] => is_addi.IN1
+inst[27] => is_sw.IN1
+inst[27] => is_j.IN1
+inst[27] => is_jal.IN1
+inst[27] => is_setx.IN1
+inst[27] => opcode[0].DATAIN
+inst[27] => is_R.IN1
+inst[27] => is_blt.IN1
+inst[27] => is_jr.IN1
+inst[27] => is_bne.IN1
+inst[27] => is_lw.IN1
+inst[27] => is_bex.IN1
+inst[28] => is_bne.IN1
+inst[28] => is_blt.IN1
+inst[28] => is_bex.IN1
+inst[28] => opcode[1].DATAIN
+inst[28] => is_R.IN1
+inst[28] => is_jr.IN1
+inst[28] => is_lw.IN1
+inst[28] => is_setx.IN1
+inst[29] => is_blt.IN1
+inst[29] => is_bex.IN1
+inst[29] => opcode[2].DATAIN
+inst[29] => is_R.IN1
+inst[29] => is_lw.IN1
+inst[30] => is_lw.IN0
+inst[30] => opcode[3].DATAIN
+inst[30] => is_R.IN0
+inst[30] => is_bex.IN0
+inst[31] => is_bex.IN1
+inst[31] => opcode[4].DATAIN
+inst[31] => is_R.IN1
+inst[31] => is_lw.IN1
+opcode[0] <= inst[27].DB_MAX_OUTPUT_PORT_TYPE
+opcode[1] <= inst[28].DB_MAX_OUTPUT_PORT_TYPE
+opcode[2] <= inst[29].DB_MAX_OUTPUT_PORT_TYPE
+opcode[3] <= inst[30].DB_MAX_OUTPUT_PORT_TYPE
+opcode[4] <= inst[31].DB_MAX_OUTPUT_PORT_TYPE
+ALUop[0] <= <GND>
+ALUop[1] <= <GND>
+ALUop[2] <= <GND>
+ALUop[3] <= <GND>
+ALUop[4] <= <GND>
+shamt[0] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+shamt[1] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+shamt[2] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+shamt[3] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+shamt[4] <= shamt.DB_MAX_OUTPUT_PORT_TYPE
+Rs[0] <= inst[17].DB_MAX_OUTPUT_PORT_TYPE
+Rs[1] <= inst[18].DB_MAX_OUTPUT_PORT_TYPE
+Rs[2] <= inst[19].DB_MAX_OUTPUT_PORT_TYPE
+Rs[3] <= inst[20].DB_MAX_OUTPUT_PORT_TYPE
+Rs[4] <= inst[21].DB_MAX_OUTPUT_PORT_TYPE
+Rt[0] <= inst[12].DB_MAX_OUTPUT_PORT_TYPE
+Rt[1] <= inst[13].DB_MAX_OUTPUT_PORT_TYPE
+Rt[2] <= inst[14].DB_MAX_OUTPUT_PORT_TYPE
+Rt[3] <= inst[15].DB_MAX_OUTPUT_PORT_TYPE
+Rt[4] <= inst[16].DB_MAX_OUTPUT_PORT_TYPE
+Rd[0] <= inst[22].DB_MAX_OUTPUT_PORT_TYPE
+Rd[1] <= inst[23].DB_MAX_OUTPUT_PORT_TYPE
+Rd[2] <= inst[24].DB_MAX_OUTPUT_PORT_TYPE
+Rd[3] <= inst[25].DB_MAX_OUTPUT_PORT_TYPE
+Rd[4] <= inst[26].DB_MAX_OUTPUT_PORT_TYPE
+N[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
+N[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
+N[3] <= inst[3].DB_MAX_OUTPUT_PORT_TYPE
+N[4] <= inst[4].DB_MAX_OUTPUT_PORT_TYPE
+N[5] <= inst[5].DB_MAX_OUTPUT_PORT_TYPE
+N[6] <= inst[6].DB_MAX_OUTPUT_PORT_TYPE
+N[7] <= inst[7].DB_MAX_OUTPUT_PORT_TYPE
+N[8] <= inst[8].DB_MAX_OUTPUT_PORT_TYPE
+N[9] <= inst[9].DB_MAX_OUTPUT_PORT_TYPE
+N[10] <= inst[10].DB_MAX_OUTPUT_PORT_TYPE
+N[11] <= inst[11].DB_MAX_OUTPUT_PORT_TYPE
+N[12] <= inst[12].DB_MAX_OUTPUT_PORT_TYPE
+N[13] <= inst[13].DB_MAX_OUTPUT_PORT_TYPE
+N[14] <= inst[14].DB_MAX_OUTPUT_PORT_TYPE
+N[15] <= inst[15].DB_MAX_OUTPUT_PORT_TYPE
+N[16] <= inst[16].DB_MAX_OUTPUT_PORT_TYPE
+T[0] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
+T[1] <= inst[1].DB_MAX_OUTPUT_PORT_TYPE
+T[2] <= inst[2].DB_MAX_OUTPUT_PORT_TYPE
+T[3] <= inst[3].DB_MAX_OUTPUT_PORT_TYPE
+T[4] <= inst[4].DB_MAX_OUTPUT_PORT_TYPE
+T[5] <= inst[5].DB_MAX_OUTPUT_PORT_TYPE
+T[6] <= inst[6].DB_MAX_OUTPUT_PORT_TYPE
+T[7] <= inst[7].DB_MAX_OUTPUT_PORT_TYPE
+T[8] <= inst[8].DB_MAX_OUTPUT_PORT_TYPE
+T[9] <= inst[9].DB_MAX_OUTPUT_PORT_TYPE
+T[10] <= inst[10].DB_MAX_OUTPUT_PORT_TYPE
+T[11] <= inst[11].DB_MAX_OUTPUT_PORT_TYPE
+T[12] <= inst[12].DB_MAX_OUTPUT_PORT_TYPE
+T[13] <= inst[13].DB_MAX_OUTPUT_PORT_TYPE
+T[14] <= inst[14].DB_MAX_OUTPUT_PORT_TYPE
+T[15] <= inst[15].DB_MAX_OUTPUT_PORT_TYPE
+T[16] <= inst[16].DB_MAX_OUTPUT_PORT_TYPE
+T[17] <= inst[17].DB_MAX_OUTPUT_PORT_TYPE
+T[18] <= inst[18].DB_MAX_OUTPUT_PORT_TYPE
+T[19] <= inst[19].DB_MAX_OUTPUT_PORT_TYPE
+T[20] <= inst[20].DB_MAX_OUTPUT_PORT_TYPE
+T[21] <= inst[21].DB_MAX_OUTPUT_PORT_TYPE
+T[22] <= inst[22].DB_MAX_OUTPUT_PORT_TYPE
+T[23] <= inst[23].DB_MAX_OUTPUT_PORT_TYPE
+T[24] <= inst[24].DB_MAX_OUTPUT_PORT_TYPE
+T[25] <= inst[25].DB_MAX_OUTPUT_PORT_TYPE
+T[26] <= inst[26].DB_MAX_OUTPUT_PORT_TYPE
+Rtar <= Rtar.DB_MAX_OUTPUT_PORT_TYPE
+ALUinB <= ALUinB.DB_MAX_OUTPUT_PORT_TYPE
+ALUop_ctrl <= ALUop_ctrl.DB_MAX_OUTPUT_PORT_TYPE
+BR <= ALUop_ctrl.DB_MAX_OUTPUT_PORT_TYPE
+Rwd <= is_lw.DB_MAX_OUTPUT_PORT_TYPE
+JP <= JP.DB_MAX_OUTPUT_PORT_TYPE
+DMwe <= is_sw.DB_MAX_OUTPUT_PORT_TYPE
+Rwe <= Rwe.DB_MAX_OUTPUT_PORT_TYPE
+is_addi <= is_addi.DB_MAX_OUTPUT_PORT_TYPE
+is_sw <= is_sw.DB_MAX_OUTPUT_PORT_TYPE
+is_lw <= is_lw.DB_MAX_OUTPUT_PORT_TYPE
+is_j <= is_j.DB_MAX_OUTPUT_PORT_TYPE
+is_bne <= is_bne.DB_MAX_OUTPUT_PORT_TYPE
+is_jal <= is_jal.DB_MAX_OUTPUT_PORT_TYPE
+is_jr <= is_jr.DB_MAX_OUTPUT_PORT_TYPE
+is_blt <= is_blt.DB_MAX_OUTPUT_PORT_TYPE
+is_bex <= is_bex.DB_MAX_OUTPUT_PORT_TYPE
+is_setx <= is_setx.DB_MAX_OUTPUT_PORT_TYPE
+is_R <= is_R.DB_MAX_OUTPUT_PORT_TYPE
+isR_add <= is_R.DB_MAX_OUTPUT_PORT_TYPE
+isR_sub <= <GND>
 
 

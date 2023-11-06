@@ -98,7 +98,35 @@ module processor(
     /* 指令获取 */
     register pc_register(.out(pc), .in(pc_next), .clk(clock), .reset(reset), .enable(1'b1));
     assign address_imem = pc[11:0];
-    // 此时应该得到了q_imem
+
+    /* 指令解码 */
+    wire Rtar, ALUinB, ALUop_ctrl, BR, Rwd,JP, DMwe, Rwe;
+    wire is_addi, is_sw, is_lw, is_j, is_bne, is_jal, is_jr, is_blt, is_bex, is_setx;
+    wire is_R,isR_add, isR_sub;   // 一些辅助的判断
+    wire [16:0] N;
+    wire [26:0] T;
+    wire [4:0] opcode, ALUop, shamt, Rs, Rt, Rd;
+    inst_decoder decoder (
+        .inst(q_imem),
+        .opcode(opcode), .ALUop(ALUop), .shamt(shamt), .Rs(Rs), .Rt(Rt), .Rd(Rd), .N(N), .T(T),
+        .Rtar(Rtar), .ALUinB(ALUinB), .ALUop_ctrl(ALUop_ctrl), .BR(BR), .Rwd(Rwd), .JP(JP), .DMwe(DMwe), .Rwe(Rwe),
+        .is_addi(is_addi), .is_sw(is_sw), .is_lw(is_lw), .is_j(is_j), .is_bne(is_bne), .is_jal(is_jal), .is_jr(is_jr), .is_blt(is_blt), .is_bex(is_bex), .is_setx(is_setx),
+        .is_R(is_R), .isR_add(isR_add), .isR_sub(isR_sub),
+    );
+
+    /* 得到立即数和跳转地址(符号拓展) */
+
+    /* Register file的read和write指定 */
+    //(之后应该得到了操作数)
+
+    /* ALU运算执行(overflow的指定) */
+    wire [31:0] ovf_wrdata;
+
+    /* 寄存器更新值 */
+
+    /* DMem更新值 */
+
+    /* PC更新 */
 
 
 
