@@ -97,7 +97,8 @@ module processor(
     
     /* 指令获取 */
     wire [31:0] pc_plus1, pc_plusN1, mux_BR_out, mux_JP_out;
-    register pc_register(.out(pc), .in(pc_next), .clk(clock), .reset(reset), .enable(1'b1));
+    // register pc_register(.out(pc), .in(mux_JP_out), .clk(clock), .reset(reset), .enable(1'b1));
+    register pc_register(.out(pc), .in(mux_JP_out), .clk(clock), .reset(reset), .enable(1'b1));
     assign address_imem = pc[11:0];
 
     /* 指令解码 */
@@ -123,7 +124,7 @@ module processor(
     assign unsignex_T[31:27] = 5'd0;
     assign unsignex_T[26:0] = q_imem[26:0]; 
 
-    /* Register file的read和write指定 */
+    /* Register file的read指定 */
     assign ctrl_readRegA = is_bex? 5'b00000: Rs;
     assign ctrl_readRegB = is_bex? 5'b11110: Rtar? Rd: Rt;
 

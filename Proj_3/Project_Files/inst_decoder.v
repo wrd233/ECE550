@@ -6,6 +6,7 @@ is_R->is_alu
 is_Radd->is_add
 is_Rsub->is_sub
 外部补充signex_N和unsignex_T
+PC更新换成另一个人的，那个更加清晰
 */
 module inst_decoder(inst,
 opcode, ALUop, shamt, Rs, Rt, Rd, N, T, // 一些直接得到的部分

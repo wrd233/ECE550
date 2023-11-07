@@ -52,6 +52,7 @@ module skeleton_test(clock, reset, test, t_ctrl_writeEnable, t_ctrl_writeReg, t_
     //TODO: 待删除()
     output [11:0]o_address_imem;
     output [31:0]o_data_q_imem;
+    
 
     // More test: clock
     //TODO: 待删除

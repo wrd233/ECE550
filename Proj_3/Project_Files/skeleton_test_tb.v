@@ -1,4 +1,4 @@
-`timescale 1 ns / 100 ps
+`timescale 100 ns / 100 ps
 
 module skeleton_test_tb();
 
@@ -49,13 +49,25 @@ initial begin
 	clock = 1'b0;
 end
 
-// 测试PC的
+// Always increment the clock, and set proc_done when we reach clock_count_max
+always begin
+	#20 clock = ~clock; 
+	clock_count = clock_count + 1;
+	if (clock_count == clock_count_max * 2)
+		proc_done = 1;
+end
+
+// // 测试PC的
+always @(o_data_writeReg) begin
+	$display("o_data_writeReg = %b", o_data_writeReg);
+end
+
 always @(o_address_imem) begin
-  $display("o_address_imem = %h", o_address_imem);
+  $display("o_address_imem = %d", o_address_imem);
 end
 
 always @(o_data_q_imem) begin
-  $display("o_data_q_imem = %h", o_data_q_imem);
+  $display("o_data_q_imem = %b", o_data_q_imem);
 end
 
 // 测试PC的
@@ -63,9 +75,9 @@ end
 //     $display("test");
 // end
 
-always @(o_stu_processor_clock) begin
-    $display("o_stu_processor_clock = %h", o_stu_processor_clock);
-end
+// always @(o_stu_processor_clock) begin
+//     $display("o_stu_processor_clock = %h", o_stu_processor_clock);
+// end
 
 // When proc_done is set high, run this code
 always @(posedge proc_done) begin
@@ -80,20 +92,17 @@ always @(posedge proc_done) begin
 		After all the insns finished, you will want to check the register file's content.
 		You can add more checks according to your test cases
 	*/
-	// check_register("addi r1",1,65535);
+	check_register("addi r1",0,65535);
+	check_register("addi r1",1,65535);
+	check_register("addi r1",2,65535);
+	check_register("addi r1",3,65535);
+	check_register("addi r1",4,65535);
+	check_register("addi r1",5,65535);
+	check_register("addi r1",6,65535);
 
 	$display("@ece550:test:end");
 	$stop;
 		
-end
-
-
-// Always increment the clock, and set proc_done when we reach clock_count_max
-always begin
-	#20 clock = ~clock; 
-	clock_count = clock_count + 1;
-	if (clock_count == clock_count_max * 2)
-		proc_done = 1;
 end
 	
 	

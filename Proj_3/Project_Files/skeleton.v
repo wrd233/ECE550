@@ -26,10 +26,10 @@ module skeleton(clock, reset, stu_imem_clock, stu_dmem_clock, stu_processor_cloc
 
     // 为各个组件分配clock 
     // TODO: 待更新
-    assign stu_processor_clock = clk_divider_by4;
-    assign stu_regfile_clock = clk_divider_by4;
-    // assign stu_processor_clock = clock;
-    // assign stu_regfile_clock = clock;
+    // assign stu_processor_clock = clk_divider_by2;
+    // assign stu_regfile_clock = clk_divider_by2;
+    assign stu_processor_clock = clock;
+    assign stu_regfile_clock = clock;
     assign stu_imem_clock = ~clock;
     assign stu_dmem_clock = ~clock;
 
